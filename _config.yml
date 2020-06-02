@@ -5,6 +5,7 @@ description:        "I am a software engineer"
 locale:             en_US
 baseurl: parkyo/parkyo.github.io # the subpath of your site, e.g. /blog
 url: http://parkyo.github.io # the base hostname & protocol for your site
+root: /octo-5
 
 # Comments
 disqus_shortname:   default
@@ -67,4 +68,3 @@ jekyll-mentions:
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, old]
 
-remote theme: 
