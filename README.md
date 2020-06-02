@@ -1,2 +1,2 @@
 # parkyo.github.io
-programming blog
+Younse Park engineer blog
