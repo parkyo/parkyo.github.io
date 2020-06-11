@@ -3,7 +3,7 @@ title:              Younse Park
 bio:                'I am a software engineer'
 description:        "I am a software engineer"
 locale:             en_US
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: http://parkyo.github.io # the base hostname & protocol for your site
 root: /octo-5
 
