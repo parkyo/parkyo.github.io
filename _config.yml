@@ -1,7 +1,7 @@
 # Site
-title:              Massively
-bio:                'Jekyll version of the Massively theme by HTML5UP'
-description:        "Jekyll version of the Massively theme by HTML5UP"
+title:              Younse Park
+bio:                'Hi, I am a software enginner'
+description:        "Hi, I am a software engineer"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://parkyo.github.io" # the base hostname & protocol for your site
@@ -17,9 +17,9 @@ instagram:          default
 github:             default
 
 # personal
-location:           Los Angeles, CA
-phone:              310-318-5555
-email:              info@default.com # change this to your email to receive free emails for your contact submissions via Slapform.com
+location:
+phone:              503-789-4680
+email:              loshinpark@gmail.com # change this to your email to receive free emails for your contact submissions via Slapform.com
 
 # Other
 background_image:   /images/bg.jpg
