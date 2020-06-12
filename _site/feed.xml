@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-12T11:21:46+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Welcome to Massively: The Jekyll Theme!</title><link href="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/" rel="alternate" type="text/html" title="Welcome to Massively: The Jekyll Theme!" /><published>2017-10-31T00:00:00+09:00</published><updated>2017-10-31T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme copy</id><content type="html" xml:base="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/">## How to Use This Theme
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-12T15:51:10+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">testing page</title><link href="https://parkyo.github.io/blog/testing/" rel="alternate" type="text/html" title="testing page" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/testing</id><content type="html" xml:base="https://parkyo.github.io/blog/testing/">## Testing Topic
+hello
+
+## Features
+### Auto-Generating Sitemap
+The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
+```
+sitemap:
+    priority: 0.7
+    lastmod: 2017-11-02
+    changefreq: weekly
+```
+### Formspring integration
+The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!</content><summary type="html">testing how post works</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/pic02.jpg" /></entry><entry><title type="html">Welcome to Massively: The Jekyll Theme!</title><link href="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/" rel="alternate" type="text/html" title="Welcome to Massively: The Jekyll Theme!" /><published>2017-10-31T00:00:00+09:00</published><updated>2017-10-31T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme copy</id><content type="html" xml:base="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/">## How to Use This Theme
 Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
 
 Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
