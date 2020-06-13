@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Abount Younse
-description: Information about me
+# description: Information about me
 sitemap:
     priority: 0.7
     lastmod: 2020-06-11
