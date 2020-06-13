@@ -1,9 +1,9 @@
 ---
 layout: post
-category: blog
-title:  "testing page"
-date:   2020-06-12
-excerpt: "testing how post works"
+category: portfolio
+title:  "travelymap"
+date:   2020-06-13
+excerpt: "travelymap portfolio"
 image: "/images/pic02.jpg"
 ---
 
