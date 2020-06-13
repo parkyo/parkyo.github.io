@@ -18,6 +18,6 @@ sitemap:
   </p>
 </div>
 
-<span class="image left"><img src="{{ "/images/pic05.jpg" | absolute_url }}" alt="" /></span>
+<span class="image left"><img src="{{ "/images/r.jpg" | absolute_url }}" alt="" /></span>
 
 this is the last paragraph
