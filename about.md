@@ -9,7 +9,7 @@ sitemap:
 ---
 ## About Me
 ### Resume
-<span class="image center"><object data="/images/resume.pdf" width = "600" height = "800" type = 'application/pdf' /></span>
+<!-- <span class="image center"><object data="/images/resume.pdf" width = "600" height = "800" type = 'application/pdf' /></span> -->
 
 ### Content is Imortant
 <div class = "box">
