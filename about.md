@@ -8,14 +8,11 @@ sitemap:
     changefreq: weekly
 ---
 ## About Me
-
-<span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
-
-University of Michigan Computer Science major
-Dickinson College Computer Science major
+### Resume
+<span class="image center"><object data="/images/resume.pdf" width = "600" height = "800" type = 'application/pdf' /></span>
 
 ### Content is Imortant
-<div class="box">
+<div class = "box">
   <p>
   this is a box
   </p>
