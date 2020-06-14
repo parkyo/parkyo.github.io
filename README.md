@@ -7,7 +7,7 @@
 ### About
 > About me
 ### Blog 
-> errors, random information
+> weekly reports, errors, random information
 ### Portfolio
 > projects
 ### Elements
