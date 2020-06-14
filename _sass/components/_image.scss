@@ -49,13 +49,16 @@
 
 			img {
 				width: 100%;
+				
 			}
 		}
 
 		&.main {
 			display: block;
 			margin: (_size(element-margin) * 2) 0;
-			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
 
 			&:first-child {
 				margin-top: 0;
