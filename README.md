@@ -1,4 +1,4 @@
-# Personal Blog <a href = "http//:parkyo.github.io"><i>parkyo.github.io</i></a>
+# Personal Blog <a href = "https://parkyo.github.io/"><i>parkyo.github.io</i></a>
 <h3>Record my journey as a developer</h3>
 
 ## INDEX
