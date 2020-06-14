@@ -51,17 +51,7 @@
           </article>
 					<!-- Post -->
 					<section class="posts">
-							<!-- <article>
-									<header>
-										<span class="date">31 Oct 2017</span>
-										<h2><a href="/blog/welcome-to-massively-the-jekyll-theme-copy/">Welcome to Massively: The Jekyll Theme!</a></h2>
-									</header>
-									<a href="/blog/welcome-to-massively-the-jekyll-theme-copy/" class="image fit"><img src="/images/pic02.jpg" alt="" /></a>
-									<p>Huge thanks to HTML5 UP for making this awesome template! Let's see what it can do</p>
-									<ul class="actions">
-										<li><a href="/blog/welcome-to-massively-the-jekyll-theme-copy/" class="button">Full Story</a></li>
-									</ul>
-								</article> -->
+							
 								
 						{% for post in site.categories.blog %}
 						{% assign mod3 = forloop.index | modulo: 3 %}
@@ -71,19 +61,19 @@
 									<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
 								</header>
 								<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-								<p>{{ post.excerpt }}</p>
-								<ul class="actions">
+								<!-- <p>{{ post.excerpt }}</p> -->
+								<!-- <ul class="actions">
 									<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-								</ul>
+								</ul> -->
 							</article>
-							{% if mod3 == 0 %}
+							<!-- {% if mod3 == 0 %}
 							<article>
 								<header>
 									<h2><a href="#">Sponsored</a></h2>
 								</header>
 
 							</article>
-							{% endif %}
+							{% endif %} -->
 						{% endfor %}
 
 					</section>

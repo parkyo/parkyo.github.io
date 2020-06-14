@@ -55,7 +55,12 @@ sitemap:
 									<h2><a href="#">Introduction</a></h2>
 									<p>Hi, I am a software engineer</p>
 								</header>
-								<a href="#" class="image main"><img src="{{ "/images/profilepic.JPG" | absolute_url }}" alt="" /></a>
+								<p><span class = "image left"><img src="/images/profilepic.JPG" alt="" width = 70% height = YYY /></span>
+									I am <i>Younse Park</i>, a senior at <strong>University of Michigan</strong> in Ann Arbor studying Computer Science.
+									The dogs that welcomed you to my blog are <i>Samsoon</i> and <i>Bokdol</i>. 	
+									<br>I am recording all my journey as a developer in this blog including projects and errors I encounter.
+								</p>
+								
                 <!-- <p>Regardless of your website's function, the homepage is what brings the user in.
                   If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter some visitors.</p>
                 <p>Your homepage must clearly describe what your site is about.
@@ -69,7 +74,7 @@ sitemap:
 
 						<!-- Posts -->
 							<section class="posts">
-                {% for post in site.posts limit:3 %}
+                {% for post in site.categories.portfolio limit:3 %}
                 {% assign mod3 = forloop.index | modulo: 3 %}
   								<article>
   									<header>
@@ -77,16 +82,16 @@ sitemap:
   										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
   									</header>
   									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-  									<p>{{ post.excerpt }}</p>
-  									<ul class="actions">
+  									<!-- <p>{{ post.excerpt }}</p> -->
+  									<!-- <ul class="actions">
   										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>
-  									</ul>
+  									</ul> -->
   								</article>
                   {% if mod3 == 0 %}
                   <article>
-  									<header>
+  									<!-- <header>
   										<h2><a href="#">Sponsored</a></h2>
-  									</header>
+  									</header> -->
 
   								</article>
                   {% endif %}
@@ -95,11 +100,11 @@ sitemap:
 							</section>
 
 						<!-- Footer -->
-							<footer>
+							<!-- <footer>
                 <ul class="actions">
                   <li><a href="{{ "/blog/" | absolute_url }}" class="button">Our Blog</a></li>
                 </ul>
-							</footer>
+							</footer> -->
 
 					</div>
 

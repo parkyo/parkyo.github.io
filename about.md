@@ -8,7 +8,7 @@ sitemap:
     changefreq: weekly
 ---
 ## About Me
-### Resume
+<!-- ### Resume -->
 <!-- <span class="image center"><object data="/images/resume.pdf" width = "600" height = "800" type = 'application/pdf' /></span> -->
 
 ### Content is Imortant
@@ -18,6 +18,6 @@ sitemap:
   </p>
 </div>
 
-<span class="image left"><img src="{{ "/images/r.jpg" | absolute_url }}" alt="" /></span>
+<!-- <span class="image left"><img src= "/images/r.jpg" alt="" width = 50 height = 50/></span> -->
 
 this is the last paragraph
