@@ -1,0 +1,20 @@
+---
+layout: post
+category: portfolio
+title:  "FDTD"
+date:   2020-06-13
+excerpt: "FDTD portfolio"
+image: "/images/gist.jpg"
+---
+<a href = "https://em.gist.ac.kr/"> Lab website</a>
+## Testing Topic
+hello
+
+## Test Feature
+### testing auto format
+test changing front matter
+```
+hihihi
+```
+### Formspring integration
+I am testing format ```format test``` file!
