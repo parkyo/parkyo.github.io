@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T20:47:30+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T20:50:01+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
 &lt;li&gt;
 Blog Set-Up
 
@@ -21,7 +21,39 @@ test changing front matter
 hihihi
 ```
 ### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry><entry><title type="html">testing page</title><link href="https://parkyo.github.io/blog/testing/" rel="alternate" type="text/html" title="testing page" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/testing</id><content type="html" xml:base="https://parkyo.github.io/blog/testing/">## Testing Topic
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/blog/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/FDTD</id><content type="html" xml:base="https://parkyo.github.io/blog/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
+## Testing Topic
+hello
+
+## Test Feature
+### testing auto format
+test changing front matter
+```
+hihihi
+```
+### Formspring integration
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/blog/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/blog/web-design-basics/">&lt;p&gt;#Javscript, HTML, CSS&lt;/p&gt;
+&lt;li&gt;
+HTML : provide the basic structure of sites
+CSS : control presentation, formatting, and layout
+Javscript : control the behavior of different elements
+&lt;/li&gt;
+
+&lt;p&gt;##Javascript
+It is a logic-based programming language that can be used to 
+provide interactive contents in response to user’s actions
+##HTML&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;HyperTextMarkup Language
+&lt;i&gt;Markup Language&lt;/i&gt; which use stags to identify different types of content and the purposes they each serve to the webpage
+```&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt; this is header &lt;h1&gt;
+```
+##CSS
+&amp;gt; Cascading Style Sheets
+It gives the style to HTML elements
+&lt;/h1&gt;&lt;/h1&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry><entry><title type="html">testing page</title><link href="https://parkyo.github.io/blog/testing/" rel="alternate" type="text/html" title="testing page" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/testing</id><content type="html" xml:base="https://parkyo.github.io/blog/testing/">## Testing Topic
 hello
 
 ## Test Feature
