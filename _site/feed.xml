@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T23:34:52+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-15T00:33:20+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django</title><link href="https://parkyo.github.io/blog/set-up-django/" rel="alternate" type="text/html" title="Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/blog/set-up-django/"># Helloworld Web App
+&gt; django2.1
+
+I have created Helloworld web app that includes todo list to practice basic web app development
+
+## Django
+&lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
+&lt;img src = &quot;django.png&quot; width = 70%/&gt;
+
+### Set-Up Django for MacOS
+Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;index=1&quot;&gt;reference&lt;/a&gt;)
+#### 1. Install Python
+&lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS
+&lt;pre&gt;&lt;code&gt;$brew install python3&lt;/code&gt;&lt;/pre&gt;
+#### 2. Install Pipenv
+&lt;strong&gt;Pipenv&lt;/strong&gt; is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use &lt;code&gt;pip&lt;/code&gt; and &lt;code&gt;virtualenv&lt;/code&gt; separately. (&lt;a href = &quot;https://www.geeksforgeeks.org/python-virtual-environment/&quot;&gt; GeeksForGeeks &lt;/a&gt;)
+&lt;pre&gt;&lt;code&gt;$pip3 install pipenv&lt;/code&gt;&lt;/pre&gt;
+&gt; &lt;strong&gt;pip3&lt;/strong&gt; is automatically installed by Homebrew. Pip3 is another package manager that includes &lt;code&gt;pipenv&lt;/code&gt;
+#### 3. Move to a directory and create a folder for the new project
+&lt;pre&gt;&lt;code&gt;$mkdir helloworld_webapp
+$cd helloworld_webapp
+&lt;/code&gt;&lt;/pre&gt;
+#### 4. Install django with pipenv
+Pipenv creates a virtual environment &lt;i&gt;django&lt;/i&gt; of 2.1 version speicifically for this project.
+&lt;pre&gt;&lt;code&gt;$pipenv instal django==2.1&lt;/code&gt;&lt;/pre&gt;
+#### 5. Activate the virtual environment
+&lt;pre&gt;&lt;code&gt;$pipenv shell&lt;/code&gt;&lt;/pre&gt;
+This allows you to use the specific version of django that you installed for your project.
+#### 6. Create a new project 
+&lt;pre&gt;&lt;code&gt;$django-admin startproject helloworld_project .&lt;/pre&gt;&lt;/code&gt;
+This starts a new project, helloworld_project in the current directory.
+&lt;p&gt;
+  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!
+&lt;/p&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/djang.png" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
 &lt;div class = &quot;box&quot;&gt;
 &lt;li&gt;Blog Set-Up&lt;/li&gt;
 &lt;li&gt;Coding Test Interview Review&lt;/li&gt;
@@ -10,7 +43,24 @@
 &lt;li&gt;Blog Set-up&lt;/li&gt;
 &lt;li&gt;Coding Test Problem&lt;/li&gt;
 &lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
-&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/blog/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/travelymap</id><content type="html" xml:base="https://parkyo.github.io/blog/travelymap/">## Testing Topic
+&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">python_vs_python3</title><link href="https://parkyo.github.io/blog/terminal-command/" rel="alternate" type="text/html" title="python_vs_python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/blog/terminal-command/"># Python vs Python3
+I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
+it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
+&lt;br&gt;
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
+So I installed newest python by Homebrew
+&lt;pre&gt;&lt;code&gt;
+brew install python
+&lt;/code&gt;&lt;/pre&gt; 
+set symlink from python to python3
+&lt;pre&gt;&lt;code&gt;
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+&lt;/code&gt;&lt;/pre&gt; 
+assigned the command 'python' to 'python3'
+&lt;pre&gt;&lt;code&gt;
+alias python=python3
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpeg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/blog/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/travelymap</id><content type="html" xml:base="https://parkyo.github.io/blog/travelymap/">## Testing Topic
 hello
 
 ## Test Feature
@@ -49,33 +99,4 @@ provide interactive contents in response to user's actions
 ```
 ##CSS
 &gt; Cascading Style Sheets
-It gives the style to HTML elements</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry><entry><title type="html">testing page</title><link href="https://parkyo.github.io/blog/testing/" rel="alternate" type="text/html" title="testing page" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/testing</id><content type="html" xml:base="https://parkyo.github.io/blog/testing/">## Testing Topic
-hello
-
-## Test Feature
-### testing auto format
-test changing front matter
-```
-hihihi
-```
-### Formspring integration
-I am testing format ```format test``` file!</content><category term="blog" /><summary type="html">testing how post works</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/pic02.jpg" /></entry><entry><title type="html">Welcome to Massively: The Jekyll Theme!</title><link href="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/" rel="alternate" type="text/html" title="Welcome to Massively: The Jekyll Theme!" /><published>2017-10-31T00:00:00+09:00</published><updated>2017-10-31T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme copy</id><content type="html" xml:base="https://parkyo.github.io/blog/welcome-to-massively-the-jekyll-theme-copy/">## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
-
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
-
-Open a terminal window or a command line and ```cd``` to that location.
-
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
-
-## Features
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
-```
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
-```
-### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!</content><category term="blog" /><summary type="html">Huge thanks to HTML5 UP for making this awesome template! Let's see what it can do</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/pic02.jpg" /></entry></feed>
+It gives the style to HTML elements</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry></feed>

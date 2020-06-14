@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Welcome to Massively: The Jekyll Theme!</title>
+<title>python_vs_python3</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,31 +62,29 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">31 Oct 2017</span>
-      				<h1>Welcome to Massively: The Jekyll Theme!</h1>
-      				<p>Huge thanks to HTML5 UP for making this awesome template! Let's see what it can do</p>
+      				<span class="date">14 Jun 2020</span>
+      				<h1>python_vs_python3</h1>
+      				<p></p>
       			</header>
-      			<div ><img class = "image main" src="/images/pic02.jpg" alt="" width = 30%></div>
-      			<p><h2 id="how-to-use-this-theme">How to Use This Theme</h2>
-<p>Just go ahead and read up on <a href="https://jekyllrb.com/">how to install Jekyll</a>. It’s not too hard I promise!</p>
-
-<p>Download this repository <a href="https://github.com/iwiedenm/jekyll-theme-massively">here</a> and save it to any folder you want.</p>
-
-<p>Open a terminal window or a command line and <code class="highlighter-rouge">cd</code> to that location.</p>
-
-<p>Then enter: <code class="highlighter-rouge">bundle exec jekyll serve</code>. You can now access your new Jekyll site from <a href="http://127.0.0.1:4000/">http://127.0.0.1:4000/</a>. Have fun exploring your new site!</p>
-
-<h2 id="features">Features</h2>
-<h3 id="auto-generating-sitemap">Auto-Generating Sitemap</h3>
-<p>The sitemap is auto generated! Just simply change the front matter of each site. It looks like so…</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
+      			<div ><img class = "image main" src="/images/terminal.jpeg" alt="" width = 30%></div>
+      			<p><h1 id="python-vs-python3">Python vs Python3</h1>
+<p>I was confused because when I type <code>python --version</code> in terminal, 
+it returned <code>Python 2.7.10</code> but I used <code>python3</code> for django. 
+<br />
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to <code>Python 2.7.10</code>, which is why when I had to type <code>python3</code> instead of <code>python</code> in order to use the latest Python. 
+So I installed newest python by Homebrew</p>
+<pre><code>
+brew install python
 </code></pre>
-</div>
-<h3 id="formspring-integration">Formspring integration</h3>
-<p>The contact form below each page on the footer actually collects information! Just change your email address in the <code class="highlighter-rouge">_config.yml</code> file!</p>
+<p>set symlink from python to python3</p>
+<pre><code>
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+</code></pre>
+<p>assigned the command ‘python’ to ‘python3’</p>
+<pre><code>
+alias python=python3
+</code></pre>
 </p>
       		</section>
 
@@ -99,8 +97,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/blog/welcome-to-massively-the-jekyll-theme-copy/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/blog/welcome-to-massively-the-jekyll-theme-copy/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/blog/terminal-command/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/blog/terminal-command/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title:  "python_vs_python3"
-date:   2020-06-15
+date:   2020-06-14
 excerpt: ""
 image: "/images/terminal.jpeg"
 ---
