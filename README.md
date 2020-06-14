@@ -1,5 +1,5 @@
 # Personal Blog <i>parkyo.github.io</i>
-> Record my journey as a developer
+<h3>Record my journey as a developer</h3>
 
 ## INDEX
 ### Home
