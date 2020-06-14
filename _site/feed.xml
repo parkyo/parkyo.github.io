@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T21:31:52+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-14T23:34:24+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
 &lt;div class = &quot;box&quot;&gt;
 &lt;li&gt;Blog Set-Up&lt;/li&gt;
 &lt;li&gt;Coding Test Interview Review&lt;/li&gt;
@@ -10,7 +10,24 @@
 &lt;li&gt;Blog Set-up&lt;/li&gt;
 &lt;li&gt;Coding Test Problem&lt;/li&gt;
 &lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
-&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/blog/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/travelymap</id><content type="html" xml:base="https://parkyo.github.io/blog/travelymap/">## Testing Topic
+&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">python_vs_python3</title><link href="https://parkyo.github.io/blog/terminal-command/" rel="alternate" type="text/html" title="python_vs_python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/blog/terminal-command/">&lt;h1 id=&quot;python-vs-python3&quot;&gt;Python vs Python3&lt;/h1&gt;
+&lt;p&gt;I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
+it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
+&lt;br /&gt;
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
+So I installed newest python by Homebrew&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+brew install python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;set symlink from python to python3&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;assigned the command ‘python’ to ‘python3’&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+alias python=python3
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpeg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/blog/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/travelymap</id><content type="html" xml:base="https://parkyo.github.io/blog/travelymap/">## Testing Topic
 hello
 
 ## Test Feature
