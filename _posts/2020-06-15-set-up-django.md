@@ -1,16 +1,13 @@
 ---
 layout: post
 category: blog
-title:  "Django"
+title:  "How to start Django"
 date:   2020-06-15
 excerpt: ""
-image: "/images/djang.png"
+image: "/images/django.png"
 ---
 
-# Helloworld Web App
-> django2.1
-
-I have created Helloworld web app that includes todo list to practice basic web app development
+I have created <a href = "https://github.com/parkyo/helloworld_webapp"><strong>Helloworld web app</strong></a> that includes todo list to practice basic web app development
 
 ## Django
 <strong>Django</strong> is a server-side Python web framework. 
@@ -24,7 +21,7 @@ Django Development Environment includes Python scripts and a simple development 
 #### 2. Install Pipenv
 <strong>Pipenv</strong> is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use <code>pip</code> and <code>virtualenv</code> separately. (<a href = "https://www.geeksforgeeks.org/python-virtual-environment/"> GeeksForGeeks </a>)
 <pre><code>$pip3 install pipenv</code></pre>
-> <strong>pip3</strong> is automatically installed by Homebrew. Pip3 is another package manager that includes <code>pipenv</code>
+<blockquote> <strong>pip3</strong> is automatically installed by Homebrew. Pip3 is another package manager that includes <code>pipenv</code></blockquote>
 #### 3. Move to a directory and create a folder for the new project
 <pre><code>$mkdir helloworld_webapp
 $cd helloworld_webapp
@@ -36,8 +33,9 @@ Pipenv creates a virtual environment <i>django</i> of 2.1 version speicifically 
 <pre><code>$pipenv shell</code></pre>
 This allows you to use the specific version of django that you installed for your project.
 #### 6. Create a new project 
-<pre><code>$django-admin startproject helloworld_project .</pre></code>
+<pre><code>$django-admin startproject helloworld_project .</code></pre>
+
 This starts a new project, helloworld_project in the current directory.
-<p>
+
+
   Now you can run django server <code>$python manage.py runserver</code> and open the local host to view your project on web browser!
-</p>

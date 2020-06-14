@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Django</title>
+<title>How to start Django</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -63,16 +63,11 @@
           <section class="post">
     				<header class="major">
       				<span class="date">15 Jun 2020</span>
-      				<h1>Django</h1>
+      				<h1>How to start Django</h1>
       				<p></p>
       			</header>
-      			<div ><img class = "image main" src="/images/djang.png" alt="" width = 30%></div>
-      			<p><h1 id="helloworld-web-app">Helloworld Web App</h1>
-<blockquote>
-  <p>django2.1</p>
-</blockquote>
-
-<p>I have created Helloworld web app that includes todo list to practice basic web app development</p>
+      			<div ><img class = "image main" src="/images/django.png" alt="" width = 30%></div>
+      			<p><p>I have created <a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld web app</strong></a> that includes todo list to practice basic web app development</p>
 
 <h2 id="django">Django</h2>
 <p><strong>Django</strong> is a server-side Python web framework. 
@@ -86,10 +81,8 @@
 <h4 id="2-install-pipenv">2. Install Pipenv</h4>
 <p><strong>Pipenv</strong> is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use <code>pip</code> and <code>virtualenv</code> separately. (<a href="https://www.geeksforgeeks.org/python-virtual-environment/"> GeeksForGeeks </a>)</p>
 <pre><code>$pip3 install pipenv</code></pre>
-<blockquote>
-  <p><strong>pip3</strong> is automatically installed by Homebrew. Pip3 is another package manager that includes <code>pipenv</code></p>
-  <h4 id="3-move-to-a-directory-and-create-a-folder-for-the-new-project">3. Move to a directory and create a folder for the new project</h4>
-</blockquote>
+<blockquote> <strong>pip3</strong> is automatically installed by Homebrew. Pip3 is another package manager that includes <code>pipenv</code></blockquote>
+<h4 id="3-move-to-a-directory-and-create-a-folder-for-the-new-project">3. Move to a directory and create a folder for the new project</h4>
 <pre><code>$mkdir helloworld_webapp
 $cd helloworld_webapp
 </code></pre>
@@ -100,12 +93,11 @@ $cd helloworld_webapp
 <pre><code>$pipenv shell</code></pre>
 <p>This allows you to use the specific version of django that you installed for your project.</p>
 <h4 id="6-create-a-new-project">6. Create a new project</h4>
-<pre><code>$django-admin startproject helloworld_project .&lt;/pre&gt;</code>
-This starts a new project, helloworld_project in the current directory.
-<p>
-  Now you can run django server <code>$python manage.py runserver</code> and open the local host to view your project on web browser!
-</p>
-</pre>
+<pre><code>$django-admin startproject helloworld_project .</code></pre>
+
+<p>This starts a new project, helloworld_project in the current directory.</p>
+
+<p>Now you can run django server <code>$python manage.py runserver</code> and open the local host to view your project on web browser!</p>
 </p>
       		</section>
 
