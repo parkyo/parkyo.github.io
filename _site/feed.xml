@@ -1,48 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-15T00:47:39+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/blog/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/blog/set-up-django/">&lt;p&gt;I have created &lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development&lt;/p&gt;
-
-&lt;h2 id=&quot;django&quot;&gt;Django&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
-&amp;lt;img src = “django.png” width = 70%/&amp;gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;set-up-django-for-macos&quot;&gt;Set-Up Django for MacOS&lt;/h3&gt;
-&lt;p&gt;Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;amp;index=1&quot;&gt;reference&lt;/a&gt;)&lt;/p&gt;
-&lt;h4 id=&quot;1-install-python&quot;&gt;1. Install Python&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$brew install python3&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;2-install-pipenv&quot;&gt;2. Install Pipenv&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Pipenv&lt;/strong&gt; is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use &lt;code&gt;pip&lt;/code&gt; and &lt;code&gt;virtualenv&lt;/code&gt; separately. (&lt;a href=&quot;https://www.geeksforgeeks.org/python-virtual-environment/&quot;&gt; GeeksForGeeks &lt;/a&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$pip3 install pipenv&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt; &lt;strong&gt;pip3&lt;/strong&gt; is automatically installed by Homebrew. Pip3 is another package manager that includes &lt;code&gt;pipenv&lt;/code&gt;&lt;/blockquote&gt;
-&lt;h4 id=&quot;3-move-to-a-directory-and-create-a-folder-for-the-new-project&quot;&gt;3. Move to a directory and create a folder for the new project&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$mkdir helloworld_webapp
-$cd helloworld_webapp
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;4-install-django-with-pipenv&quot;&gt;4. Install django with pipenv&lt;/h4&gt;
-&lt;p&gt;Pipenv creates a virtual environment &lt;i&gt;django&lt;/i&gt; of 2.1 version speicifically for this project.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$pipenv instal django==2.1&lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&quot;5-activate-the-virtual-environment&quot;&gt;5. Activate the virtual environment&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$pipenv shell&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This allows you to use the specific version of django that you installed for your project.&lt;/p&gt;
-&lt;h4 id=&quot;6-create-a-new-project&quot;&gt;6. Create a new project&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;$django-admin startproject helloworld_project .&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This starts a new project, helloworld_project in the current directory.&lt;/p&gt;
-
-&lt;p&gt;Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!&lt;/p&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/blog/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/blog/June_3rd_week/">### 6/13
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-Up&lt;/li&gt;
-&lt;li&gt;Coding Test Interview Review&lt;/li&gt;
-&lt;li&gt;Finish Todo list webapp&lt;/li&gt;
-&lt;/div&gt;
-
-### 6/14
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-up&lt;/li&gt;
-&lt;li&gt;Coding Test Problem&lt;/li&gt;
-&lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
-&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">python_vs_python3</title><link href="https://parkyo.github.io/blog/terminal-command/" rel="alternate" type="text/html" title="python_vs_python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/blog/terminal-command/"># Python vs Python3
-I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
-it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-16T14:50:34+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Check if a string is a substring of another</title><link href="https://parkyo.github.io/categories/Substring_prob1/" rel="alternate" type="text/html" title="Check if a string is a substring of another" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Substring_prob1</id><content type="html" xml:base="https://parkyo.github.io/categories/Substring_prob1/">## Problem
+Check if a string is a substring of another string. If true, return the index of the substring's first letter in another string. Else, return -1.
 &lt;br&gt;
 After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
 And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
@@ -57,7 +14,67 @@ ls -l -f /usr/local/bin/python3 /usr/local/bin/python
 assigned the command 'python' to 'python3'
 &lt;pre&gt;&lt;code&gt;
 alias python=python3
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpeg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/blog/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/travelymap</id><content type="html" xml:base="https://parkyo.github.io/blog/travelymap/">## Testing Topic
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
+
+## Django
+&lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
+&lt;img src = &quot;django.png&quot; width = 70%/&gt;
+
+### Set-Up Django for MacOS
+Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;index=1&quot;&gt;reference&lt;/a&gt;)
+#### 1. Install Python
+&lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS
+&lt;pre&gt;&lt;code&gt;$brew install python3&lt;/code&gt;&lt;/pre&gt;
+#### 2. Install Pipenv
+&lt;strong&gt;Pipenv&lt;/strong&gt; is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use &lt;code&gt;pip&lt;/code&gt; and &lt;code&gt;virtualenv&lt;/code&gt; separately. (&lt;a href = &quot;https://www.geeksforgeeks.org/python-virtual-environment/&quot;&gt; GeeksForGeeks &lt;/a&gt;)
+&lt;pre&gt;&lt;code&gt;$pip3 install pipenv&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt; &lt;strong&gt;pip3&lt;/strong&gt; is automatically installed by Homebrew. Pip3 is another package manager that includes &lt;code&gt;pipenv&lt;/code&gt;&lt;/blockquote&gt;
+#### 3. Move to a directory and create a folder for the new project
+&lt;pre&gt;&lt;code&gt;$mkdir helloworld_webapp
+$cd helloworld_webapp
+&lt;/code&gt;&lt;/pre&gt;
+#### 4. Install django with pipenv
+Pipenv creates a virtual environment &lt;i&gt;django&lt;/i&gt; of 2.1 version speicifically for this project.
+&lt;pre&gt;&lt;code&gt;$pipenv instal django==2.1&lt;/code&gt;&lt;/pre&gt;
+#### 5. Activate the virtual environment
+&lt;pre&gt;&lt;code&gt;$pipenv shell&lt;/code&gt;&lt;/pre&gt;
+This allows you to use the specific version of django that you installed for your project.
+#### 6. Create a new project 
+&lt;pre&gt;&lt;code&gt;$django-admin startproject helloworld_project .&lt;/code&gt;&lt;/pre&gt;
+
+This starts a new project, helloworld_project in the current directory.
+
+
+  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">Python vs Python3</title><link href="https://parkyo.github.io/categories/terminal-command/" rel="alternate" type="text/html" title="Python vs Python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/categories/terminal-command/">&lt;!-- # Python vs Python3 --&gt;
+&lt;p&gt;I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
+it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
+&lt;br /&gt;
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
+So I installed newest python by Homebrew&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+brew install python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;set symlink from python to python3&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;assigned the command ‘python’ to ‘python3’&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+alias python=python3
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpg" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/categories/June_3rd_week/">### 6/13
+&lt;div class = &quot;box&quot;&gt;
+&lt;li&gt;Blog Set-Up&lt;/li&gt;
+&lt;li&gt;Coding Test Interview Review&lt;/li&gt;
+&lt;li&gt;Finish Todo list webapp&lt;/li&gt;
+&lt;/div&gt;
+
+### 6/14
+&lt;div class = &quot;box&quot;&gt;
+&lt;li&gt;Blog Set-up&lt;/li&gt;
+&lt;li&gt;Coding Test Problem&lt;/li&gt;
+&lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
+&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/categories/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/travelymap</id><content type="html" xml:base="https://parkyo.github.io/categories/travelymap/">## Testing Topic
 hello
 
 ## Test Feature
@@ -67,7 +84,7 @@ test changing front matter
 hihihi
 ```
 ### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/blog/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/FDTD</id><content type="html" xml:base="https://parkyo.github.io/blog/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/categories/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/FDTD</id><content type="html" xml:base="https://parkyo.github.io/categories/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
 ## Testing Topic
 hello
 
@@ -78,7 +95,7 @@ test changing front matter
 hihihi
 ```
 ### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/blog/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/blog/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/blog/web-design-basics/">#Javscript, HTML, CSS
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/categories/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/web-design-basics/">#Javscript, HTML, CSS
 &lt;li&gt;
 HTML : provide the basic structure of sites
 CSS : control presentation, formatting, and layout

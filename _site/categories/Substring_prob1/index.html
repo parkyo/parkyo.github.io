@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>web design basics</title>
+<title>Check if a string is a substring of another</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -43,7 +43,7 @@
             <ul class="links">
   <li class=""><a href="/">Home</a></li>
   <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
+  <li class=""><a href="/blog/">Blog</a></li>
   <li class=""><a href="/portfolio/">Portfolio</a></li>
   <li class=""><a href="/elements/">Elements Reference</a></li>
 </ul>
@@ -62,33 +62,28 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">12 Jun 2020</span>
-      				<h1>web design basics</h1>
+      				<span class="date">16 Jun 2020</span>
+      				<h1>Check if a string is a substring of another</h1>
       				<p></p>
       			</header>
-      			<div ><img class = "image main" src="/images/web-design-title.jpg" alt="" width = 30%></div>
-      			<p><p>#Javscript, HTML, CSS</p>
-<li>
-HTML : provide the basic structure of sites
-CSS : control presentation, formatting, and layout
-Javscript : control the behavior of different elements
-</li>
-
-<p>##Javascript
-It is a logic-based programming language that can be used to 
-provide interactive contents in response to user’s actions
-##HTML</p>
-<blockquote>
-  <p>HyperTextMarkup Language
-<i>Markup Language</i> which use stags to identify different types of content and the purposes they each serve to the webpage
-```</p>
-</blockquote>
-<h1> this is header <h1>
-```
-##CSS
-&gt; Cascading Style Sheets
-It gives the style to HTML elements
-</h1></h1>
+      			<div ><img class = "image main" src="" alt="" width = 30%></div>
+      			<p><h2 id="problem">Problem</h2>
+<p>Check if a string is a substring of another string. If true, return the index of the substring’s first letter in another string. Else, return -1.
+<br />
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to <code>Python 2.7.10</code>, which is why when I had to type <code>python3</code> instead of <code>python</code> in order to use the latest Python. 
+So I installed newest python by Homebrew</p>
+<pre><code>
+brew install python
+</code></pre>
+<p>set symlink from python to python3</p>
+<pre><code>
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+</code></pre>
+<p>assigned the command ‘python’ to ‘python3’</p>
+<pre><code>
+alias python=python3
+</code></pre>
 </p>
       		</section>
 
@@ -101,8 +96,8 @@ It gives the style to HTML elements
                */
 
               var disqus_config = function () {
-                  this.page.url = '/blog/web-design-basics/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/blog/web-design-basics/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/Substring_prob1/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/Substring_prob1/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

@@ -1,13 +1,13 @@
 ---
 layout: post
 category: blog
-title:  "python_vs_python3"
+title:  "Python vs Python3"
 date:   2020-06-14
 excerpt: ""
-image: "/images/terminal.jpeg"
+image: "/images/terminal.jpg"
 ---
 
-# Python vs Python3
+<!-- # Python vs Python3 -->
 I was confused because when I type <code>python --version</code> in terminal, 
 it returned <code>Python 2.7.10</code> but I used <code>python3</code> for django. 
 <br>
