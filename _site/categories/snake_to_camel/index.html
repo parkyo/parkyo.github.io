@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>web design basics</title>
+<title>Convert a snake case to a camel case</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,33 +62,57 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">14 Jun 2020</span>
-      				<h1>web design basics</h1>
+      				<span class="date">16 Jun 2020</span>
+      				<h1>Convert a snake case to a camel case</h1>
       				<p></p>
       			</header>
-      			<div ><img class = "image main" src="/images/web-design-title.jpg" alt="" width = 30%></div>
-      			<p><p>#Javscript, HTML, CSS</p>
-<li>
-HTML : provide the basic structure of sites
-CSS : control presentation, formatting, and layout
-Javscript : control the behavior of different elements
-</li>
+      			<div ><img class = "image main" src="" alt="" width = 30%></div>
+      			<p><h2 id="problem">Problem</h2>
+<p>Convert from snake-case to camel-case and return it.</p>
 
-<p>##Javascript
-It is a logic-based programming language that can be used to 
-provide interactive contents in response to user’s actions
-##HTML</p>
-<blockquote>
-  <p>HyperTextMarkup Language
-<i>Markup Language</i> which use stags to identify different types of content and the purposes they each serve to the webpage
-```</p>
-</blockquote>
-<h1> this is header <h1>
-```
-##CSS
-&gt; Cascading Style Sheets
-It gives the style to HTML elements
-</h1></h1>
+<h2 id="example">Example</h2>
+<pre><code><strong>input</strong>: 
+naver_webtoon
+NAVER_WEBTOON
+</code></pre>
+<pre><code><strong>output</strong>:
+naverWebtoon
+naverWebtoon</code></pre>
+
+<blockquote> written in C++</blockquote>
+
+<h2 id="solution-1">Solution 1</h2>
+<ol>
+  <li>loop through the snake case string</li>
+  <li>As iterationg, have a boolean ‘cap’ and update it if there is a underdash to convert the next letter to cap
+<br /><strong>Time Complexity = <i>O(n)</i></strong></li>
+</ol>
+
+<pre><code>
+<strong>
+string convertCamel(string snake){
+    string camel;
+    bool cap = false;
+    for(char c : snake){
+        if(!cap &amp;&amp; (int)c &lt; 91){</strong><i>//if the char is cap when it shouldn't be</i><strong>
+            camel.push_back(tolower(c)); 
+        }else if(c == '_'){</strong><i>//if there is an underdash, the next char should be capitalized</i><strong>
+            cap = true;
+        }else if(cap){</strong><i>//if there should be a cap char convert the char to cap if it is not. Else, just push it back</i><strong>
+            if((int)c &gt; 97){
+                camel.push_back(toupper(c));
+            }else{
+                camel.push_back(c);
+            }
+            cap = false;
+        }else{
+            camel.push_back(c);
+        }
+    }
+    return camel;
+}   
+</strong>
+</code></pre>
 </p>
       		</section>
 
@@ -101,8 +125,8 @@ It gives the style to HTML elements
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/web-design-basics/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/web-design-basics/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/snake_to_camel/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/snake_to_camel/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

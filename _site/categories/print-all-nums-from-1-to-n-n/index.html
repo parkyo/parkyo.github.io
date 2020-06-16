@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>web design basics</title>
+<title>Print all numbers from 1 to n*n</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,33 +62,64 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">14 Jun 2020</span>
-      				<h1>web design basics</h1>
+      				<span class="date">16 Jun 2020</span>
+      				<h1>Print all numbers from 1 to n*n</h1>
       				<p></p>
       			</header>
-      			<div ><img class = "image main" src="/images/web-design-title.jpg" alt="" width = 30%></div>
-      			<p><p>#Javscript, HTML, CSS</p>
-<li>
-HTML : provide the basic structure of sites
-CSS : control presentation, formatting, and layout
-Javscript : control the behavior of different elements
-</li>
+      			<div ><img class = "image main" src="" alt="" width = 30%></div>
+      			<p><h2 id="problem">Problem</h2>
+<p>Print all numbers from 1 to n^2 in ‘ㄹ’ shape</p>
 
-<p>##Javascript
-It is a logic-based programming language that can be used to 
-provide interactive contents in response to user’s actions
-##HTML</p>
-<blockquote>
-  <p>HyperTextMarkup Language
-<i>Markup Language</i> which use stags to identify different types of content and the purposes they each serve to the webpage
-```</p>
-</blockquote>
-<h1> this is header <h1>
-```
-##CSS
-&gt; Cascading Style Sheets
-It gives the style to HTML elements
-</h1></h1>
+<h2 id="example">Example</h2>
+<pre><code><strong>input</strong>: 
+4
+5
+</code></pre>
+<pre><code><strong>output</strong>:
+1 2 3 4
+8 7 6 5 
+9 10 11 12
+16 15 14 13
+
+1 2 3 4 5
+10 9 8 7 6
+11 12 13 14 15
+20 19 18 17 16
+21 22 23 24 25</code></pre>
+
+<blockquote> written in C++</blockquote>
+
+<h2 id="solution-1">Solution 1</h2>
+<p>Use <code>std::stack</code> to store every even number line
+<br /><strong>Time Complexity = <i>O(n)</i></strong></p>
+
+<pre><code>
+<strong>
+void printMultiples(int n){
+    stack<int> reverseList;
+    size_t line = 1;
+    for(size_t i = 1; i &lt;= n*n; ++i){
+        if (line %2 == 0){
+            reverseList.push((int)i);
+        }else{
+            cout &lt;&lt; i &lt;&lt; " ";
+        }
+        if (i%n == 0 &amp;&amp; line %2 == 1){
+            ++line;
+            cout &lt;&lt; "\n";
+        }
+        if (reverseList.size() == n){
+            for(size_t j = 0; j &lt; n; ++j){
+                cout &lt;&lt; reverseList.top() &lt;&lt; " ";
+                reverseList.pop();
+            }
+            cout &lt;&lt; "\n";
+        }
+    }
+}
+&lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</int></strong></code></pre>
 </p>
       		</section>
 
@@ -101,8 +132,8 @@ It gives the style to HTML elements
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/web-design-basics/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/web-design-basics/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/print-all-nums-from-1-to-n-n/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/print-all-nums-from-1-to-n-n/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

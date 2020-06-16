@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title:  "web design basics"
-date:   2020-06-12
+date:   2020-06-14
 excerpt: ""
 image: "/images/web-design-title.jpg"
 ---

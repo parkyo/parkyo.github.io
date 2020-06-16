@@ -31,12 +31,12 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/categories/:title/"
+    permalink: "/:category/:title/"
     layout: post
     author:
 
 # Jekyll
-permalink:          /categories/:title/
+permalink:          /:category/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:

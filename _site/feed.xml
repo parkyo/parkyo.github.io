@@ -1,20 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-16T14:50:34+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Check if a string is a substring of another</title><link href="https://parkyo.github.io/categories/Substring_prob1/" rel="alternate" type="text/html" title="Check if a string is a substring of another" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Substring_prob1</id><content type="html" xml:base="https://parkyo.github.io/categories/Substring_prob1/">## Problem
-Check if a string is a substring of another string. If true, return the index of the substring's first letter in another string. Else, return -1.
-&lt;br&gt;
-After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
-And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
-So I installed newest python by Homebrew
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-16T23:08:04+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">## Problem
+Convert from snake-case to camel-case and return it.
+
+## Example
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+naver_webtoon
+NAVER_WEBTOON
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+naverWebtoon
+naverWebtoon&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt; written in C++&lt;/blockquote&gt;
+
+## Solution 1
+1. loop through the snake case string
+2. As iterationg, have a boolean 'cap' and update it if there is a underdash to convert the next letter to cap
+&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+
 &lt;pre&gt;&lt;code&gt;
-brew install python
-&lt;/code&gt;&lt;/pre&gt; 
-set symlink from python to python3
+&lt;strong&gt;
+string convertCamel(string snake){
+    string camel;
+    bool cap = false;
+    for(char c : snake){
+        if(!cap &amp;&amp; (int)c &lt; 91){&lt;/strong&gt;&lt;i&gt;//if the char is cap when it shouldn't be&lt;/i&gt;&lt;strong&gt;
+            camel.push_back(tolower(c)); 
+        }else if(c == '_'){&lt;/strong&gt;&lt;i&gt;//if there is an underdash, the next char should be capitalized&lt;/i&gt;&lt;strong&gt;
+            cap = true;
+        }else if(cap){&lt;/strong&gt;&lt;i&gt;//if there should be a cap char convert the char to cap if it is not. Else, just push it back&lt;/i&gt;&lt;strong&gt;
+            if((int)c &gt; 97){
+                camel.push_back(toupper(c));
+            }else{
+                camel.push_back(c);
+            }
+            cap = false;
+        }else{
+            camel.push_back(c);
+        }
+    }
+    return camel;
+}   
+&lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Print all numbers from 1 to n*n</title><link href="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/" rel="alternate" type="text/html" title="Print all numbers from 1 to n*n" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/print-all-nums-from-1-to-n*n</id><content type="html" xml:base="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/">## Problem
+Print all numbers from 1 to n^2 in 'ㄹ' shape
+
+## Example
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+4
+5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+1 2 3 4
+8 7 6 5 
+9 10 11 12
+16 15 14 13
+
+1 2 3 4 5
+10 9 8 7 6
+11 12 13 14 15
+20 19 18 17 16
+21 22 23 24 25&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt; written in C++&lt;/blockquote&gt;
+
+## Solution 1
+Use &lt;code&gt;std::stack&lt;/code&gt; to store every even number line
+&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+
 &lt;pre&gt;&lt;code&gt;
-ls -l -f /usr/local/bin/python3 /usr/local/bin/python
-&lt;/code&gt;&lt;/pre&gt; 
-assigned the command 'python' to 'python3'
+&lt;strong&gt;
+void printMultiples(int n){
+    stack&lt;int&gt; reverseList;
+    size_t line = 1;
+    for(size_t i = 1; i &lt;= n*n; ++i){
+        if (line %2 == 0){
+            reverseList.push((int)i);
+        }else{
+            cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+        }
+        if (i%n == 0 &amp;&amp; line %2 == 1){
+            ++line;
+            cout &lt;&lt; &quot;\n&quot;;
+        }
+        if (reverseList.size() == n){
+            for(size_t j = 0; j &lt; n; ++j){
+                cout &lt;&lt; reverseList.top() &lt;&lt; &quot; &quot;;
+                reverseList.pop();
+            }
+            cout &lt;&lt; &quot;\n&quot;;
+        }
+    }
+}
+&lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Check if a string is a substring of another</title><link href="https://parkyo.github.io/categories/Substring_prob1/" rel="alternate" type="text/html" title="Check if a string is a substring of another" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Substring_prob1</id><content type="html" xml:base="https://parkyo.github.io/categories/Substring_prob1/">## Problem
+Check if a string is a substring of another string. If true, return the index of the substring's first letter in the other string. Else, return -1.
+
+## Example
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+abcde cd
+abcde cda
+abcd de
+abcbcde bc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+2
+-1
+-1
+1&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt; written in C++&lt;/blockquote&gt;
+
+## Solution 1
+1. loop through the string &lt;strong&gt;a&lt;/strong&gt;
+2. As iterating, check if the current char matches any char of the string &lt;strong&gt;b&lt;/strong&gt;.
+3. If they do, iterate through the string &lt;strong&gt;b&lt;/strong&gt; along with a to check if all the chars match
+&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+
 &lt;pre&gt;&lt;code&gt;
-alias python=python3
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
+&lt;strong&gt;int substring(string a, string b){
+    int result = -1; //result to return
+    size_t b_ind = 0; //index to iterate through b
+    for(size_t i = 0; i &lt; a.size(); ++i){
+        if(b[b_ind] == a[i]){ &lt;/strong&gt;&lt;i&gt;//if the first char of b matches the char in a&lt;/i&gt;&lt;strong&gt;
+        if (b_ind == 0){ &lt;/strong&gt;&lt;i&gt;//if it is the first letter in b, save it in result&lt;/i&gt;&lt;strong&gt;
+                result = (int)i;
+            }
+            if (b_ind == b.size() -1){&lt;/strong&gt;&lt;i&gt;//if all chars in b are in a, return result&lt;/i&gt;&lt;strong&gt;
+                return result;
+            }
+            ++b_ind;&lt;/strong&gt;&lt;i&gt;//update b_ind to iterate&lt;/i&gt;&lt;strong&gt;
+        }else if (b_ind &gt; 0 &amp;&amp; a[i-1] == a[i]){ &lt;/strong&gt;&lt;i&gt;//if b_ind is at 1 and prev char in a equals to the current, cout it as found &lt;/i&gt;&lt;strong&gt;
+            if (b_ind == 1){                       
+                ++result;
+            }
+        }else{ &lt;/strong&gt;&lt;i&gt;//if the chars don't match, reset result and b_ind&lt;/i&gt;&lt;strong&gt;
+            if (result != -1){
+                result = -1;
+            }
+            b_ind = 0;
+        }
+
+    }
+
+    if (b_ind != b.size()){
+        result = -1;
+    }
+    return result;
+}   &lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+## Solution 2
+Use &lt;a href = &quot;http://www.cplusplus.com/reference/string/string/find/&quot;&gt;&lt;code&gt;std::string find(string str)&lt;/code&gt;&lt;/a&gt; 
+
+
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;
+int substring(string a, string b){
+    size_t found = a.find(b);
+    if (found == a.npos){
+        return -1;
+    }else{
+        return found;
+    }
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+
+## Follow-up
+What if the string a contains multiple words with space in between and b is a word? 
+### Example
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+&quot;geeks for geeks&quot; &quot;for&quot;
+&quot;geeks for geeks&quot; &quot;sfor&quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+6
+-1&lt;/code&gt;&lt;/pre&gt;
+
+Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">CSS errors</title><link href="https://parkyo.github.io/categories/CSS_errors/" rel="alternate" type="text/html" title="CSS errors" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/CSS_errors</id><content type="html" xml:base="https://parkyo.github.io/categories/CSS_errors/">&lt;blockquote&gt; All the issues I have encoutered with CSS &lt;/blockquote&gt;
+
+### object-fit
+&lt;strong&gt;IMPORTANT&lt;/strong&gt; : This can be only applied to &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;tag 
+&lt;li&gt;fill : stretch the image to fit&lt;/li&gt;
+&lt;li&gt;contain : keep the ratio&lt;/li&gt;
+&lt;li&gt;cover : crop the image&lt;/li&gt;
+&lt;li&gt;scale-down : scale down to fit the size&lt;/li&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/css.png" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
 
 ## Django
 &lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
@@ -45,57 +212,7 @@ This allows you to use the specific version of django that you installed for you
 This starts a new project, helloworld_project in the current directory.
 
 
-  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">Python vs Python3</title><link href="https://parkyo.github.io/categories/terminal-command/" rel="alternate" type="text/html" title="Python vs Python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/categories/terminal-command/">&lt;!-- # Python vs Python3 --&gt;
-&lt;p&gt;I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
-it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
-&lt;br /&gt;
-After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
-And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
-So I installed newest python by Homebrew&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-brew install python
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;set symlink from python to python3&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-ls -l -f /usr/local/bin/python3 /usr/local/bin/python
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;assigned the command ‘python’ to ‘python3’&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-alias python=python3
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpg" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/categories/June_3rd_week/">### 6/13
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-Up&lt;/li&gt;
-&lt;li&gt;Coding Test Interview Review&lt;/li&gt;
-&lt;li&gt;Finish Todo list webapp&lt;/li&gt;
-&lt;/div&gt;
-
-### 6/14
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-up&lt;/li&gt;
-&lt;li&gt;Coding Test Problem&lt;/li&gt;
-&lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
-&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/categories/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/travelymap</id><content type="html" xml:base="https://parkyo.github.io/categories/travelymap/">## Testing Topic
-hello
-
-## Test Feature
-### testing auto format
-test changing front matter
-```
-hihihi
-```
-### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/categories/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/FDTD</id><content type="html" xml:base="https://parkyo.github.io/categories/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
-## Testing Topic
-hello
-
-## Test Feature
-### testing auto format
-test changing front matter
-```
-hihihi
-```
-### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/categories/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-12T00:00:00+09:00</published><updated>2020-06-12T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/web-design-basics/">#Javscript, HTML, CSS
+  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/categories/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/web-design-basics/">#Javscript, HTML, CSS
 &lt;li&gt;
 HTML : provide the basic structure of sites
 CSS : control presentation, formatting, and layout
@@ -113,4 +230,54 @@ provide interactive contents in response to user's actions
 ```
 ##CSS
 &gt; Cascading Style Sheets
-It gives the style to HTML elements</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry></feed>
+It gives the style to HTML elements</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry><entry><title type="html">Python vs Python3</title><link href="https://parkyo.github.io/categories/terminal-command/" rel="alternate" type="text/html" title="Python vs Python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/categories/terminal-command/">&lt;!-- # Python vs Python3 --&gt;
+I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
+it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
+&lt;br&gt;
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
+So I installed newest python by Homebrew
+&lt;pre&gt;&lt;code&gt;
+brew install python
+&lt;/code&gt;&lt;/pre&gt; 
+set symlink from python to python3
+&lt;pre&gt;&lt;code&gt;
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+&lt;/code&gt;&lt;/pre&gt; 
+assigned the command 'python' to 'python3'
+&lt;pre&gt;&lt;code&gt;
+alias python=python3
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpg" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/categories/June_3rd_week/">### 6/13
+&lt;div class = &quot;box&quot;&gt;
+&lt;li&gt;Blog Set-Up&lt;/li&gt;
+&lt;li&gt;Coding Test Interview Review&lt;/li&gt;
+&lt;li&gt;Finish Todo list webapp&lt;/li&gt;
+&lt;/div&gt;
+
+### 6/14
+&lt;div class = &quot;box&quot;&gt;
+&lt;li&gt;Blog Set-up&lt;/li&gt;
+&lt;li&gt;Coding Test Problem&lt;/li&gt;
+&lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
+&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/categories/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/FDTD</id><content type="html" xml:base="https://parkyo.github.io/categories/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
+## Testing Topic
+hello
+
+## Test Feature
+### testing auto format
+test changing front matter
+```
+hihihi
+```
+### Formspring integration
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/categories/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/travelymap</id><content type="html" xml:base="https://parkyo.github.io/categories/travelymap/">## Testing Topic
+hello
+
+## Test Feature
+### testing auto format
+test changing front matter
+```
+hihihi
+```
+### Formspring integration
+I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry></feed>
