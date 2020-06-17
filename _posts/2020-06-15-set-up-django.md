@@ -26,12 +26,15 @@ Django Development Environment includes Python scripts and a simple development 
 <pre><code>$mkdir helloworld_webapp
 $cd helloworld_webapp
 </code></pre>
+
 #### 4. Install django with pipenv
 Pipenv creates a virtual environment <i>django</i> of 2.1 version speicifically for this project.
 <pre><code>$pipenv instal django==2.1</code></pre>
+
 #### 5. Activate the virtual environment
 <pre><code>$pipenv shell</code></pre>
 This allows you to use the specific version of django that you installed for your project.
+
 #### 6. Create a new project 
 <pre><code>$django-admin startproject helloworld_project .</code></pre>
 
