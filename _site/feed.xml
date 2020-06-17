@@ -1,4 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-16T23:08:04+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">## Problem
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-18T01:43:41+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts for TODO List</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts for TODO List" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;p&gt;&lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;make-todo-list&quot;&gt;Make Todo List&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;python manage.py COMMAND&lt;/code&gt; allows you to interact with django project&lt;/p&gt;
+
+&lt;h3 id=&quot;settingspy&quot;&gt;Settings.py&lt;/h3&gt;
+&lt;p&gt;When creating a new app within the project, the app’s name has to be added to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;urlspy&quot;&gt;urls.py&lt;/h3&gt;
+&lt;p&gt;Import new functions from {app_name}.views and add &lt;code&gt;path('{url}', {function})&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;viewspy&quot;&gt;views.py&lt;/h3&gt;
+&lt;p&gt;If you created a separate html for the app in templates directory, add &lt;code&gt;from django.shortcuts import render&lt;/code&gt;
+&lt;strong&gt;django.shortcuts&lt;/strong&gt; is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling.&lt;/p&gt;
+&lt;blockquote&gt;&lt;strong&gt;Control coupling&lt;/strong&gt; is one module controlling the flow of another by passing it information on what to do. &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;render(request, template_name, context=None, content_type=None, using=None)&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;strong&gt;render&lt;/strong&gt; is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
+
+#### required
+&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
+&lt;strong&gt;template_name&lt;/strong&gt;
+
+#### optional
+&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
+&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.
+&lt;blockquote&gt;&lt;strong&gt;MIME types&lt;/strong&gt;: is a media type that describes the nature and format of a document, file or assortment of bytes. &lt;code&gt;type/subtype&lt;/code&gt;&lt;/blockquote&gt;
+&lt;strong&gt;status&lt;/strong&gt;: status code for the response
+&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template
+
+&lt;code&gt;from django.http import HttpResponse, HttpResposneRedirect&lt;/code&gt;
+&lt;blockquote&gt;&lt;strong&gt;HttpRequest&lt;/strong&gt; objects that contain metadata are created automatically by Django&lt;/blockquote&gt;
+Request and response objects are used to pass state through the system.
+
+&lt;blockquote&gt;Page is requested -&amp;gt; &lt;strong&gt;HttpRequest&lt;/strong&gt; created with metadata about the request -&amp;gt; load view with &lt;strong&gt;HttpRequest&lt;/strong&gt; -&amp;gt; each returns &lt;strong&gt;HttpResponse&lt;/strong&gt; object&lt;/blockquote&gt;
+
+&lt;code&gt;return HttpResponse('{url}' or {&quot;{msg}&quot;})&lt;/code&gt;
+
+### settings.py
+&lt;pre&gt;&lt;code&gt;import os&lt;/code&gt;&lt;/pre&gt;
+Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &amp;gt; DIRS&lt;/code&gt; 
+
+In your live server environment, tell WSGI app what settings file to use
+&lt;blockquote&gt;WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python&lt;/blockquote&gt;
+
+&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/&quot;&gt;reference&lt;/a&gt;
+&lt;/blockquote&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">There have been so many unfamiliar terms I need to know about. 
+
+&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application
+
+&lt;strong&gt;Configuration&lt;/strong&gt; describes the arrangement of hardware and software components to make up the computer system. 
+
+&lt;strong&gt;Module&lt;/strong&gt; is a separate, interchangeable component.
+&lt;li&gt;encampsulate code and data to implmenet a particular functionality&lt;/li&gt;
+&lt;li&gt;has an interface to access its functionality in an uniform manner&lt;/li&gt;
+&lt;li&gt;easily pluggable with another module that expects its iterface&lt;/li&gt;
+&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">## Problem
 Convert from snake-case to camel-case and return it.
 
 ## Example
@@ -174,14 +231,7 @@ What if the string a contains multiple words with space in between and b is a wo
 6
 -1&lt;/code&gt;&lt;/pre&gt;
 
-Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">CSS errors</title><link href="https://parkyo.github.io/categories/CSS_errors/" rel="alternate" type="text/html" title="CSS errors" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/CSS_errors</id><content type="html" xml:base="https://parkyo.github.io/categories/CSS_errors/">&lt;blockquote&gt; All the issues I have encoutered with CSS &lt;/blockquote&gt;
-
-### object-fit
-&lt;strong&gt;IMPORTANT&lt;/strong&gt; : This can be only applied to &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;tag 
-&lt;li&gt;fill : stretch the image to fit&lt;/li&gt;
-&lt;li&gt;contain : keep the ratio&lt;/li&gt;
-&lt;li&gt;cover : crop the image&lt;/li&gt;
-&lt;li&gt;scale-down : scale down to fit the size&lt;/li&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/css.png" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
+Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
 
 ## Django
 &lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
@@ -190,6 +240,7 @@ Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.</content><cat
 ### Set-Up Django for MacOS
 Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;index=1&quot;&gt;reference&lt;/a&gt;)
 #### 1. Install Python
+&lt;blockquote&gt;python 3.8.2 &lt;/blockquote&gt;
 &lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS
 &lt;pre&gt;&lt;code&gt;$brew install python3&lt;/code&gt;&lt;/pre&gt;
 #### 2. Install Pipenv
@@ -212,72 +263,48 @@ This allows you to use the specific version of django that you installed for you
 This starts a new project, helloworld_project in the current directory.
 
 
-  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/categories/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/web-design-basics/">#Javscript, HTML, CSS
+  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/Coding-test-prep/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Coding-test-prep</id><content type="html" xml:base="https://parkyo.github.io/categories/Coding-test-prep/">I can almost say coding test is all you need to get a job as a junior software engineer because if you don't pass the coding test, you are not given a chance for an interview at all. 
+I have also experience many failures due to my lacking experience with coding test problems. 
+I have planned to solve at least one coding problem per day but it has not been easy. 
+Then, I thought let's give myself a moderate pressure to study coding problems. And that is participating coding competitions.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">Django Migrations</title><link href="https://parkyo.github.io/categories/Django-migrations/" rel="alternate" type="text/html" title="Django Migrations" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-migrations</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-migrations/">&lt;a href = &quot;https://realpython.com/django-migrations-a-primer/&quot;&gt; reference&lt;/a&gt;
+
+&lt;strong&gt;Django&lt;/strong&gt; is designed to work with a relational database managed in MySQL, SQLite.
+&lt;strong&gt;A relational database&lt;/strong&gt; organizes data in table composed of a fixed numbe of cols and infinite number of rows. Each column has a specific data type. A database schema describes these tables with their columns and datatypes. 
+Instead of working directly with SQL, Django provides an object-relational mapper which maps the relational database to the wrld of OOP. You write Django models in python that define database fields that correspond to the cols in their database tables. When you update your models, migrations in teh app update the database tables. 
+With &lt;strong&gt;django Migrations&lt;/strong&gt;, you can easily keep multiple instances of databases in sync with your models. 
+
+&lt;code&gt;makemigrations&lt;/code&gt; create individual migration files based on the changes in models
+&lt;code&gt;migrate&lt;/code&gt; apply and unapply those migrations made to database
+&lt;code&gt;sqlmigrate&lt;/code&gt; displays the SQL statements for a migration
+&lt;code&gt;showmigrations&lt;/code&gt; lists a project's migrations and their status
+
+### models.py
+&lt;span class = &quot;image center&quot;&gt;&lt;img src = &quot;/images/helloworld_models.png&quot;/&gt;&lt;/span&gt;
+
+### migrate.py
+&lt;span class = &quot;image center&quot;&gt;&lt;img src = &quot;/images/helloworld_migrate.png&quot;/&gt;&lt;/span&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django_migrations.jpg" /></entry><entry><title type="html">web design basics</title><link href="https://parkyo.github.io/categories/web-design-basics/" rel="alternate" type="text/html" title="web design basics" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/web-design-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/web-design-basics/"># Javscript &amp; HTML &amp; CSS
 &lt;li&gt;
 HTML : provide the basic structure of sites
 CSS : control presentation, formatting, and layout
 Javscript : control the behavior of different elements
 &lt;/li&gt;
 
-##Javascript
-It is a logic-based programming language that can be used to 
+
+## Javascript
+&gt; It is a logic-based programming language that can be used to 
 provide interactive contents in response to user's actions
-##HTML
+
+## HTML
 &gt; HyperTextMarkup Language
 &lt;i&gt;Markup Language&lt;/i&gt; which use stags to identify different types of content and the purposes they each serve to the webpage
-```
-&lt;h1&gt; this is header &lt;h1&gt;
-```
-##CSS
+
+## CSS
 &gt; Cascading Style Sheets
-It gives the style to HTML elements</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry><entry><title type="html">Python vs Python3</title><link href="https://parkyo.github.io/categories/terminal-command/" rel="alternate" type="text/html" title="Python vs Python3" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/terminal-command</id><content type="html" xml:base="https://parkyo.github.io/categories/terminal-command/">&lt;!-- # Python vs Python3 --&gt;
-I was confused because when I type &lt;code&gt;python --version&lt;/code&gt; in terminal, 
-it returned &lt;code&gt;Python 2.7.10&lt;/code&gt; but I used &lt;code&gt;python3&lt;/code&gt; for django. 
-&lt;br&gt;
-After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
-And the symbolic link for python on my computer was directed to &lt;code&gt;Python 2.7.10&lt;/code&gt;, which is why when I had to type &lt;code&gt;python3&lt;/code&gt; instead of &lt;code&gt;python&lt;/code&gt; in order to use the latest Python. 
-So I installed newest python by Homebrew
-&lt;pre&gt;&lt;code&gt;
-brew install python
-&lt;/code&gt;&lt;/pre&gt; 
-set symlink from python to python3
-&lt;pre&gt;&lt;code&gt;
-ls -l -f /usr/local/bin/python3 /usr/local/bin/python
-&lt;/code&gt;&lt;/pre&gt; 
-assigned the command 'python' to 'python3'
-&lt;pre&gt;&lt;code&gt;
-alias python=python3
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/terminal.jpg" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/June_3rd_week/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/June_3rd_week</id><content type="html" xml:base="https://parkyo.github.io/categories/June_3rd_week/">### 6/13
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-Up&lt;/li&gt;
-&lt;li&gt;Coding Test Interview Review&lt;/li&gt;
-&lt;li&gt;Finish Todo list webapp&lt;/li&gt;
-&lt;/div&gt;
+It gives the style to HTML elements
 
-### 6/14
-&lt;div class = &quot;box&quot;&gt;
-&lt;li&gt;Blog Set-up&lt;/li&gt;
-&lt;li&gt;Coding Test Problem&lt;/li&gt;
-&lt;li&gt;Write readme for helloworld web app&lt;/li&gt;
-&lt;/div&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry><entry><title type="html">FDTD</title><link href="https://parkyo.github.io/categories/FDTD/" rel="alternate" type="text/html" title="FDTD" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/FDTD</id><content type="html" xml:base="https://parkyo.github.io/categories/FDTD/">&lt;a href = &quot;https://em.gist.ac.kr/&quot;&gt; Lab website&lt;/a&gt;
-## Testing Topic
-hello
-
-## Test Feature
-### testing auto format
-test changing front matter
-```
-hihihi
-```
-### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">FDTD portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/gist.jpg" /></entry><entry><title type="html">travelymap</title><link href="https://parkyo.github.io/categories/travelymap/" rel="alternate" type="text/html" title="travelymap" /><published>2020-06-13T00:00:00+09:00</published><updated>2020-06-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/travelymap</id><content type="html" xml:base="https://parkyo.github.io/categories/travelymap/">## Testing Topic
-hello
-
-## Test Feature
-### testing auto format
-test changing front matter
-```
-hihihi
-```
-### Formspring integration
-I am testing format ```format test``` file!</content><category term="portfolio" /><summary type="html">travelymap portfolio</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/travelymap.png" /></entry></feed>
+### object-fit
+&lt;strong&gt;IMPORTANT&lt;/strong&gt; : This can be only applied to &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;tag 
+&lt;li&gt;fill : stretch the image to fit&lt;/li&gt;
+&lt;li&gt;contain : keep the ratio&lt;/li&gt;
+&lt;li&gt;cover : crop the image&lt;/li&gt;
+&lt;li&gt;scale-down : scale down to fit the size&lt;/li&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/web-design-title.jpg" /></entry></feed>

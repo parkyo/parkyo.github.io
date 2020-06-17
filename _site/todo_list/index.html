@@ -42,21 +42,6 @@
 				<!-- Nav -->
 					<nav id="nav">
 
-            <ul class="links">
-  <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
-  <li class=""><a href="/blog/">Blog</a></li>
-  <li class=""><a href="/portfolio/">Portfolio</a></li>
-  <li class=""><a href="/elements/">Elements Reference</a></li>
-</ul>
-
-<!-- <ul class="icons">
-  <li><a href="https://twitter.com/default" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
-  <li><a href="https://facebook.com/default" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
-  <li><a href="https://instagram.com/default" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
-  <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
-</ul> -->
-
 						
 					</nav>
 
@@ -65,17 +50,32 @@
 
 					<!-- list -->
 					<section>
-						<h2>TO DO LIST</h2>
-<section class = "to_do_list">
-        
-</section>
-						<div class = "field">
-								<input type= "item" placeholder="Add to the list"/>
-								<a class = "button"> Add </a>
-						</div>
+							<h2>TO DO LIST</h2>
+							<section class = "to_do_list">
+									<ul id = "cur_list">
+											<li>hi</li>
+									</ul>
+							</section>
+						<!-- <div class = "field">
+								<input type= "item" id = "newItem" placeholder="Add to the list"/>
+									<button class="add">Add</button>
+						</div> -->
 					</section>
-
-					</div>
+<!-- 
+					<script>
+						function addNewItem(){
+							var list = document.createElement("li");
+							var new_item = document.getElementById("newItem").nodeValue;
+							var t = document.createTextNode(new_item);
+							list.appendChild(t);
+							if (inputValue === '') {
+								alert("You must write something!");
+							} else {
+							document.getElementById("cur_list").appendChild(li);
+							}
+							document.getElementById("newItem").nodeVlaue = "";
+}
+					</script> -->
 
 				<!-- Footer -->
         <footer id="footer">

@@ -31,12 +31,12 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/:category/:title/"
+    permalink: "/categories/:title/"
     layout: post
     author:
 
 # Jekyll
-permalink:          /:category/:title/
+permalink:          /categories/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -58,7 +58,7 @@ gems:
   - jekyll-gist
   - jekyll-paginate
 
-paginate: 6
+paginate: 6 # maximum number of posts in one page
 paginate_path: "/blog/page:num/"
 
 jekyll-mentions:

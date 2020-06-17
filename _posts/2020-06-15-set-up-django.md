@@ -16,6 +16,7 @@ I have created <a href = "https://github.com/parkyo/helloworld_webapp"><strong>H
 ### Set-Up Django for MacOS
 Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (<a href="https://www.youtube.com/watch?v=UyQn0BhVqNU&list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&index=1">reference</a>)
 #### 1. Install Python
+<blockquote>python 3.8.2 </blockquote>
 <strong>Homebrew</strong> is an open-source software package manager that helps install different applications on MacOS
 <pre><code>$brew install python3</code></pre>
 #### 2. Install Pipenv

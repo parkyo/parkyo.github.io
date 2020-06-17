@@ -24,7 +24,6 @@
 				<!-- Nav -->
 					<nav id="nav">
 
-            {% include nav.html %}
 						
 					</nav>
 
@@ -33,14 +32,32 @@
 
 					<!-- list -->
 					<section>
-						{% include list.html %}
-						<div class = "field">
-								<input type= "item" placeholder="Add to the list"/>
-								<a class = "button"> Add </a>
-						</div>
+							<h2>TO DO LIST</h2>
+							<section class = "to_do_list">
+									<ul id = "cur_list">
+											<li>hi</li>
+									</ul>
+							</section>
+						<!-- <div class = "field">
+								<input type= "item" id = "newItem" placeholder="Add to the list"/>
+									<button class="add">Add</button>
+						</div> -->
 					</section>
-
-					</div>
+<!-- 
+					<script>
+						function addNewItem(){
+							var list = document.createElement("li");
+							var new_item = document.getElementById("newItem").nodeValue;
+							var t = document.createTextNode(new_item);
+							list.appendChild(t);
+							if (inputValue === '') {
+								alert("You must write something!");
+							} else {
+							document.getElementById("cur_list").appendChild(li);
+							}
+							document.getElementById("newItem").nodeVlaue = "";
+}
+					</script> -->
 
 				<!-- Footer -->
         {% include foot.html %}
