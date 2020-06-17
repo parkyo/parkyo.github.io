@@ -15,13 +15,16 @@ I have created <a href = "https://github.com/parkyo/helloworld_webapp"><strong>H
 
 ### Set-Up Django for MacOS
 Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (<a href="https://www.youtube.com/watch?v=UyQn0BhVqNU&list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&index=1">reference</a>)
+
 #### 1. Install Python
 <strong>Homebrew</strong> is an open-source software package manager that helps install different applications on MacOS
 <pre><code>$brew install python3</code></pre>
+
 #### 2. Install Pipenv
 <strong>Pipenv</strong> is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use <code>pip</code> and <code>virtualenv</code> separately. (<a href = "https://www.geeksforgeeks.org/python-virtual-environment/"> GeeksForGeeks </a>)
 <pre><code>$pip3 install pipenv</code></pre>
 <blockquote> <strong>pip3</strong> is automatically installed by Homebrew. Pip3 is another package manager that includes <code>pipenv</code></blockquote>
+
 #### 3. Move to a directory and create a folder for the new project
 <pre><code>$mkdir helloworld_webapp
 $cd helloworld_webapp
