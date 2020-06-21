@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Google Kick Start 2020 Round A - Allocation"
 date:   2020-06-19
-excerpt: ""
+tags: algorithm kick_start greedy
 image: ""
 ---
 

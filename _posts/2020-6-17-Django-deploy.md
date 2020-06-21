@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Django - Deploy"
 date:   2020-06-17
-excerpt: ""
+tags: django concepts
 image: ""
 ---
 

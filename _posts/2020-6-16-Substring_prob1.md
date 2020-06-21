@@ -3,6 +3,7 @@ layout: post
 category: blog
 title:  "Check if a string is a substring of another"
 date:   2020-06-16
+tags: algorithm string Naver_webtoons interview
 excerpt: ""
 image: ""
 ---

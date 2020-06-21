@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-20T02:33:55+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Allocation</title><link href="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Allocation" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-21T11:44:31+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Allocation</title><link href="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Allocation" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;There are N houses for sale. The i-th house costs Ai dollars to buy. You have a budget of B dollars to spend.
@@ -55,16 +55,16 @@ Case #3: 0&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(nlogn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;Think about greedy algorithm first&lt;/blockquote&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Plates</title><link href="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Plates" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kick-start-2020-A-plates</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/">&lt;a href = &quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d40bb&quot;&gt;LINK&lt;/a&gt;
+&lt;blockquote&gt;Think about greedy algorithm first&lt;/blockquote&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="greedy" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Plates</title><link href="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Plates" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kick-start-2020-A-plates</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d40bb&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
-## Problem
-Dr. Patel has N stacks of plates. Each stack contains K plates. Each plate has a positive beauty value, describing how beautiful it looks.
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Dr. Patel has N stacks of plates. Each stack contains K plates. Each plate has a positive beauty value, describing how beautiful it looks.&lt;/p&gt;
 
-Dr. Patel would like to take exactly P plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well.
+&lt;p&gt;Dr. Patel would like to take exactly P plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well.&lt;/p&gt;
 
-Help Dr. Patel pick the P plates that would maximize the total sum of beauty values.
+&lt;p&gt;Help Dr. Patel pick the P plates that would maximize the total sum of beauty values.&lt;/p&gt;
 
-## Example
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
 2
 2 4 5
@@ -82,48 +82,49 @@ Case #2: 180&lt;/code&gt;&lt;/pre&gt;
 These small mistakes always prevent me from getting scores even after making almost perfect solution.
 I think this comes from experience to detect what common errors can be in the solution or what specific formants are necessary for each competition.&lt;/blockquote&gt;
 
-## Solution
-Similar to &lt;strong&gt;0/1 Knapsack Problem&lt;/strong&gt; Bottom-up Approach
-1. Make two vectors to store values of all plates and to keep track of dynamic programming.
-2. When storing values, store accumulated values per stack
-3. dp[i][j] = max(dp[i-1][j-n] + values[i][n] where n from 0 to k)
-
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Similar to &lt;strong&gt;0/1 Knapsack Problem&lt;/strong&gt; Bottom-up Approach&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Make two vectors to store values of all plates and to keep track of dynamic programming.&lt;/li&gt;
+  &lt;li&gt;When storing values, store accumulated values per stack&lt;/li&gt;
+  &lt;li&gt;dp[i][j] = max(dp[i-1][j-n] + values[i][n] where n from 0 to k)&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;strong&gt;
 int main(){
     int tests, s, p, num;
-    cin &gt;&gt; tests;
-    for(size_t i = 0; i &lt; tests; ++i){
-        cin &gt;&gt; s &gt;&gt; p &gt;&gt; num;
+    cin &amp;gt;&amp;gt; tests;
+    for(size_t i = 0; i &amp;lt; tests; ++i){
+        cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; p &amp;gt;&amp;gt; num;
         vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; stacks(s, vector&amp;lt;int&amp;gt;(p+1));
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sol(s, vector&lt;&amp;lt;ntgt;(num+1));
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sol(s, vector&amp;lt;&amp;lt;ntgt;(num+1));
         int cur = 0;
-        for(size_t j = 0; j &lt; s; ++j){
-            for(size_t k = 1; k &lt; p+1; ++k){
-                cin &gt;&gt; cur;
+        for(size_t j = 0; j &amp;lt; s; ++j){
+            for(size_t k = 1; k &amp;lt; p+1; ++k){
+                cin &amp;gt;&amp;gt; cur;
                 stacks[j][k] = stacks[j][k-1] + cur;
             }
         }
         
-        for(size_t j = 0; j &lt; s; ++j){
-            for(size_t k = 1; k &lt; num+1; ++k){
+        for(size_t j = 0; j &amp;lt; s; ++j){
+            for(size_t k = 1; k &amp;lt; num+1; ++k){
                 if(j == 0){
-                    if(k &gt; p){
+                    if(k &amp;gt; p){
                         sol[j][k] = sol[j][k-1];
                     }else{
                         sol[j][k] = stacks[0][k];
                     }
                 }else{
                     int max = 0;
-                    for(size_t n = 0; n &lt;= k; ++n){
+                    for(size_t n = 0; n &amp;lt;= k; ++n){
                         int part = sol[j-1][k-n];
-                        if(n &lt;= p){
+                        if(n &amp;lt;= p){
                             part += stacks[j][n];
                         }else{
                             part += stacks[j][p];
                         }
-                            if(max &lt; part){
+                            if(max &amp;lt; part){
                                 max = part;
                             }
                     }
@@ -133,7 +134,7 @@ int main(){
             }
         }
         
-        cout &lt;&lt; &quot;Case #&quot; &lt;&lt; i+1 &lt;&lt; &quot;: &quot; &lt;&lt; sol[s-1][num] &lt;&lt; endl;
+        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; sol[s-1][num] &amp;lt;&amp;lt; endl;
     }
     return 0;
     
@@ -141,28 +142,26 @@ int main(){
    &lt;/strong&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;strong&gt;Time Complexity = &lt;i&gt;O(s*p*num)&lt;/i&gt;&lt;/strong&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts for TODO List</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts for TODO List" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts for TODO List</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts for TODO List" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;p&gt;&lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;make-todo-list&quot;&gt;Make Todo List&lt;/h2&gt;
 
-## Make Todo List
+&lt;p&gt;&lt;code&gt;python manage.py COMMAND&lt;/code&gt; allows you to interact with django project&lt;/p&gt;
 
-&lt;code&gt;python manage.py COMMAND&lt;/code&gt; allows you to interact with django project
+&lt;h3 id=&quot;settingspy&quot;&gt;Settings.py&lt;/h3&gt;
+&lt;p&gt;When creating a new app within the project, the app’s name has to be added to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/p&gt;
 
-### Settings.py
-When creating a new app within the project, the app's name has to be added to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;
+&lt;h3 id=&quot;urlspy&quot;&gt;urls.py&lt;/h3&gt;
+&lt;p&gt;Import new functions from {app_name}.views and add &lt;code&gt;path('{url}', {function})&lt;/code&gt;&lt;/p&gt;
 
-### urls.py
-Import new functions from {app_name}.views and add &lt;code&gt;path('{url}', {function})&lt;/code&gt;
+&lt;h3 id=&quot;viewspy&quot;&gt;views.py&lt;/h3&gt;
+&lt;p&gt;If you created a separate html for the app in templates directory, add &lt;code&gt;from django.shortcuts import render&lt;/code&gt;
+&lt;strong&gt;django.shortcuts&lt;/strong&gt; is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling.&lt;/p&gt;
+&lt;blockquote&gt;&lt;strong&gt;Control coupling&lt;/strong&gt; is one module controlling the flow of another by passing it information on what to do. &lt;/blockquote&gt;
 
-### views.py
-If you created a separate html for the app in templates directory, add &lt;code&gt;from django.shortcuts import render&lt;/code&gt;
-&lt;strong&gt;django.shortcuts&lt;/strong&gt; is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling. 
-&lt;blockquote&gt;&lt;strong&gt;Control coupling&lt;/strong&gt; is one module controlling the flow of another by passing it information on what to do. &lt;/blockquote&gt; 
+&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
 
-&lt;a href = &quot;https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/&quot;&gt;reference&lt;/a&gt;
-
-
-&lt;code&gt;render(request, template_name, context=None, content_type=None, using=None)&lt;/code&gt; 
+&lt;p&gt;&lt;code&gt;render(request, template_name, context=None, content_type=None, using=None)&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;strong&gt;render&lt;/strong&gt; is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
 
 #### required
@@ -180,32 +179,33 @@ If you created a separate html for the app in templates directory, add &lt;code&
 &lt;blockquote&gt;&lt;strong&gt;HttpRequest&lt;/strong&gt; objects that contain metadata are created automatically by Django&lt;/blockquote&gt;
 Request and response objects are used to pass state through the system.
 
-&lt;blockquote&gt;Page is requested -&gt; &lt;strong&gt;HttpRequest&lt;/strong&gt; created with metadata about the request -&gt; load view with &lt;strong&gt;HttpRequest&lt;/strong&gt; -&gt; each returns &lt;strong&gt;HttpResponse&lt;/strong&gt; object&lt;/blockquote&gt;
+&lt;blockquote&gt;Page is requested -&amp;gt; &lt;strong&gt;HttpRequest&lt;/strong&gt; created with metadata about the request -&amp;gt; load view with &lt;strong&gt;HttpRequest&lt;/strong&gt; -&amp;gt; each returns &lt;strong&gt;HttpResponse&lt;/strong&gt; object&lt;/blockquote&gt;
 
 &lt;code&gt;return HttpResponse('{url}' or {&quot;{msg}&quot;})&lt;/code&gt;
 
 ### settings.py
 &lt;pre&gt;&lt;code&gt;import os&lt;/code&gt;&lt;/pre&gt;
-Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &gt; DIRS&lt;/code&gt; 
+Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &amp;gt; DIRS&lt;/code&gt; 
 
 In your live server environment, tell WSGI app what settings file to use
 &lt;blockquote&gt;WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python&lt;/blockquote&gt;
 &lt;strong&gt;OS module&lt;/strong&gt; provides functions for interacting with the operating system. 
 &lt;code&gt;os.path.join({a file system path},{path component to be joined})&lt;/code&gt; 
-&lt;code&gt;BASE_DIR&lt;/code&gt; is an absolute path where manage.py lies</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">There have been so many unfamiliar terms I need to know about. 
+&lt;code&gt;BASE_DIR&lt;/code&gt; is an absolute path where manage.py lies
+&lt;/blockquote&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Helloworld Web App github</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There have been so many unfamiliar terms I need to know about.&lt;/p&gt;
 
-&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application
+&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;
 
-&lt;strong&gt;Configuration&lt;/strong&gt; describes the arrangement of hardware and software components to make up the computer system. 
+&lt;p&gt;&lt;strong&gt;Configuration&lt;/strong&gt; describes the arrangement of hardware and software components to make up the computer system.&lt;/p&gt;
 
-&lt;strong&gt;Module&lt;/strong&gt; is a separate, interchangeable component.
+&lt;p&gt;&lt;strong&gt;Module&lt;/strong&gt; is a separate, interchangeable component.&lt;/p&gt;
 &lt;li&gt;encampsulate code and data to implmenet a particular functionality&lt;/li&gt;
 &lt;li&gt;has an interface to access its functionality in an uniform manner&lt;/li&gt;
 &lt;li&gt;easily pluggable with another module that expects its iterface&lt;/li&gt;
-&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">## Problem
-Convert from snake-case to camel-case and return it.
+&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Convert from snake-case to camel-case and return it.&lt;/p&gt;
 
-## Example
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
 naver_webtoon
 NAVER_WEBTOON
@@ -216,10 +216,12 @@ naverWebtoon&lt;/code&gt;&lt;/pre&gt;
 
 &lt;blockquote&gt; written in C++&lt;/blockquote&gt;
 
-## Solution 1
-1. loop through the snake case string
-2. As iterationg, have a boolean 'cap' and update it if there is a underdash to convert the next letter to cap
-&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;loop through the snake case string&lt;/li&gt;
+  &lt;li&gt;As iterationg, have a boolean ‘cap’ and update it if there is a underdash to convert the next letter to cap
+&lt;br /&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;strong&gt;
@@ -227,12 +229,12 @@ string convertCamel(string snake){
     string camel;
     bool cap = false;
     for(char c : snake){
-        if(!cap &amp;&amp; (int)c &lt; 91){&lt;/strong&gt;&lt;i&gt;//if the char is cap when it shouldn't be&lt;/i&gt;&lt;strong&gt;
+        if(!cap &amp;amp;&amp;amp; (int)c &amp;lt; 91){&lt;/strong&gt;&lt;i&gt;//if the char is cap when it shouldn't be&lt;/i&gt;&lt;strong&gt;
             camel.push_back(tolower(c)); 
         }else if(c == '_'){&lt;/strong&gt;&lt;i&gt;//if there is an underdash, the next char should be capitalized&lt;/i&gt;&lt;strong&gt;
             cap = true;
         }else if(cap){&lt;/strong&gt;&lt;i&gt;//if there should be a cap char convert the char to cap if it is not. Else, just push it back&lt;/i&gt;&lt;strong&gt;
-            if((int)c &gt; 97){
+            if((int)c &amp;gt; 97){
                 camel.push_back(toupper(c));
             }else{
                 camel.push_back(c);
@@ -245,10 +247,11 @@ string convertCamel(string snake){
     return camel;
 }   
 &lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Print all numbers from 1 to n*n</title><link href="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/" rel="alternate" type="text/html" title="Print all numbers from 1 to n*n" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/print-all-nums-from-1-to-n*n</id><content type="html" xml:base="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/">## Problem
-Print all numbers from 1 to n^2 in 'ㄹ' shape
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="string" /><category term="Naver_webtoons" /><category term="interview" /><summary type="html">Problem
+Convert from snake-case to camel-case and return it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Print all numbers from 1 to n*n</title><link href="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/" rel="alternate" type="text/html" title="Print all numbers from 1 to n*n" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/print-all-nums-from-1-to-n*n</id><content type="html" xml:base="https://parkyo.github.io/categories/print-all-nums-from-1-to-n-n/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Print all numbers from 1 to n^2 in ‘ㄹ’ shape&lt;/p&gt;
 
-## Example
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
 4
 5
@@ -267,39 +270,41 @@ Print all numbers from 1 to n^2 in 'ㄹ' shape
 
 &lt;blockquote&gt; written in C++&lt;/blockquote&gt;
 
-## Solution 1
-Use &lt;code&gt;std::stack&lt;/code&gt; to store every even number line
-&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;std::stack&lt;/code&gt; to store every even number line
+&lt;br /&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;strong&gt;
 void printMultiples(int n){
     stack&lt;int&gt; reverseList;
     size_t line = 1;
-    for(size_t i = 1; i &lt;= n*n; ++i){
+    for(size_t i = 1; i &amp;lt;= n*n; ++i){
         if (line %2 == 0){
             reverseList.push((int)i);
         }else{
-            cout &lt;&lt; i &lt;&lt; &quot; &quot;;
+            cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; &quot; &quot;;
         }
-        if (i%n == 0 &amp;&amp; line %2 == 1){
+        if (i%n == 0 &amp;amp;&amp;amp; line %2 == 1){
             ++line;
-            cout &lt;&lt; &quot;\n&quot;;
+            cout &amp;lt;&amp;lt; &quot;\n&quot;;
         }
         if (reverseList.size() == n){
-            for(size_t j = 0; j &lt; n; ++j){
-                cout &lt;&lt; reverseList.top() &lt;&lt; &quot; &quot;;
+            for(size_t j = 0; j &amp;lt; n; ++j){
+                cout &amp;lt;&amp;lt; reverseList.top() &amp;lt;&amp;lt; &quot; &quot;;
                 reverseList.pop();
             }
-            cout &lt;&lt; &quot;\n&quot;;
+            cout &amp;lt;&amp;lt; &quot;\n&quot;;
         }
     }
 }
-&lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Check if a string is a substring of another</title><link href="https://parkyo.github.io/categories/Substring_prob1/" rel="alternate" type="text/html" title="Check if a string is a substring of another" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Substring_prob1</id><content type="html" xml:base="https://parkyo.github.io/categories/Substring_prob1/">## Problem
-Check if a string is a substring of another string. If true, return the index of the substring's first letter in the other string. Else, return -1.
+&amp;lt;/strong&amp;gt;
+&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="stack" /><category term="Naver_webtoons" /><category term="interview" /><summary type="html">Problem
+Print all numbers from 1 to n^2 in ‘ㄹ’ shape</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Check if a string is a substring of another</title><link href="https://parkyo.github.io/categories/Substring_prob1/" rel="alternate" type="text/html" title="Check if a string is a substring of another" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Substring_prob1</id><content type="html" xml:base="https://parkyo.github.io/categories/Substring_prob1/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Check if a string is a substring of another string. If true, return the index of the substring’s first letter in the other string. Else, return -1.&lt;/p&gt;
 
-## Example
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
 abcde cd
 abcde cda
@@ -313,17 +318,19 @@ abcbcde bc&lt;/code&gt;&lt;/pre&gt;
 
 &lt;blockquote&gt; written in C++&lt;/blockquote&gt;
 
-## Solution 1
-1. loop through the string &lt;strong&gt;a&lt;/strong&gt;
-2. As iterating, check if the current char matches any char of the string &lt;strong&gt;b&lt;/strong&gt;.
-3. If they do, iterate through the string &lt;strong&gt;b&lt;/strong&gt; along with a to check if all the chars match
-&lt;br&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;loop through the string &lt;strong&gt;a&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;As iterating, check if the current char matches any char of the string &lt;strong&gt;b&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;If they do, iterate through the string &lt;strong&gt;b&lt;/strong&gt; along with a to check if all the chars match
+&lt;br /&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;pre&gt;&lt;code&gt;
 &lt;strong&gt;int substring(string a, string b){
     int result = -1; //result to return
     size_t b_ind = 0; //index to iterate through b
-    for(size_t i = 0; i &lt; a.size(); ++i){
+    for(size_t i = 0; i &amp;lt; a.size(); ++i){
         if(b[b_ind] == a[i]){ &lt;/strong&gt;&lt;i&gt;//if the first char of b matches the char in a&lt;/i&gt;&lt;strong&gt;
         if (b_ind == 0){ &lt;/strong&gt;&lt;i&gt;//if it is the first letter in b, save it in result&lt;/i&gt;&lt;strong&gt;
                 result = (int)i;
@@ -332,7 +339,7 @@ abcbcde bc&lt;/code&gt;&lt;/pre&gt;
                 return result;
             }
             ++b_ind;&lt;/strong&gt;&lt;i&gt;//update b_ind to iterate&lt;/i&gt;&lt;strong&gt;
-        }else if (b_ind &gt; 0 &amp;&amp; a[i-1] == a[i]){ &lt;/strong&gt;&lt;i&gt;//if b_ind is at 1 and prev char in a equals to the current, cout it as found &lt;/i&gt;&lt;strong&gt;
+        }else if (b_ind &amp;gt; 0 &amp;amp;&amp;amp; a[i-1] == a[i]){ &lt;/strong&gt;&lt;i&gt;//if b_ind is at 1 and prev char in a equals to the current, cout it as found &lt;/i&gt;&lt;strong&gt;
             if (b_ind == 1){                       
                 ++result;
             }
@@ -352,9 +359,8 @@ abcbcde bc&lt;/code&gt;&lt;/pre&gt;
 }   &lt;/strong&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-## Solution 2
-Use &lt;a href = &quot;http://www.cplusplus.com/reference/string/string/find/&quot;&gt;&lt;code&gt;std::string find(string str)&lt;/code&gt;&lt;/a&gt; 
-
+&lt;h2 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h2&gt;
+&lt;p&gt;Use &lt;a href=&quot;http://www.cplusplus.com/reference/string/string/find/&quot;&gt;&lt;code&gt;std::string find(string str)&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;
 int substring(string a, string b){
@@ -366,11 +372,11 @@ int substring(string a, string b){
     }
 }
 &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-## Follow-up
-What if the string a contains multiple words with space in between and b is a word? 
-### Example
+&lt;h2 id=&quot;follow-up&quot;&gt;Follow-up&lt;/h2&gt;
+&lt;p&gt;What if the string a contains multiple words with space in between and b is a word?&lt;/p&gt;
+&lt;h3 id=&quot;example-1&quot;&gt;Example&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
 &quot;geeks for geeks&quot; &quot;for&quot;
 &quot;geeks for geeks&quot; &quot;sfor&quot;&lt;/code&gt;&lt;/pre&gt;
@@ -378,45 +384,47 @@ What if the string a contains multiple words with space in between and b is a wo
 6
 -1&lt;/code&gt;&lt;/pre&gt;
 
-Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">I have created &lt;a href = &quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development
+&lt;p&gt;Solution is the same with &lt;strong&gt;Solution 2&lt;/strong&gt;.&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="string" /><category term="Naver_webtoons" /><category term="interview" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">How to start Django</title><link href="https://parkyo.github.io/categories/set-up-django/" rel="alternate" type="text/html" title="How to start Django" /><published>2020-06-15T00:00:00+09:00</published><updated>2020-06-15T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/set-up-django</id><content type="html" xml:base="https://parkyo.github.io/categories/set-up-django/">&lt;p&gt;I have created &lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld web app&lt;/strong&gt;&lt;/a&gt; that includes todo list to practice basic web app development&lt;/p&gt;
 
-## Django
-&lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
-&lt;img src = &quot;django.png&quot; width = 70%/&gt;
+&lt;h2 id=&quot;django&quot;&gt;Django&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; is a server-side Python web framework. 
+&amp;lt;img src = “django.png” width = 70%/&amp;gt;&lt;/p&gt;
 
-### Set-Up Django for MacOS
-Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;index=1&quot;&gt;reference&lt;/a&gt;)
+&lt;h3 id=&quot;set-up-django-for-macos&quot;&gt;Set-Up Django for MacOS&lt;/h3&gt;
+&lt;p&gt;Django Development Environment includes Python scripts and a simple development webserver that you can test local Djnago web applications on web browser. (&lt;a href=&quot;https://www.youtube.com/watch?v=UyQn0BhVqNU&amp;amp;list=PLBZBJbE_rGRXBhJNdKbN7IUy-ctlOFxA1&amp;amp;index=1&quot;&gt;reference&lt;/a&gt;)&lt;/p&gt;
 
-#### 1. Install Python
+&lt;h4 id=&quot;1-install-python&quot;&gt;1. Install Python&lt;/h4&gt;
 &lt;blockquote&gt;python 3.8.2 &lt;/blockquote&gt;
-&lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS
+&lt;p&gt;&lt;strong&gt;Homebrew&lt;/strong&gt; is an open-source software package manager that helps install different applications on MacOS&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$brew install python3&lt;/code&gt;&lt;/pre&gt;
 
-#### 2. Install Pipenv
-&lt;strong&gt;Pipenv&lt;/strong&gt; is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use &lt;code&gt;pip&lt;/code&gt; and &lt;code&gt;virtualenv&lt;/code&gt; separately. (&lt;a href = &quot;https://www.geeksforgeeks.org/python-virtual-environment/&quot;&gt; GeeksForGeeks &lt;/a&gt;)
+&lt;h4 id=&quot;2-install-pipenv&quot;&gt;2. Install Pipenv&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Pipenv&lt;/strong&gt; is a tool that automatically creates and manages a virtual environment for Python. We need a virtual environment to keep dependencies required by different projects separate by creating isolated python virtual environments for them. Pipenv prevents having to use &lt;code&gt;pip&lt;/code&gt; and &lt;code&gt;virtualenv&lt;/code&gt; separately. (&lt;a href=&quot;https://www.geeksforgeeks.org/python-virtual-environment/&quot;&gt; GeeksForGeeks &lt;/a&gt;)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$pip3 install pipenv&lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt; &lt;strong&gt;pip3&lt;/strong&gt; is automatically installed by Homebrew. Pip3 is another package manager that includes &lt;code&gt;pipenv&lt;/code&gt;&lt;/blockquote&gt;
 
-#### 3. Move to a directory and create a folder for the new project
+&lt;h4 id=&quot;3-move-to-a-directory-and-create-a-folder-for-the-new-project&quot;&gt;3. Move to a directory and create a folder for the new project&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$mkdir helloworld_webapp
 $cd helloworld_webapp
 &lt;/code&gt;&lt;/pre&gt;
 
-#### 4. Install django with pipenv
-Pipenv creates a virtual environment &lt;i&gt;django&lt;/i&gt; of 2.1 version speicifically for this project.
+&lt;h4 id=&quot;4-install-django-with-pipenv&quot;&gt;4. Install django with pipenv&lt;/h4&gt;
+&lt;p&gt;Pipenv creates a virtual environment &lt;i&gt;django&lt;/i&gt; of 2.1 version speicifically for this project.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$pipenv instal django==2.1&lt;/code&gt;&lt;/pre&gt;
 
-#### 5. Activate the virtual environment
+&lt;h4 id=&quot;5-activate-the-virtual-environment&quot;&gt;5. Activate the virtual environment&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$pipenv shell&lt;/code&gt;&lt;/pre&gt;
-This allows you to use the specific version of django that you installed for your project.
+&lt;p&gt;This allows you to use the specific version of django that you installed for your project.&lt;/p&gt;
 
-#### 6. Create a new project 
+&lt;h4 id=&quot;6-create-a-new-project&quot;&gt;6. Create a new project&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;$django-admin startproject helloworld_project .&lt;/code&gt;&lt;/pre&gt;
 
-This starts a new project, helloworld_project in the current directory.
+&lt;p&gt;This starts a new project, helloworld_project in the current directory.&lt;/p&gt;
 
-
-  Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">June_3rd</title><link href="https://parkyo.github.io/categories/Coding-test-prep/" rel="alternate" type="text/html" title="June_3rd" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Coding-test-prep</id><content type="html" xml:base="https://parkyo.github.io/categories/Coding-test-prep/">I can almost say coding test is all you need to get a job as a junior software engineer because if you don't pass the coding test, you are not given a chance for an interview at all. 
+&lt;p&gt;Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="setup" /><category term="python" /><summary type="html">I have created Helloworld web app that includes todo list to practice basic web app development</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">About Coding Test</title><link href="https://parkyo.github.io/categories/Coding-test-prep/" rel="alternate" type="text/html" title="About Coding Test" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Coding-test-prep</id><content type="html" xml:base="https://parkyo.github.io/categories/Coding-test-prep/">&lt;p&gt;I can almost say coding test is all you need to get a job as a junior software engineer because if you don’t pass the coding test, you are not given a chance for an interview at all. 
 I have also experience many failures due to my lacking experience with coding test problems. 
 I have planned to solve at least one coding problem per day but it has not been easy. 
-Then, I thought let's give myself a moderate pressure to study coding problems. And that is participating coding competitions.</content><category term="blog" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry></feed>
+Then, I thought let’s give myself a moderate pressure to study coding problems. And that is participating coding competitions.&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="interview" /><summary type="html">I can almost say coding test is all you need to get a job as a junior software engineer because if you don’t pass the coding test, you are not given a chance for an interview at all. 
+I have also experience many failures due to my lacking experience with coding test problems. 
+I have planned to solve at least one coding problem per day but it has not been easy. 
+Then, I thought let’s give myself a moderate pressure to study coding problems. And that is participating coding competitions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry></feed>

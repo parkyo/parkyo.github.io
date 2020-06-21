@@ -3,8 +3,8 @@ layout: post
 category: portfolio
 title:  "travelymap"
 date:   2020-06-13
-excerpt: "travelymap portfolio"
 image: "/images/travelymap.png"
+tags: javascript html css react
 ---
 
 ## Testing Topic

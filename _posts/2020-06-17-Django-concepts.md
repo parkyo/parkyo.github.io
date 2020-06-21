@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Django Concepts for TODO List"
 date:   2020-06-17
-excerpt: ""
+tags: django concepts python
 image: ""
 ---
 <a href = "https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a>

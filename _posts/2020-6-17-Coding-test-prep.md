@@ -1,9 +1,9 @@
 ---
 layout: post
 category: blog
-title:  "June_3rd"
+title:  "About Coding Test"
 date:   2020-06-14
-excerpt: ""
+tags: algorithm interview
 image: "/images/weekly_report.jpg"
 ---
 

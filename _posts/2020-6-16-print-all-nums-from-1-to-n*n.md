@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Print all numbers from 1 to n*n"
 date:   2020-06-16
-excerpt: ""
+tags: algorithm stack Naver_webtoons interview
 image: ""
 ---
 

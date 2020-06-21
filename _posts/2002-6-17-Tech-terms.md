@@ -4,6 +4,7 @@ category: blog
 title:  "Tech Terms"
 date:   2020-06-17
 excerpt: ""
+tags: concepts
 image: ""
 ---
 There have been so many unfamiliar terms I need to know about. 

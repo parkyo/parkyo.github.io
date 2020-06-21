@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Django Migrations"
 date:   2020-06-14
-excerpt: ""
+tags: django concepts python
 image: "/images/django_migrations.jpg"
 ---
 

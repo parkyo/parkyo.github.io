@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "How to start Django"
 date:   2020-06-15
-excerpt: ""
+tags: django setup python
 image: "/images/django.png"
 ---
 

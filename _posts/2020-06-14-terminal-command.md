@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Python vs Python3"
 date:   2020-06-14
-excerpt: ""
+tags: python terminal
 image: "/images/terminal.jpg"
 ---
 

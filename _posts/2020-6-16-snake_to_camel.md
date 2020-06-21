@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "Convert a snake case to a camel case"
 date:   2020-06-16
-excerpt: ""
+tags: algorithm string Naver_webtoons interview
 image: ""
 ---
 

@@ -64,7 +64,25 @@
     				<header class="major">
       				<span class="date">14 Jun 2020</span>
       				<h1>Python vs Python3</h1>
-      				<p></p>
+      				<p><!-- # Python vs Python3 -->
+<p>I was confused because when I type <code>python --version</code> in terminal, 
+it returned <code>Python 2.7.10</code> but I used <code>python3</code> for django. 
+<br />
+After research, I realized that mutliple versions of Python can be installed and exist simultaneously.
+And the symbolic link for python on my computer was directed to <code>Python 2.7.10</code>, which is why when I had to type <code>python3</code> instead of <code>python</code> in order to use the latest Python. 
+So I installed newest python by Homebrew</p>
+<pre><code>
+brew install python
+</code></pre>
+<p>set symlink from python to python3</p>
+<pre><code>
+ls -l -f /usr/local/bin/python3 /usr/local/bin/python
+</code></pre>
+<p>assigned the command ‘python’ to ‘python3’</p>
+<pre><code>
+alias python=python3
+</code></pre>
+</p>
       			</header>
       			<div ><img class = "image main" src="/images/terminal.jpg" alt="" width = 30%></div>
       			<p><!-- # Python vs Python3 -->

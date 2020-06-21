@@ -3,7 +3,7 @@ layout: post
 category: blog
 title:  "June_3rd"
 date:   2020-06-14
-excerpt: ""
+tags: todo
 image: "/images/weekly_report.jpg"
 ---
 
