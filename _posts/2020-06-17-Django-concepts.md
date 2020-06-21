@@ -24,6 +24,9 @@ If you created a separate html for the app in templates directory, add <code>fro
 <strong>django.shortcuts</strong> is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling. 
 <blockquote><strong>Control coupling</strong> is one module controlling the flow of another by passing it information on what to do. </blockquote> 
 
+<a href = "https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/">reference</a>
+
+
 <code>render(request, template_name, context=None, content_type=None, using=None)</code> 
 <blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
 
@@ -52,5 +55,6 @@ Add  <code>os.path.join(BASE_DIR, 'templates')</code> in <code>TEMPLATES > DIRS<
 
 In your live server environment, tell WSGI app what settings file to use
 <blockquote>WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python</blockquote>
-
-<a href = "https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/">reference</a>
+<strong>OS module</strong> provides functions for interacting with the operating system. 
+<code>os.path.join({a file system path},{path component to be joined})</code> 
+<code>BASE_DIR</code> is an absolute path where manage.py lies

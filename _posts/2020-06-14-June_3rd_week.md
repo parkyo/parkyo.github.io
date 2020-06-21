@@ -44,6 +44,5 @@ image: "/images/weekly_report.jpg"
 <div class = "box">
 <li>Driving practice</li>
 <li>Research making dynamic jekyll pages</li>
-<li>Complete documentation about Helloworld web app project</li>
-<li>Research Java Spring web app</li>
+<li>Research concepts related to TODO LIST</li>
 </div>
