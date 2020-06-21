@@ -7,7 +7,8 @@ tags: python terminal
 image: "/images/terminal.jpg"
 ---
 
-<!-- # Python vs Python3 -->
+
+<div>
 I was confused because when I type <code>python --version</code> in terminal, 
 it returned <code>Python 2.7.10</code> but I used <code>python3</code> for django. 
 <br>
@@ -25,3 +26,4 @@ assigned the command 'python' to 'python3'
 <pre><code>
 alias python=python3
 </code></pre> 
+</div>

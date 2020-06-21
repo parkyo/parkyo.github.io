@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-21T11:44:31+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Allocation</title><link href="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Allocation" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-21T22:19:18+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Allocation</title><link href="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Allocation" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;There are N houses for sale. The i-th house costs Ai dollars to buy. You have a budget of B dollars to spend.
@@ -142,7 +142,7 @@ int main(){
    &lt;/strong&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts for TODO List</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts for TODO List" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;p&gt;&lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;p&gt;&lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;make-todo-list&quot;&gt;Make Todo List&lt;/h2&gt;
 
@@ -162,37 +162,36 @@ int main(){
 &lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;render(request, template_name, context=None, content_type=None, using=None)&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;render&lt;/strong&gt; is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
+&lt;blockquote&gt;&lt;strong&gt;render&lt;/strong&gt; is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. &lt;/blockquote&gt;
 
-#### required
-&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
-&lt;strong&gt;template_name&lt;/strong&gt;
+&lt;h4 id=&quot;required&quot;&gt;required&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
+&lt;strong&gt;template_name&lt;/strong&gt;&lt;/p&gt;
 
-#### optional
-&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
-&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.
+&lt;h4 id=&quot;optional&quot;&gt;optional&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
+&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.&lt;/p&gt;
 &lt;blockquote&gt;&lt;strong&gt;MIME types&lt;/strong&gt;: is a media type that describes the nature and format of a document, file or assortment of bytes. &lt;code&gt;type/subtype&lt;/code&gt;&lt;/blockquote&gt;
-&lt;strong&gt;status&lt;/strong&gt;: status code for the response
-&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template
+&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt;: status code for the response
+&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template&lt;/p&gt;
 
-&lt;code&gt;from django.http import HttpResponse, HttpResposneRedirect&lt;/code&gt;
+&lt;p&gt;&lt;code&gt;from django.http import HttpResponse, HttpResposneRedirect&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;strong&gt;HttpRequest&lt;/strong&gt; objects that contain metadata are created automatically by Django&lt;/blockquote&gt;
-Request and response objects are used to pass state through the system.
+&lt;p&gt;Request and response objects are used to pass state through the system.&lt;/p&gt;
 
 &lt;blockquote&gt;Page is requested -&amp;gt; &lt;strong&gt;HttpRequest&lt;/strong&gt; created with metadata about the request -&amp;gt; load view with &lt;strong&gt;HttpRequest&lt;/strong&gt; -&amp;gt; each returns &lt;strong&gt;HttpResponse&lt;/strong&gt; object&lt;/blockquote&gt;
 
-&lt;code&gt;return HttpResponse('{url}' or {&quot;{msg}&quot;})&lt;/code&gt;
+&lt;p&gt;&lt;code&gt;return HttpResponse('{url}' or {&quot;{msg}&quot;})&lt;/code&gt;&lt;/p&gt;
 
-### settings.py
+&lt;h3 id=&quot;settingspy-1&quot;&gt;settings.py&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;import os&lt;/code&gt;&lt;/pre&gt;
-Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &amp;gt; DIRS&lt;/code&gt; 
+&lt;p&gt;Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &amp;gt; DIRS&lt;/code&gt;&lt;/p&gt;
 
-In your live server environment, tell WSGI app what settings file to use
+&lt;p&gt;In your live server environment, tell WSGI app what settings file to use&lt;/p&gt;
 &lt;blockquote&gt;WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python&lt;/blockquote&gt;
-&lt;strong&gt;OS module&lt;/strong&gt; provides functions for interacting with the operating system. 
+&lt;p&gt;&lt;strong&gt;OS module&lt;/strong&gt; provides functions for interacting with the operating system. 
 &lt;code&gt;os.path.join({a file system path},{path component to be joined})&lt;/code&gt; 
-&lt;code&gt;BASE_DIR&lt;/code&gt; is an absolute path where manage.py lies
-&lt;/blockquote&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Helloworld Web App github</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There have been so many unfamiliar terms I need to know about.&lt;/p&gt;
+&lt;code&gt;BASE_DIR&lt;/code&gt; is an absolute path where manage.py lies&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Helloworld Web App github</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There have been so many unfamiliar terms I need to know about.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;
 
@@ -202,7 +201,9 @@ In your live server environment, tell WSGI app what settings file to use
 &lt;li&gt;encampsulate code and data to implmenet a particular functionality&lt;/li&gt;
 &lt;li&gt;has an interface to access its functionality in an uniform manner&lt;/li&gt;
 &lt;li&gt;easily pluggable with another module that expects its iterface&lt;/li&gt;
-&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;
+
+&lt;p&gt;&lt;strong&gt;Forge&lt;/strong&gt; is a web-based collaborative software platform for developing and sharing computer application.&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Convert from snake-case to camel-case and return it.&lt;/p&gt;
 
 &lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
@@ -421,10 +422,10 @@ $cd helloworld_webapp
 
 &lt;p&gt;This starts a new project, helloworld_project in the current directory.&lt;/p&gt;
 
-&lt;p&gt;Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="setup" /><category term="python" /><summary type="html">I have created Helloworld web app that includes todo list to practice basic web app development</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">About Coding Test</title><link href="https://parkyo.github.io/categories/Coding-test-prep/" rel="alternate" type="text/html" title="About Coding Test" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Coding-test-prep</id><content type="html" xml:base="https://parkyo.github.io/categories/Coding-test-prep/">&lt;p&gt;I can almost say coding test is all you need to get a job as a junior software engineer because if you don’t pass the coding test, you are not given a chance for an interview at all. 
-I have also experience many failures due to my lacking experience with coding test problems. 
-I have planned to solve at least one coding problem per day but it has not been easy. 
-Then, I thought let’s give myself a moderate pressure to study coding problems. And that is participating coding competitions.&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="interview" /><summary type="html">I can almost say coding test is all you need to get a job as a junior software engineer because if you don’t pass the coding test, you are not given a chance for an interview at all. 
-I have also experience many failures due to my lacking experience with coding test problems. 
-I have planned to solve at least one coding problem per day but it has not been easy. 
-Then, I thought let’s give myself a moderate pressure to study coding problems. And that is participating coding competitions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/weekly_report.jpg" /></entry></feed>
+&lt;p&gt;Now you can run django server &lt;code&gt;$python manage.py runserver&lt;/code&gt; and open the local host to view your project on web browser!&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="setup" /><category term="python" /><summary type="html">I have created Helloworld web app that includes todo list to practice basic web app development</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io/images/django.png" /></entry><entry><title type="html">Server-side Dev basics</title><link href="https://parkyo.github.io/categories/Server-dev-concepts/" rel="alternate" type="text/html" title="Server-side Dev basics" /><published>2020-06-14T00:00:00+09:00</published><updated>2020-06-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Server-dev-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Server-dev-concepts/">&lt;h3 id=&quot;csrf-token&quot;&gt;CSRF Token&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Cross-site Request Forgery token&lt;/strong&gt; is a token containing a random value generated by the server-side application in order to prevent hackers from forging the user’s data. 
+&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/csrf_token.png&quot; /&gt;&lt;/span&gt;
+When a client logs in, the server gives a session token unique to that client. The client needs to provide the same token in order to request to the server so that the server validates it.&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">CSRF Token
+Cross-site Request Forgery token is a token containing a random value generated by the server-side application in order to prevent hackers from forging the user’s data. 
+
+When a client logs in, the server gives a session token unique to that client. The client needs to provide the same token in order to request to the server so that the server validates it.</summary></entry></feed>

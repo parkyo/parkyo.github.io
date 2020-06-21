@@ -18,3 +18,5 @@ There have been so many unfamiliar terms I need to know about.
 <li>has an interface to access its functionality in an uniform manner</li>
 <li>easily pluggable with another module that expects its iterface</li>
 <li>packaged in a single unit so that it can be easily deployed</li>
+
+<strong>Forge</strong> is a web-based collaborative software platform for developing and sharing computer application.

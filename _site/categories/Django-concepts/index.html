@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Django Concepts for TODO List</title>
+<title>Django Concepts</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -63,12 +63,12 @@
           <section class="post">
     				<header class="major">
       				<span class="date">17 Jun 2020</span>
-      				<h1>Django Concepts for TODO List</h1>
-      				<p><p><a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a></p>
+      				<h1>Django Concepts</h1>
+      				<!-- <p><p><a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a></p>
 
-</p>
+</p> -->
       			</header>
-      			<div ><img class = "image main" src="" alt="" width = 30%></div>
+      			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
       			<p><p><a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a></p>
 
 <h2 id="make-todo-list">Make Todo List</h2>
@@ -89,37 +89,36 @@
 <p><a href="https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/">reference</a></p>
 
 <p><code>render(request, template_name, context=None, content_type=None, using=None)</code></p>
-<blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
+<blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. </blockquote>
 
-#### required
-<strong>request </strong>: object used to generate this response
-<strong>template_name</strong>
+<h4 id="required">required</h4>
+<p><strong>request </strong>: object used to generate this response
+<strong>template_name</strong></p>
 
-#### optional
-<strong>context </strong>: a dictionary of values to add to the template context
-<strong>content_type </strong>: the MIME type to use fo rthe resulting doc.
+<h4 id="optional">optional</h4>
+<p><strong>context </strong>: a dictionary of values to add to the template context
+<strong>content_type </strong>: the MIME type to use fo rthe resulting doc.</p>
 <blockquote><strong>MIME types</strong>: is a media type that describes the nature and format of a document, file or assortment of bytes. <code>type/subtype</code></blockquote>
-<strong>status</strong>: status code for the response
-<strong>using</strong> : the name of a template engine to use for loading the template
+<p><strong>status</strong>: status code for the response
+<strong>using</strong> : the name of a template engine to use for loading the template</p>
 
-<code>from django.http import HttpResponse, HttpResposneRedirect</code>
+<p><code>from django.http import HttpResponse, HttpResposneRedirect</code></p>
 <blockquote><strong>HttpRequest</strong> objects that contain metadata are created automatically by Django</blockquote>
-Request and response objects are used to pass state through the system.
+<p>Request and response objects are used to pass state through the system.</p>
 
 <blockquote>Page is requested -&gt; <strong>HttpRequest</strong> created with metadata about the request -&gt; load view with <strong>HttpRequest</strong> -&gt; each returns <strong>HttpResponse</strong> object</blockquote>
 
-<code>return HttpResponse('{url}' or {"{msg}"})</code>
+<p><code>return HttpResponse('{url}' or {"{msg}"})</code></p>
 
-### settings.py
+<h3 id="settingspy-1">settings.py</h3>
 <pre><code>import os</code></pre>
-Add  <code>os.path.join(BASE_DIR, 'templates')</code> in <code>TEMPLATES &gt; DIRS</code> 
+<p>Add  <code>os.path.join(BASE_DIR, 'templates')</code> in <code>TEMPLATES &gt; DIRS</code></p>
 
-In your live server environment, tell WSGI app what settings file to use
+<p>In your live server environment, tell WSGI app what settings file to use</p>
 <blockquote>WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python</blockquote>
-<strong>OS module</strong> provides functions for interacting with the operating system. 
+<p><strong>OS module</strong> provides functions for interacting with the operating system. 
 <code>os.path.join({a file system path},{path component to be joined})</code> 
-<code>BASE_DIR</code> is an absolute path where manage.py lies
-</blockquote>
+<code>BASE_DIR</code> is an absolute path where manage.py lies</p>
 </p>
       		</section>
 

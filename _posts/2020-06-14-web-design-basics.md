@@ -33,3 +33,5 @@ It gives the style to HTML elements
 <li>contain : keep the ratio</li>
 <li>cover : crop the image</li>
 <li>scale-down : scale down to fit the size</li>
+
+

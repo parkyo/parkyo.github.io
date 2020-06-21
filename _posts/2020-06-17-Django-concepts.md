@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title:  "Django Concepts for TODO List"
+title:  "Django Concepts"
 date:   2020-06-17
 tags: django concepts python
 image: ""
@@ -28,7 +28,7 @@ If you created a separate html for the app in templates directory, add <code>fro
 
 
 <code>render(request, template_name, context=None, content_type=None, using=None)</code> 
-<blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. 
+<blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. </blockquote>
 
 #### required
 <strong>request </strong>: object used to generate this response

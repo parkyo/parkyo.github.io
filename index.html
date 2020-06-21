@@ -61,20 +61,10 @@ sitemap:
 									<br>I am recording all my journey as a developer in this blog including projects and errors I encounter.
 									Here is my <a href = "https://github.com/parkyo"><strong>Github</strong></a> portfolio.
 								</p>
-								
-                <!-- <p>Regardless of your website's function, the homepage is what brings the user in.
-                  If it's anything short of intriguing, captivating, or just plain cool, you're out of luck and you might deter some visitors.</p>
-                <p>Your homepage must clearly describe what your site is about.
-									Having engaging content will in this manner enable you to offer and it will make your customers more inclined to purchase from you. Content is a way to position your organization in the correct place for your clients to discover you.
-								</p> -->
-								<!-- <p>
-									In this manner, content in itself is a standout amongst the best promoting apparatuses in your whole advertising toolbox! Rather than making your content around your promoting technique, it's limitlessly more productive to fabricate your showcasing around your content.
-								 </p> -->
-
 							</article>
 
 						<!-- Posts -->
-							<section class="posts">
+							<section class="portfolio_posts">
                 {% for post in site.categories.portfolio limit:3 %}
                 {% assign mod3 = forloop.index | modulo: 3 %}
   								<article>
@@ -82,7 +72,7 @@ sitemap:
   										<span class="date">{{ post.date | date_to_string }}</span>
   										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
   									</header>
-  									<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
+  									<a href="{{ post.url | absolute_url }}" class="portfolio_posts"><img src="{{ post.image | absolute_url }}" alt="" /></a>
   									<!-- <p>{{ post.excerpt }}</p> -->
   									<!-- <ul class="actions">
   										<li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li>

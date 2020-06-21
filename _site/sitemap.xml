@@ -83,6 +83,15 @@
     </url>
   
     <url>
+      <loc>https://parkyo.github.io/categories/Server-dev-concepts/</loc>
+      
+        <lastmod>2020-06-14T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/Coding-test-prep/</loc>
       
         <lastmod>2020-06-14T00:00:00+09:00</lastmod>
