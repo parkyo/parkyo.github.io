@@ -1,8 +1,8 @@
 ---
 layout: post
 category: blog
-title:  "Server-side Dev basics"
-date:   2020-06-14
+title:  "CSRF Token"
+date:   2020-06-21
 tags: concepts web server-side
 ---
 

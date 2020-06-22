@@ -2,6 +2,42 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://parkyo.github.io/categories/python-basics/</loc>
+      
+        <lastmod>2020-06-22T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/render-httpresponse/</loc>
+      
+        <lastmod>2020-06-21T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/fetch/</loc>
+      
+        <lastmod>2020-06-21T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/CSRF-token/</loc>
+      
+        <lastmod>2020-06-21T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/</loc>
       
         <lastmod>2020-06-19T00:00:00+09:00</lastmod>
@@ -20,6 +56,15 @@
     </url>
   
     <url>
+      <loc>https://parkyo.github.io/categories/Tech-terms/</loc>
+      
+        <lastmod>2020-06-17T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/Django-deploy/</loc>
       
         <lastmod>2020-06-17T00:00:00+09:00</lastmod>
@@ -30,15 +75,6 @@
   
     <url>
       <loc>https://parkyo.github.io/categories/Django-concepts/</loc>
-      
-        <lastmod>2020-06-17T00:00:00+09:00</lastmod>
-      
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://parkyo.github.io/categories/Tech-terms/</loc>
       
         <lastmod>2020-06-17T00:00:00+09:00</lastmod>
       
@@ -77,15 +113,6 @@
       <loc>https://parkyo.github.io/categories/set-up-django/</loc>
       
         <lastmod>2020-06-15T00:00:00+09:00</lastmod>
-      
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://parkyo.github.io/categories/Server-dev-concepts/</loc>
-      
-        <lastmod>2020-06-14T00:00:00+09:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -287,6 +314,16 @@
   
     <url>
       <loc>https://parkyo.github.io/blog/page3/</loc>
+       <lastmod>2020-06-12T00:00:00+09:00</lastmod>
+      
+       <changefreq>weekly</changefreq>
+      
+       <priority>1.0</priority>
+      
+     </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/blog/page4/</loc>
        <lastmod>2020-06-12T00:00:00+09:00</lastmod>
       
        <changefreq>weekly</changefreq>
