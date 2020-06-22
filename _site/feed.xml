@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-22T15:12:41+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Python basics</title><link href="https://parkyo.github.io/categories/python-basics/" rel="alternate" type="text/html" title="Python basics" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/python-basics/">&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-22T21:35:23+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Python basics</title><link href="https://parkyo.github.io/categories/python-basics/" rel="alternate" type="text/html" title="Python basics" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/python-basics/">&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
 &lt;li&gt;Web Development&lt;/li&gt;
 &lt;li&gt;Machine Learning&lt;/li&gt;
 &lt;li&gt;Data Analytics&lt;/li&gt;
@@ -10,7 +10,29 @@ Machine Learning
 Data Analytics
 
 self
-self is an instance of the class to access properties and methods of the class</summary></entry><entry><title type="html">render vs. HTTPResponse vs. HTTPResponseredirect</title><link href="https://parkyo.github.io/categories/render-httpresponse/" rel="alternate" type="text/html" title="render vs. HTTPResponse vs. HTTPResponseredirect" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/render-httpresponse</id><content type="html" xml:base="https://parkyo.github.io/categories/render-httpresponse/">&lt;p&gt;
+self is an instance of the class to access properties and methods of the class</summary></entry><entry><title type="html">What is Operating System</title><link href="https://parkyo.github.io/categories/operating-system/" rel="alternate" type="text/html" title="What is Operating System" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/operating-system</id><content type="html" xml:base="https://parkyo.github.io/categories/operating-system/">&lt;p&gt;&lt;strong&gt;Operating Systems&lt;/strong&gt; are programs for computers to operate on their own. 
+&lt;i&gt;ex) MacOS, Android, Windows…&lt;/i&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+&lt;li&gt;&lt;strong&gt;Device Drivers&lt;/strong&gt; : intermediaries between software programs and hardware peripheral using API allowing talking to I/O hardware&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multitasking&lt;/strong&gt; : allows multiple programs on a single CPU&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Virtual Memory&lt;/strong&gt; : virtualizes locations of the memory allocated to each program to hide physical locations and simplify it for programmers&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dynamic Memory Allocation&lt;/strong&gt; : allows program sto have flexible memory size with virtual memory addresses&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Memory Protection&lt;/strong&gt; : prevets a program from destroying memory of the other progam&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time Sharing&lt;/strong&gt; : manages multiple users&lt;/li&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Unix &lt;/strong&gt;appears to simplify the engineering of the early OS by separating it into two parts:&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt; : manages memory and multi-tasking or deals with I/O&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;programs &amp;amp; libraries&lt;/strong&gt;&lt;/li&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h3&gt;
+&lt;p&gt;An open-source, Debian based operating system&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="computer" /><summary type="html">Operating Systems are programs for computers to operate on their own. 
+ex) MacOS, Android, Windows…</summary></entry><entry><title type="html">error: failed to push some refs to</title><link href="https://parkyo.github.io/categories/git-pull/" rel="alternate" type="text/html" title="error: failed to push some refs to" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/git-pull</id><content type="html" xml:base="https://parkyo.github.io/categories/git-pull/">&lt;p&gt;When this error happens,&lt;br /&gt;
+&lt;span&gt;&lt;img src=&quot;/images/gitpull.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$git pull origin master
+$i
+$:wq
+$git push&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="git" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">render vs. HTTPResponse vs. HTTPResponseredirect</title><link href="https://parkyo.github.io/categories/render-httpresponse/" rel="alternate" type="text/html" title="render vs. HTTPResponse vs. HTTPResponseredirect" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/render-httpresponse</id><content type="html" xml:base="https://parkyo.github.io/categories/render-httpresponse/">&lt;p&gt;
 &lt;strong&gt;HTTP reponse code&lt;/strong&gt; indicates a specific HTTP request has been successfully completed
 &lt;ol&gt;
 &lt;li&gt;Informatioin responses(100-)&lt;/li&gt;
@@ -216,7 +238,7 @@ int main(){
    &lt;/strong&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There have been so many unfamiliar terms I need to know about.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There are so many unfamiliar terms I need to know about.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;
 
@@ -228,99 +250,8 @@ int main(){
 &lt;li&gt;easily pluggable with another module that expects its iterface&lt;/li&gt;
 &lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Forge&lt;/strong&gt; is a web-based collaborative software platform for developing and sharing computer application.&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;p&gt;&lt;a href=&quot;https://github.com/parkyo/helloworld_webapp&quot;&gt;&lt;strong&gt;Helloworld Web App&lt;/strong&gt; github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Forge&lt;/strong&gt; is a web-based collaborative software platform for developing and sharing computer application.&lt;/p&gt;
 
-&lt;h2 id=&quot;make-todo-list&quot;&gt;Make Todo List&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;python manage.py COMMAND&lt;/code&gt; allows you to interact with django project&lt;/p&gt;
-
-&lt;h3 id=&quot;settingspy&quot;&gt;Settings.py&lt;/h3&gt;
-&lt;p&gt;When creating a new app within the project, the app’s name has to be added to &lt;code&gt;INSTALLED_APPS&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;urlspy&quot;&gt;urls.py&lt;/h3&gt;
-&lt;p&gt;Import new functions from {app_name}.views and add &lt;code&gt;path('{url}', {function})&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;viewspy&quot;&gt;views.py&lt;/h3&gt;
-&lt;p&gt;If you created a separate html for the app in templates directory, add &lt;code&gt;from django.shortcuts import render&lt;/code&gt;
-&lt;strong&gt;django.shortcuts&lt;/strong&gt; is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling.&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;Control coupling&lt;/strong&gt; is one module controlling the flow of another by passing it information on what to do. &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;render(request, template_name, context=None, content_type=None, using=None)&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;render&lt;/strong&gt; is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. &lt;/blockquote&gt;
-
-&lt;h4 id=&quot;required&quot;&gt;required&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
-&lt;strong&gt;template_name&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;optional&quot;&gt;optional&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
-&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;MIME types&lt;/strong&gt;: is a media type that describes the nature and format of a document, file or assortment of bytes. &lt;code&gt;type/subtype&lt;/code&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt;: status code for the response
-&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;from django.http import HttpResponse, HttpResposneRedirect&lt;/code&gt;&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;HttpRequest&lt;/strong&gt; objects that contain metadata are created automatically by Django&lt;/blockquote&gt;
-&lt;p&gt;Request and response objects are used to pass state through the system.&lt;/p&gt;
-
-&lt;blockquote&gt;Page is requested -&amp;gt; &lt;strong&gt;HttpRequest&lt;/strong&gt; created with metadata about the request -&amp;gt; load view with &lt;strong&gt;HttpRequest&lt;/strong&gt; -&amp;gt; each returns &lt;strong&gt;HttpResponse&lt;/strong&gt; object&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code&gt;return HttpResponse('{url}' or {&quot;{msg}&quot;})&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;settingspy-1&quot;&gt;settings.py&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;import os&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Add  &lt;code&gt;os.path.join(BASE_DIR, 'templates')&lt;/code&gt; in &lt;code&gt;TEMPLATES &amp;gt; DIRS&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;In your live server environment, tell WSGI app what settings file to use&lt;/p&gt;
-&lt;blockquote&gt;WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;OS module&lt;/strong&gt; provides functions for interacting with the operating system. 
-&lt;code&gt;os.path.join({a file system path},{path component to be joined})&lt;/code&gt; 
-&lt;code&gt;BASE_DIR&lt;/code&gt; is an absolute path where manage.py lies&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Helloworld Web App github</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Convert a snake case to a camel case</title><link href="https://parkyo.github.io/categories/snake_to_camel/" rel="alternate" type="text/html" title="Convert a snake case to a camel case" /><published>2020-06-16T00:00:00+09:00</published><updated>2020-06-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/snake_to_camel</id><content type="html" xml:base="https://parkyo.github.io/categories/snake_to_camel/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Convert from snake-case to camel-case and return it.&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-naver_webtoon
-NAVER_WEBTOON
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-naverWebtoon
-naverWebtoon&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt; written in C++&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;loop through the snake case string&lt;/li&gt;
-  &lt;li&gt;As iterationg, have a boolean ‘cap’ and update it if there is a underdash to convert the next letter to cap
-&lt;br /&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;strong&gt;
-string convertCamel(string snake){
-    string camel;
-    bool cap = false;
-    for(char c : snake){
-        if(!cap &amp;amp;&amp;amp; (int)c &amp;lt; 91){&lt;/strong&gt;&lt;i&gt;//if the char is cap when it shouldn't be&lt;/i&gt;&lt;strong&gt;
-            camel.push_back(tolower(c)); 
-        }else if(c == '_'){&lt;/strong&gt;&lt;i&gt;//if there is an underdash, the next char should be capitalized&lt;/i&gt;&lt;strong&gt;
-            cap = true;
-        }else if(cap){&lt;/strong&gt;&lt;i&gt;//if there should be a cap char convert the char to cap if it is not. Else, just push it back&lt;/i&gt;&lt;strong&gt;
-            if((int)c &amp;gt; 97){
-                camel.push_back(toupper(c));
-            }else{
-                camel.push_back(c);
-            }
-            cap = false;
-        }else{
-            camel.push_back(c);
-        }
-    }
-    return camel;
-}   
-&lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="string" /><category term="Naver_webtoons" /><category term="interview" /><summary type="html">Problem
-Convert from snake-case to camel-case and return it.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;p&gt;&lt;strong&gt;Encoding&lt;/strong&gt; is transforming a data from one type to another&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;&lt;/li&gt;
+&lt;p&gt;= variable-width : from character code points to unicode&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>

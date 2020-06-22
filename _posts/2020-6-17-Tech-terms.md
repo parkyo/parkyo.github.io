@@ -7,7 +7,7 @@ excerpt: ""
 tags: concepts
 image: ""
 ---
-There have been so many unfamiliar terms I need to know about. 
+There are so many unfamiliar terms I need to know about. 
 
 <strong>Deployment</strong> means to install, test and implement a computer system or application
 
@@ -20,3 +20,6 @@ There have been so many unfamiliar terms I need to know about.
 <li>packaged in a single unit so that it can be easily deployed</li>
 
 <strong>Forge</strong> is a web-based collaborative software platform for developing and sharing computer application.
+
+<strong>Encoding</strong> is transforming a data from one type to another
+<li><strong>UTF-8</strong></li> = variable-width : from character code points to unicode
