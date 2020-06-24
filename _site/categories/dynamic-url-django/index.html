@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>render vs. HTTPResponse vs. HTTPResponseredirect</title>
+<title>Django - dynamically type url</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,87 +62,54 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">21 Jun 2020</span>
-              <h1>render vs. HTTPResponse vs. HTTPResponseredirect</h1>
+      				<span class="date">24 Jun 2020</span>
+              <h1>Django - dynamically type url</h1>
               
-								<li class="button small">concepts</li>
-								
 								<li class="button small">web</li>
 								
 								<li class="button small">server-side</li>
 								
 								<li class="button small">django</li>
 								
-      				<!-- <p><p>
-<strong>HTTP reponse code</strong> indicates a specific HTTP request has been successfully completed
-<ol>
-<li>Informatioin responses(100-)</li>
-<li>Successful responses (200-)</li>
-<li>Redirects (300-)</li>
-<li>Client errors (400-)</li>
-<li>Server errors (400-)</li>
-</ol>
-</p>
-<p>
-<code><strong>200 OK</strong></code>
-<li><strong>GET</strong>: fetching and transmission of the source in the message body</li>
-<li><strong>HEAD</strong>: the entity headers are in the message body</li>
-<li><strong>PUT or POST</strong>: transmission of the resource describing the result in the message body</li>
-<li><strong>TRACE</strong>: the request message in the message body as received by the server</li>
-</p>
+								<li class="button small">python</li>
+								
+      				<!-- <p><pre><code>"adults": "1"
+"childs":"0"
+"infants":"0"
+"res": "0"
+"vehicle":"0"
+outbound_route = '1040'
+outbound_date = '19-02-2019'
+inbound_route = '1042'
+inbound_date = '20-02-2019'
 
+</code></pre>
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p>
-<strong>HTTP reponse code</strong> indicates a specific HTTP request has been successfully completed
-<ol>
-<li>Informatioin responses(100-)</li>
-<li>Successful responses (200-)</li>
-<li>Redirects (300-)</li>
-<li>Client errors (400-)</li>
-<li>Server errors (400-)</li>
-</ol>
-</p>
-<p>
-<code><strong>200 OK</strong></code>
-<li><strong>GET</strong>: fetching and transmission of the source in the message body</li>
-<li><strong>HEAD</strong>: the entity headers are in the message body</li>
-<li><strong>PUT or POST</strong>: transmission of the resource describing the result in the message body</li>
-<li><strong>TRACE</strong>: the request message in the message body as received by the server</li>
-</p>
+      			<p><pre><code>"adults": "1"
+"childs":"0"
+"infants":"0"
+"res": "0"
+"vehicle":"0"
+outbound_route = '1040'
+outbound_date = '19-02-2019'
+inbound_route = '1042'
+inbound_date = '20-02-2019'
 
-<h3 id="httpresponse">HTTPResponse()</h3>
-<blockquote>HTTP 200</blockquote>
-<li>returns a HTTPResponse object</li>
-<li>usually used for small responses such as ajax dadta or small numbers</li>
-<p><br /></p>
+url = "https://booking.snav.it/#/booking/rates"  # no trailing /
+final_url = '/'.join([url, outbound_route, outbound_date, inbound_route, inbound_date])
+res = requests.get(final_url, params=params)
+</code></pre>
 
-<h3 id="httpresponseredirect">HTTPResponseredirect()</h3>
-<blockquote>HTTP 302 (found/moved temporarily)</blockquote>
-<li>redirects the page to the given url parameter</li>
-<p><br /></p>
+<p>or you could use a formatted string literal:</p>
 
-<h3 id="renderrequest-template_name-contextnone-content_typenone-stats-none-usingnone">Render(request, template_name, context=None, content_type=None, stats-None, using=None)</h3>
-<li>instead of rendering the template in HTTPResponse()</li>
-<li>combines the template with the context and returns HTTPResponse object</li>
-<p><br /></p>
+<pre><code>url = "https://booking.snav.it/#/booking/rates/"
+final_url = f'{url}{outbound_route}/{outbound_date}/{inbound_route}/{inbound_date}
+</code></pre>
 
-<h4 id="required">required</h4>
-<p><strong>request </strong>: object used to generate this response
-<strong>template_name</strong></p>
-
-<h4 id="optional">optional</h4>
-<p><strong>context </strong>: a dictionary of values to add to the template context
-<strong>content_type </strong>: the MIME type to use fo rthe resulting doc.</p>
-<blockquote><strong>MIME types</strong>: is a media type that describes the nature and format of a document, file or assortment of bytes. <code>type/subtype</code></blockquote>
-<p><strong>status</strong>: status code for the response
-<strong>using</strong> : the name of a template engine to use for loading the template</p>
-
-<h3 id="redirectto-args-permanentfalse-kwargs">Redirect(to, args, permanent=false, kwargs)</h3>
-<li>instead of calling reverse within HTTPResponseredirect(), call redirect to move to the given url</li>
-<li>cannot transfer data between pages</li>
-<li>use names from url pattern in urls.py</li>
+<h3 id="output">output</h3>
+<pre><code>https://booking.snav.it/#/booking/rates/1040/19-02-2019/1042/19-02-2019?adults=1&amp;childs=0&amp;infants=0&amp;res=0&amp;vehicle=0</code></pre>
 </p>
       		</section>
 
@@ -155,8 +122,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/render-httpresponse/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/render-httpresponse/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/dynamic-url-django/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/dynamic-url-django/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

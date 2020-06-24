@@ -1,4 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-22T21:35:23+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Python basics</title><link href="https://parkyo.github.io/categories/python-basics/" rel="alternate" type="text/html" title="Python basics" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/python-basics/">&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-25T00:14:08+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django - dynamically type url</title><link href="https://parkyo.github.io/categories/dynamic-url-django/" rel="alternate" type="text/html" title="Django - dynamically type url" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/dynamic-url-django</id><content type="html" xml:base="https://parkyo.github.io/categories/dynamic-url-django/">&lt;pre&gt;&lt;code&gt;&quot;adults&quot;: &quot;1&quot;
+&quot;childs&quot;:&quot;0&quot;
+&quot;infants&quot;:&quot;0&quot;
+&quot;res&quot;: &quot;0&quot;
+&quot;vehicle&quot;:&quot;0&quot;
+outbound_route = '1040'
+outbound_date = '19-02-2019'
+inbound_route = '1042'
+inbound_date = '20-02-2019'
+
+url = &quot;https://booking.snav.it/#/booking/rates&quot;  # no trailing /
+final_url = '/'.join([url, outbound_route, outbound_date, inbound_route, inbound_date])
+res = requests.get(final_url, params=params)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or you could use a formatted string literal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;url = &quot;https://booking.snav.it/#/booking/rates/&quot;
+final_url = f'{url}{outbound_route}/{outbound_date}/{inbound_route}/{inbound_date}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;output&quot;&gt;output&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;https://booking.snav.it/#/booking/rates/1040/19-02-2019/1042/19-02-2019?adults=1&amp;amp;childs=0&amp;amp;infants=0&amp;amp;res=0&amp;amp;vehicle=0&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="web" /><category term="server-side" /><category term="django" /><category term="python" /><summary type="html">&quot;adults&quot;: &quot;1&quot;
+&quot;childs&quot;:&quot;0&quot;
+&quot;infants&quot;:&quot;0&quot;
+&quot;res&quot;: &quot;0&quot;
+&quot;vehicle&quot;:&quot;0&quot;
+outbound_route = '1040'
+outbound_date = '19-02-2019'
+inbound_route = '1042'
+inbound_date = '20-02-2019'</summary></entry><entry><title type="html">Django - how to fetch data from external website</title><link href="https://parkyo.github.io/categories/fetch/" rel="alternate" type="text/html" title="Django - how to fetch data from external website" /><published>2020-06-23T00:00:00+09:00</published><updated>2020-06-23T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/fetch</id><content type="html" xml:base="https://parkyo.github.io/categories/fetch/">&lt;h2 id=&quot;fetch&quot;&gt;Fetch&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Fetch&lt;/strong&gt; is a process of bringing or displaying data to an alternate location.&lt;/p&gt;
+
+&lt;h2 id=&quot;fetch-data-from-web&quot;&gt;Fetch data from web&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Web scraping&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;def fetchFilteredClasses(dpt):
+    classnames=[]
+    url = 'https://www.lsa.umich.edu/cg/cg_results.aspx?termArray=f_20_2310&amp;amp;cgtype=ug&amp;amp;department=&amp;amp;allsections=true'
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content,&quot;html.parser&quot;)
+    for a in soup.findAll('div', attrs = {'class' : 'row toppadding_main bottompadding_interior'}):
+        name = a.find('div', attrs={'class':'col-sm-12'})
+        classnames.append(name.text)
+
+    df = pd.DataFrame({'Class Name':classnames}) 
+    df.to_csv('products.csv', index=False, encoding='utf-8')
+
+&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">Fetch
+Fetch is a process of bringing or displaying data to an alternate location.</summary></entry><entry><title type="html">Python basics</title><link href="https://parkyo.github.io/categories/python-basics/" rel="alternate" type="text/html" title="Python basics" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/python-basics/">&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
 &lt;li&gt;Web Development&lt;/li&gt;
 &lt;li&gt;Machine Learning&lt;/li&gt;
 &lt;li&gt;Data Analytics&lt;/li&gt;
@@ -66,6 +115,17 @@ $git push&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category te
 &lt;li&gt;combines the template with the context and returns HTTPResponse object&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;h4 id=&quot;required&quot;&gt;required&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
+&lt;strong&gt;template_name&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;optional&quot;&gt;optional&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
+&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.&lt;/p&gt;
+&lt;blockquote&gt;&lt;strong&gt;MIME types&lt;/strong&gt;: is a media type that describes the nature and format of a document, file or assortment of bytes. &lt;code&gt;type/subtype&lt;/code&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt;: status code for the response
+&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template&lt;/p&gt;
+
 &lt;h3 id=&quot;redirectto-args-permanentfalse-kwargs&quot;&gt;Redirect(to, args, permanent=false, kwargs)&lt;/h3&gt;
 &lt;li&gt;instead of calling reverse within HTTPResponseredirect(), call redirect to move to the given url&lt;/li&gt;
 &lt;li&gt;cannot transfer data between pages&lt;/li&gt;
@@ -83,12 +143,7 @@ Server errors (400-)
 GET: fetching and transmission of the source in the message body
 HEAD: the entity headers are in the message body
 PUT or POST: transmission of the resource describing the result in the message body
-TRACE: the request message in the message body as received by the server</summary></entry><entry><title type="html">how to fetch data from external website</title><link href="https://parkyo.github.io/categories/fetch/" rel="alternate" type="text/html" title="how to fetch data from external website" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/fetch</id><content type="html" xml:base="https://parkyo.github.io/categories/fetch/">&lt;h2 id=&quot;fetch&quot;&gt;Fetch&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Fetch&lt;/strong&gt; is a process of bringing or displaying data to an alternate location.&lt;/p&gt;
-
-&lt;h2 id=&quot;fetch-data-from-web&quot;&gt;Fetch data from web&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Web scraping&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">Fetch
-Fetch is a process of bringing or displaying data to an alternate location.</summary></entry><entry><title type="html">CSRF Token</title><link href="https://parkyo.github.io/categories/CSRF-token/" rel="alternate" type="text/html" title="CSRF Token" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/CSRF-token</id><content type="html" xml:base="https://parkyo.github.io/categories/CSRF-token/">&lt;h3 id=&quot;csrf-token&quot;&gt;CSRF Token&lt;/h3&gt;
+TRACE: the request message in the message body as received by the server</summary></entry><entry><title type="html">CSRF Token</title><link href="https://parkyo.github.io/categories/CSRF-token/" rel="alternate" type="text/html" title="CSRF Token" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/CSRF-token</id><content type="html" xml:base="https://parkyo.github.io/categories/CSRF-token/">&lt;h3 id=&quot;csrf-token&quot;&gt;CSRF Token&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Cross-site Request Forgery token&lt;/strong&gt; is a token containing a random value generated by the server-side application in order to prevent hackers from forging the user’s data. 
 &lt;a href=&quot;https://www.youtube.com/watch?v=Ub5TLow9GL4&quot; class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/csrf_token.png&quot; /&gt;&lt;/a&gt;
 When a client logs in, the server gives a session token unique to that client. The client needs to provide the same token in order to request to the server so that the server validates it.&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">CSRF Token
@@ -254,4 +309,4 @@ int main(){
 
 &lt;p&gt;&lt;strong&gt;Encoding&lt;/strong&gt; is transforming a data from one type to another&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;&lt;/li&gt;
-&lt;p&gt;= variable-width : from character code points to unicode&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Deploy</title><link href="https://parkyo.github.io/categories/Django-deploy/" rel="alternate" type="text/html" title="Django - Deploy" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-deploy</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-deploy/">&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><summary type="html">Deployment means to install, test and implement a computer system or application</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;p&gt;= variable-width : from character code points to unicode&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>

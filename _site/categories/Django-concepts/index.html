@@ -82,11 +82,24 @@
 
 <p><code>python manage.py COMMAND</code> allows you to interact with django project</p>
 
+<h3 id="create-a-new-app">Create a new app</h3>
+<pre><code>$python manage.py startapp {APP_NAME}</code></pre>
+
 <h3 id="settingspy">Settings.py</h3>
 <p>When creating a new app within the project, the app’s name has to be added to <code>INSTALLED_APPS</code></p>
 
 <h3 id="urlspy">urls.py</h3>
-<p>Import new functions from {app_name}.views and add <code>path('{url}', {function})</code></p>
+<p>Import new functions <code>from {app_name}.views import {FUNCTION}</code> and add <code>path('{URL}', {FUNCTION})</code></p>
+
+<h3 id="modelspy">models.py</h3>
+<pre><code>class MODEL_ITEM(models.Model):
+    DATA_FIELD = models.TextField()
+    DATA_FIELD = models.CharField(max_length = 29)
+    ...
+</code></pre>
+
+<pre><code>$python manage.py makemigrations
+$python manage.py migrate</code></pre>
 
 <h3 id="viewspy">views.py</h3>
 <p>If you created a separate html for the app in templates directory, add <code>from django.shortcuts import render</code>
@@ -98,17 +111,6 @@
 <p><code>render(request, template_name, context=None, content_type=None, using=None)</code></p>
 <blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. </blockquote>
 
-<h4 id="required">required</h4>
-<p><strong>request </strong>: object used to generate this response
-<strong>template_name</strong></p>
-
-<h4 id="optional">optional</h4>
-<p><strong>context </strong>: a dictionary of values to add to the template context
-<strong>content_type </strong>: the MIME type to use fo rthe resulting doc.</p>
-<blockquote><strong>MIME types</strong>: is a media type that describes the nature and format of a document, file or assortment of bytes. <code>type/subtype</code></blockquote>
-<p><strong>status</strong>: status code for the response
-<strong>using</strong> : the name of a template engine to use for loading the template</p>
-
 <p><code>from django.http import HttpResponse, HttpResposneRedirect</code></p>
 <blockquote><strong>HttpRequest</strong> objects that contain metadata are created automatically by Django</blockquote>
 <p>Request and response objects are used to pass state through the system.</p>
@@ -116,6 +118,9 @@
 <blockquote>Page is requested -&gt; <strong>HttpRequest</strong> created with metadata about the request -&gt; load view with <strong>HttpRequest</strong> -&gt; each returns <strong>HttpResponse</strong> object</blockquote>
 
 <p><code>return HttpResponse('{url}' or {"{msg}"})</code></p>
+
+<p><code>from .models import MODEL_ITEM</code> imports model item from models.py. 
+<code>MODEL_ITEM(DATA_FIELD = request.METHOD['INPUT_NAME'])</code></p>
 
 <h3 id="settingspy-1">settings.py</h3>
 <pre><code>import os</code></pre>
@@ -126,6 +131,10 @@
 <p><strong>OS module</strong> provides functions for interacting with the operating system. 
 <code>os.path.join({a file system path},{path component to be joined})</code> 
 <code>BASE_DIR</code> is an absolute path where manage.py lies</p>
+
+<h3 id="templates--html">templates &gt; .html</h3>
+<pre><code>&lt;/pre&gt;</code>
+</pre>
 </p>
       		</section>
 
