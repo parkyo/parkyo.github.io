@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-25T00:14:08+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django - dynamically type url</title><link href="https://parkyo.github.io/categories/dynamic-url-django/" rel="alternate" type="text/html" title="Django - dynamically type url" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/dynamic-url-django</id><content type="html" xml:base="https://parkyo.github.io/categories/dynamic-url-django/">&lt;pre&gt;&lt;code&gt;&quot;adults&quot;: &quot;1&quot;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-25T01:31:25+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Workout</title><link href="https://parkyo.github.io/categories/google-kickstart-workout/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Workout" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-workout</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-workout/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.&lt;/p&gt;
+
+&lt;p&gt;The score of a group is equal to the length of the longest prefix shared by all the strings in that group. For example:
+The group {RAINBOW, RANK, RANDOM, RANK} has a score of 2 (the longest prefix is ‘RA’).
+The group {FIRE, FIREBALL, FIREFIGHTER} has a score of 4 (the longest prefix is ‘FIRE’).
+The group {ALLOCATION, PLATE, WORKOUT, BUNDLING} has a score of 0 (the longest prefix is ‘’).&lt;/p&gt;
+
+&lt;p&gt;Please help Pip bundle their strings into groups of size K, such that the sum of scores of the groups is maximized.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+2
+2 2
+KICK
+START
+8 2
+G
+G
+GO
+GO
+GOO
+GOO
+GOOO
+GOOO&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+Case #1: 0
+Case #2: 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;blockquote&gt;(MLT for bigger test set)&lt;/blockquote&gt;
+&lt;p&gt;(explanation to come..)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;strong&gt;
+int main(){
+    int tests, size, b;
+    cin &amp;gt;&amp;gt; tests;
+    for(size_t j = 0; j &amp;lt; tests; ++j){
+        int score = 0;
+        cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; b;
+        unordered_map&amp;lt;string, int&amp;gt; list;
+        for(size_t i = 0; i &amp;lt; size; ++i){
+            string w;
+            cin &amp;gt;&amp;gt; w;
+            string cur = &quot;&quot;;
+            for(size_t k =0; k &amp;lt; w.size(); ++k){
+                cur.push_back(w[k]);
+                auto it = list.find(cur);
+                if(it == list.end()){
+                    list.insert(pair&amp;lt;string,int&amp;gt;(cur, 1));
+                }else{
+                    ++(it-&amp;gt;second);
+                }
+            }
+            
+            
+        }
+        for(auto it = list.begin(); it != list.end(); ++it){
+            score += ((it-&amp;gt;second)/b);
+        }
+        
+        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; score &amp;lt;&amp;lt; endl;
+    }
+    return 0;
+}
+   &lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h3&gt;
+&lt;p&gt;Use &lt;strong&gt;trie&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Plates</title><link href="https://parkyo.github.io/categories/google-kickstart-bundling/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Plates" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-bundling</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-bundling/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.&lt;/p&gt;
+
+&lt;p&gt;The score of a group is equal to the length of the longest prefix shared by all the strings in that group. For example:
+The group {RAINBOW, RANK, RANDOM, RANK} has a score of 2 (the longest prefix is ‘RA’).
+The group {FIRE, FIREBALL, FIREFIGHTER} has a score of 4 (the longest prefix is ‘FIRE’).
+The group {ALLOCATION, PLATE, WORKOUT, BUNDLING} has a score of 0 (the longest prefix is ‘’).&lt;/p&gt;
+
+&lt;p&gt;Please help Pip bundle their strings into groups of size K, such that the sum of scores of the groups is maximized.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+2
+2 2
+KICK
+START
+8 2
+G
+G
+GO
+GO
+GOO
+GOO
+GOOO
+GOOO&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+Case #1: 0
+Case #2: 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;blockquote&gt;(MLT for bigger test set)&lt;/blockquote&gt;
+&lt;p&gt;(explanation to come..)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;strong&gt;
+int main(){
+    int tests, size, b;
+    cin &amp;gt;&amp;gt; tests;
+    for(size_t j = 0; j &amp;lt; tests; ++j){
+        int score = 0;
+        cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; b;
+        unordered_map&amp;lt;string, int&amp;gt; list;
+        for(size_t i = 0; i &amp;lt; size; ++i){
+            string w;
+            cin &amp;gt;&amp;gt; w;
+            string cur = &quot;&quot;;
+            for(size_t k =0; k &amp;lt; w.size(); ++k){
+                cur.push_back(w[k]);
+                auto it = list.find(cur);
+                if(it == list.end()){
+                    list.insert(pair&amp;lt;string,int&amp;gt;(cur, 1));
+                }else{
+                    ++(it-&amp;gt;second);
+                }
+            }
+            
+            
+        }
+        for(auto it = list.begin(); it != list.end(); ++it){
+            score += ((it-&amp;gt;second)/b);
+        }
+        
+        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; score &amp;lt;&amp;lt; endl;
+    }
+    return 0;
+}
+   &lt;/strong&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h3&gt;
+&lt;p&gt;Use &lt;strong&gt;trie&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="trie" /><category term="string" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - dynamically type url</title><link href="https://parkyo.github.io/categories/dynamic-url-django/" rel="alternate" type="text/html" title="Django - dynamically type url" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/dynamic-url-django</id><content type="html" xml:base="https://parkyo.github.io/categories/dynamic-url-django/">&lt;pre&gt;&lt;code&gt;&quot;adults&quot;: &quot;1&quot;
 &quot;childs&quot;:&quot;0&quot;
 &quot;infants&quot;:&quot;0&quot;
 &quot;res&quot;: &quot;0&quot;
@@ -206,107 +356,4 @@ Case #3: 0&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(nlogn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;Think about greedy algorithm first&lt;/blockquote&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="greedy" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Plates</title><link href="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Plates" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kick-start-2020-A-plates</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kick-start-2020-A-plates/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d40bb&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Dr. Patel has N stacks of plates. Each stack contains K plates. Each plate has a positive beauty value, describing how beautiful it looks.&lt;/p&gt;
-
-&lt;p&gt;Dr. Patel would like to take exactly P plates to use for dinner tonight. If he would like to take a plate in a stack, he must also take all of the plates above it in that stack as well.&lt;/p&gt;
-
-&lt;p&gt;Help Dr. Patel pick the P plates that would maximize the total sum of beauty values.&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-2
-2 4 5
-10 10 100 30
-80 50 10 50
-3 2 3
-80 80
-15 50
-20 10&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-Case #1: 250
-Case #2: 180&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;I have realized a lot of my test failures come from small errors like not checking enough conditions or confusing variables.
-These small mistakes always prevent me from getting scores even after making almost perfect solution.
-I think this comes from experience to detect what common errors can be in the solution or what specific formants are necessary for each competition.&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Similar to &lt;strong&gt;0/1 Knapsack Problem&lt;/strong&gt; Bottom-up Approach&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Make two vectors to store values of all plates and to keep track of dynamic programming.&lt;/li&gt;
-  &lt;li&gt;When storing values, store accumulated values per stack&lt;/li&gt;
-  &lt;li&gt;dp[i][j] = max(dp[i-1][j-n] + values[i][n] where n from 0 to k)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;strong&gt;
-int main(){
-    int tests, s, p, num;
-    cin &amp;gt;&amp;gt; tests;
-    for(size_t i = 0; i &amp;lt; tests; ++i){
-        cin &amp;gt;&amp;gt; s &amp;gt;&amp;gt; p &amp;gt;&amp;gt; num;
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; stacks(s, vector&amp;lt;int&amp;gt;(p+1));
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; sol(s, vector&amp;lt;&amp;lt;ntgt;(num+1));
-        int cur = 0;
-        for(size_t j = 0; j &amp;lt; s; ++j){
-            for(size_t k = 1; k &amp;lt; p+1; ++k){
-                cin &amp;gt;&amp;gt; cur;
-                stacks[j][k] = stacks[j][k-1] + cur;
-            }
-        }
-        
-        for(size_t j = 0; j &amp;lt; s; ++j){
-            for(size_t k = 1; k &amp;lt; num+1; ++k){
-                if(j == 0){
-                    if(k &amp;gt; p){
-                        sol[j][k] = sol[j][k-1];
-                    }else{
-                        sol[j][k] = stacks[0][k];
-                    }
-                }else{
-                    int max = 0;
-                    for(size_t n = 0; n &amp;lt;= k; ++n){
-                        int part = sol[j-1][k-n];
-                        if(n &amp;lt;= p){
-                            part += stacks[j][n];
-                        }else{
-                            part += stacks[j][p];
-                        }
-                            if(max &amp;lt; part){
-                                max = part;
-                            }
-                    }
-                    sol[j][k] = max;
-                }
-                
-            }
-        }
-        
-        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; sol[s-1][num] &amp;lt;&amp;lt; endl;
-    }
-    return 0;
-    
-}
-   &lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(s&lt;em&gt;p&lt;/em&gt;num)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="dp" /><category term="bottom_up" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tech Terms</title><link href="https://parkyo.github.io/categories/Tech-terms/" rel="alternate" type="text/html" title="Tech Terms" /><published>2020-06-17T00:00:00+09:00</published><updated>2020-06-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Tech-terms</id><content type="html" xml:base="https://parkyo.github.io/categories/Tech-terms/">&lt;p&gt;There are so many unfamiliar terms I need to know about.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Deployment&lt;/strong&gt; means to install, test and implement a computer system or application&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Configuration&lt;/strong&gt; describes the arrangement of hardware and software components to make up the computer system.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Module&lt;/strong&gt; is a separate, interchangeable component.&lt;/p&gt;
-&lt;li&gt;encampsulate code and data to implmenet a particular functionality&lt;/li&gt;
-&lt;li&gt;has an interface to access its functionality in an uniform manner&lt;/li&gt;
-&lt;li&gt;easily pluggable with another module that expects its iterface&lt;/li&gt;
-&lt;li&gt;packaged in a single unit so that it can be easily deployed&lt;/li&gt;
-
-&lt;p&gt;&lt;strong&gt;Forge&lt;/strong&gt; is a web-based collaborative software platform for developing and sharing computer application.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Encoding&lt;/strong&gt; is transforming a data from one type to another&lt;/p&gt;
-&lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;&lt;/li&gt;
-&lt;p&gt;= variable-width : from character code points to unicode&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;blockquote&gt;Think about greedy algorithm first&lt;/blockquote&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="greedy" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
