@@ -11,5 +11,6 @@ tags: concepts python
 <li>Machine Learning</li>
 <li>Data Analytics</li>
 <br>
+
 ### self
 <strong>self</strong> is an instance of the class to access properties and methods of the class

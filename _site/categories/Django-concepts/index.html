@@ -62,7 +62,7 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">17 Jun 2020</span>
+      				<span class="date">25 Jun 2020</span>
               <h1>Django Concepts</h1>
               
 								<li class="button small">django</li>
@@ -71,70 +71,36 @@
 								
 								<li class="button small">python</li>
 								
-      				<!-- <p><p><a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a></p>
+      				<!-- <p><h3 id="django">Django</h3>
+<p>MVT - Model View Template</p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://github.com/parkyo/helloworld_webapp"><strong>Helloworld Web App</strong> github</a></p>
+      			<p><h3 id="django">Django</h3>
+<p>MVT - Model View Template</p>
 
-<h2 id="make-todo-list">Make Todo List</h2>
+<p>To accomplish <strong>Separation of Concern</strong> by separating…</p>
+<li>Data - Model</li>
+<li>Layout - Django Template Language allows dynamic data</li>
+<li>Logic</li>
 
-<p><code>python manage.py COMMAND</code> allows you to interact with django project</p>
+<p><span class="image fit"><img src="/images/MVT.png" /></span>
+Data from database is linked with <strong>Model</strong>. <strong>View</strong> links <strong>Model</strong> and <strong>Template</strong> together. When the user sends a request, it goes to the framework forming a URL that navigates to <strong>View</strong>. In <strong>View</strong>, we write busienss logic. Then, it will use the model and template objects to decide what data to be sent on <strong>template </strong>from <strong>model</strong>.</p>
 
-<h3 id="create-a-new-app">Create a new app</h3>
-<pre><code>$python manage.py startapp {APP_NAME}</code></pre>
+<h3 id="mvt-vs-mvc">MVT vs. MVC</h3>
+<li>Model = Model</li>
+<li>Template = View</li>
+<li>View = Controller</li>
 
-<h3 id="settingspy">Settings.py</h3>
-<p>When creating a new app within the project, the app’s name has to be added to <code>INSTALLED_APPS</code></p>
+<p>However, MVC needs a configuration for <strong>Controller</strong> where as <strong>Django</strong> does it automatically.</p>
 
-<h3 id="urlspy">urls.py</h3>
-<p>Import new functions <code>from {app_name}.views import {FUNCTION}</code> and add <code>path('{URL}', {FUNCTION})</code></p>
+<h3 id="advantages">Advantages</h3>
+<li>Develop Fast</li>
+<li>Provide Bundled Components </li>
+<li>Data Security </li>
+<li>Scalability </li>
 
-<h3 id="modelspy">models.py</h3>
-<pre><code>class MODEL_ITEM(models.Model):
-    DATA_FIELD = models.TextField()
-    DATA_FIELD = models.CharField(max_length = 29)
-    ...
-</code></pre>
-
-<pre><code>$python manage.py makemigrations
-$python manage.py migrate</code></pre>
-
-<h3 id="viewspy">views.py</h3>
-<p>If you created a separate html for the app in templates directory, add <code>from django.shortcuts import render</code>
-<strong>django.shortcuts</strong> is a package that collects helper functions and classes that span multiple levels of MVC and introudce control coupling.</p>
-<blockquote><strong>Control coupling</strong> is one module controlling the flow of another by passing it information on what to do. </blockquote>
-
-<p><a href="https://docs.djangoproject.com/en/3.0/topics/http/shortcuts/">reference</a></p>
-
-<p><code>render(request, template_name, context=None, content_type=None, using=None)</code></p>
-<blockquote><strong>render</strong> is gathering data, loading the associated templates, applying the data to the templates, and sending the output to the user. </blockquote>
-
-<p><code>from django.http import HttpResponse, HttpResposneRedirect</code></p>
-<blockquote><strong>HttpRequest</strong> objects that contain metadata are created automatically by Django</blockquote>
-<p>Request and response objects are used to pass state through the system.</p>
-
-<blockquote>Page is requested -&gt; <strong>HttpRequest</strong> created with metadata about the request -&gt; load view with <strong>HttpRequest</strong> -&gt; each returns <strong>HttpResponse</strong> object</blockquote>
-
-<p><code>return HttpResponse('{url}' or {"{msg}"})</code></p>
-
-<p><code>from .models import MODEL_ITEM</code> imports model item from models.py. 
-<code>MODEL_ITEM(DATA_FIELD = request.METHOD['INPUT_NAME'])</code></p>
-
-<h3 id="settingspy-1">settings.py</h3>
-<pre><code>import os</code></pre>
-<p>Add  <code>os.path.join(BASE_DIR, 'templates')</code> in <code>TEMPLATES &gt; DIRS</code></p>
-
-<p>In your live server environment, tell WSGI app what settings file to use</p>
-<blockquote>WSGI is the Web Server Gateway Interface that forwards requests to web apps or frameworks in Python</blockquote>
-<p><strong>OS module</strong> provides functions for interacting with the operating system. 
-<code>os.path.join({a file system path},{path component to be joined})</code> 
-<code>BASE_DIR</code> is an absolute path where manage.py lies</p>
-
-<h3 id="templates--html">templates &gt; .html</h3>
-<pre><code>&lt;/pre&gt;</code>
-</pre>
 </p>
       		</section>
 

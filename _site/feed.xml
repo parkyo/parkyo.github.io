@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-25T01:31:25+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round A - Workout</title><link href="https://parkyo.github.io/categories/google-kickstart-workout/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Workout" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-workout</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-workout/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-26T15:20:33+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django - template extending</title><link href="https://parkyo.github.io/categories/django-template-extending/" rel="alternate" type="text/html" title="Django - template extending" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-template-extending</id><content type="html" xml:base="https://parkyo.github.io/categories/django-template-extending/">&lt;p&gt;&lt;strong&gt;Template extending&lt;/strong&gt; means you can reuse same parts of HTML for different pages of website and prevent you from code repetition.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to&quot;&gt;How To&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a base template &lt;code&gt;templates/base.html&lt;/code&gt;&lt;/li&gt;
+&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/basehtml.png&quot; /&gt;&lt;/span&gt;
+
+&lt;li&gt;Replace the part which content is dependent on other templates with &lt;code&gt;&amp;#123;&amp;#37; block content &amp;#37;&amp;#125;&amp;#123;&amp;#37; endblock &amp;#37;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/basehtml2.png&quot; /&gt;&lt;/span&gt;
+
+&lt;li&gt;In other templates, extend &lt;code&gt;base.html&lt;/code&gt; and code what should be inside of &lt;code&gt;&amp;#123;&amp;#37; block content &amp;#37;&amp;#125;&amp;#123;&amp;#37; endblock &amp;#37;&amp;#125;&lt;/code&gt;&lt;/li&gt;
+&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/extendhtml.png&quot; /&gt;&lt;/span&gt;
+&lt;/ol&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Template extending means you can reuse same parts of HTML for different pages of website and prevent you from code repetition.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Object Relational Mapper Theory</title><link href="https://parkyo.github.io/categories/django-orm/" rel="alternate" type="text/html" title="Django - Object Relational Mapper Theory" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-orm</id><content type="html" xml:base="https://parkyo.github.io/categories/django-orm/">&lt;h2 id=&quot;orm&quot;&gt;ORM&lt;/h2&gt;
+&lt;p&gt;The user uses application to access data.&lt;/p&gt;
+
+&lt;p&gt;Database has tables with data. One object will represent each column.
+ex) product table customer table etc.
+Customer table wil have cust_id, cust_name, cust_phn data.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;classs Customer:
+    cust_id: int
+    cust_name: str
+    cust_phn: int
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; creates a table in database automatically when an object is created in &lt;strong&gt;models.py&lt;/strong&gt;, which is called &lt;strong&gt;ORM theory&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;database-engine&quot;&gt;Database Engine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Oracle, MySQL, SQLite…&lt;/li&gt;
+&lt;/ul&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">ORM
+The user uses application to access data.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">HTTP Methods - GET vs POST</title><link href="https://parkyo.github.io/categories/django-get-post/" rel="alternate" type="text/html" title="HTTP Methods - GET vs POST" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-get-post</id><content type="html" xml:base="https://parkyo.github.io/categories/django-get-post/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OTmQOjsl0eg&quot;&gt; recommendation for Django tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;http-protocol&quot;&gt;HTTP Protocol&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/httpprotocol.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Request Methods&lt;/strong&gt; GET POST PUT DELETE HEAD CONNECT OPTION TRACE PATCH&lt;/p&gt;
+
+&lt;h3 id=&quot;get&quot;&gt;GET&lt;/h3&gt;
+&lt;p&gt;: fetch data from the server
+The data is sent to the address bar. So we don’t want to use &lt;code&gt;GET&lt;/code&gt; for private data such as userID and password&lt;/p&gt;
+
+&lt;h3 id=&quot;post&quot;&gt;POST&lt;/h3&gt;
+&lt;p&gt;: update data of the server
+Use &lt;code&gt;CSRF Token&lt;/code&gt; for this method&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><category term="HTTP" /><summary type="html">recommendation for Django tutorial</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;h3 id=&quot;django&quot;&gt;Django&lt;/h3&gt;
+&lt;p&gt;MVT - Model View Template&lt;/p&gt;
+
+&lt;p&gt;To accomplish &lt;strong&gt;Separation of Concern&lt;/strong&gt; by separating…&lt;/p&gt;
+&lt;li&gt;Data - Model&lt;/li&gt;
+&lt;li&gt;Layout - Django Template Language allows dynamic data&lt;/li&gt;
+&lt;li&gt;Logic&lt;/li&gt;
+
+&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/MVT.png&quot; /&gt;&lt;/span&gt;
+Data from database is linked with &lt;strong&gt;Model&lt;/strong&gt;. &lt;strong&gt;View&lt;/strong&gt; links &lt;strong&gt;Model&lt;/strong&gt; and &lt;strong&gt;Template&lt;/strong&gt; together. When the user sends a request, it goes to the framework forming a URL that navigates to &lt;strong&gt;View&lt;/strong&gt;. In &lt;strong&gt;View&lt;/strong&gt;, we write busienss logic. Then, it will use the model and template objects to decide what data to be sent on &lt;strong&gt;template &lt;/strong&gt;from &lt;strong&gt;model&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;mvt-vs-mvc&quot;&gt;MVT vs. MVC&lt;/h3&gt;
+&lt;li&gt;Model = Model&lt;/li&gt;
+&lt;li&gt;Template = View&lt;/li&gt;
+&lt;li&gt;View = Controller&lt;/li&gt;
+
+&lt;p&gt;However, MVC needs a configuration for &lt;strong&gt;Controller&lt;/strong&gt; where as &lt;strong&gt;Django&lt;/strong&gt; does it automatically.&lt;/p&gt;
+
+&lt;h3 id=&quot;advantages&quot;&gt;Advantages&lt;/h3&gt;
+&lt;li&gt;Develop Fast&lt;/li&gt;
+&lt;li&gt;Provide Bundled Components &lt;/li&gt;
+&lt;li&gt;Data Security &lt;/li&gt;
+&lt;li&gt;Scalability &lt;/li&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Django
+MVT - Model View Template</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Workout</title><link href="https://parkyo.github.io/categories/google-kickstart-workout/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Workout" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-workout</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-workout/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.&lt;/p&gt;
@@ -202,14 +268,12 @@ Fetch is a process of bringing or displaying data to an alternate location.</sum
 &lt;li&gt;Machine Learning&lt;/li&gt;
 &lt;li&gt;Data Analytics&lt;/li&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;self&quot;&gt;self&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;self&lt;/strong&gt; is an instance of the class to access properties and methods of the class&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="python" /><summary type="html">Uses
 Web Development
 Machine Learning
-Data Analytics
-
-self
-self is an instance of the class to access properties and methods of the class</summary></entry><entry><title type="html">What is Operating System</title><link href="https://parkyo.github.io/categories/operating-system/" rel="alternate" type="text/html" title="What is Operating System" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/operating-system</id><content type="html" xml:base="https://parkyo.github.io/categories/operating-system/">&lt;p&gt;&lt;strong&gt;Operating Systems&lt;/strong&gt; are programs for computers to operate on their own. 
+Data Analytics</summary></entry><entry><title type="html">What is Operating System</title><link href="https://parkyo.github.io/categories/operating-system/" rel="alternate" type="text/html" title="What is Operating System" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/operating-system</id><content type="html" xml:base="https://parkyo.github.io/categories/operating-system/">&lt;p&gt;&lt;strong&gt;Operating Systems&lt;/strong&gt; are programs for computers to operate on their own. 
 &lt;i&gt;ex) MacOS, Android, Windows…&lt;/i&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
@@ -226,134 +290,4 @@ self is an instance of the class to access properties and methods of the class</
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h3&gt;
 &lt;p&gt;An open-source, Debian based operating system&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="computer" /><summary type="html">Operating Systems are programs for computers to operate on their own. 
-ex) MacOS, Android, Windows…</summary></entry><entry><title type="html">error: failed to push some refs to</title><link href="https://parkyo.github.io/categories/git-pull/" rel="alternate" type="text/html" title="error: failed to push some refs to" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/git-pull</id><content type="html" xml:base="https://parkyo.github.io/categories/git-pull/">&lt;p&gt;When this error happens,&lt;br /&gt;
-&lt;span&gt;&lt;img src=&quot;/images/gitpull.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$git pull origin master
-$i
-$:wq
-$git push&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="git" /><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">render vs. HTTPResponse vs. HTTPResponseredirect</title><link href="https://parkyo.github.io/categories/render-httpresponse/" rel="alternate" type="text/html" title="render vs. HTTPResponse vs. HTTPResponseredirect" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/render-httpresponse</id><content type="html" xml:base="https://parkyo.github.io/categories/render-httpresponse/">&lt;p&gt;
-&lt;strong&gt;HTTP reponse code&lt;/strong&gt; indicates a specific HTTP request has been successfully completed
-&lt;ol&gt;
-&lt;li&gt;Informatioin responses(100-)&lt;/li&gt;
-&lt;li&gt;Successful responses (200-)&lt;/li&gt;
-&lt;li&gt;Redirects (300-)&lt;/li&gt;
-&lt;li&gt;Client errors (400-)&lt;/li&gt;
-&lt;li&gt;Server errors (400-)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;code&gt;&lt;strong&gt;200 OK&lt;/strong&gt;&lt;/code&gt;
-&lt;li&gt;&lt;strong&gt;GET&lt;/strong&gt;: fetching and transmission of the source in the message body&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;HEAD&lt;/strong&gt;: the entity headers are in the message body&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;PUT or POST&lt;/strong&gt;: transmission of the resource describing the result in the message body&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TRACE&lt;/strong&gt;: the request message in the message body as received by the server&lt;/li&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&quot;httpresponse&quot;&gt;HTTPResponse()&lt;/h3&gt;
-&lt;blockquote&gt;HTTP 200&lt;/blockquote&gt;
-&lt;li&gt;returns a HTTPResponse object&lt;/li&gt;
-&lt;li&gt;usually used for small responses such as ajax dadta or small numbers&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;httpresponseredirect&quot;&gt;HTTPResponseredirect()&lt;/h3&gt;
-&lt;blockquote&gt;HTTP 302 (found/moved temporarily)&lt;/blockquote&gt;
-&lt;li&gt;redirects the page to the given url parameter&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;renderrequest-template_name-contextnone-content_typenone-stats-none-usingnone&quot;&gt;Render(request, template_name, context=None, content_type=None, stats-None, using=None)&lt;/h3&gt;
-&lt;li&gt;instead of rendering the template in HTTPResponse()&lt;/li&gt;
-&lt;li&gt;combines the template with the context and returns HTTPResponse object&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;required&quot;&gt;required&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;request &lt;/strong&gt;: object used to generate this response
-&lt;strong&gt;template_name&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;optional&quot;&gt;optional&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;context &lt;/strong&gt;: a dictionary of values to add to the template context
-&lt;strong&gt;content_type &lt;/strong&gt;: the MIME type to use fo rthe resulting doc.&lt;/p&gt;
-&lt;blockquote&gt;&lt;strong&gt;MIME types&lt;/strong&gt;: is a media type that describes the nature and format of a document, file or assortment of bytes. &lt;code&gt;type/subtype&lt;/code&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;status&lt;/strong&gt;: status code for the response
-&lt;strong&gt;using&lt;/strong&gt; : the name of a template engine to use for loading the template&lt;/p&gt;
-
-&lt;h3 id=&quot;redirectto-args-permanentfalse-kwargs&quot;&gt;Redirect(to, args, permanent=false, kwargs)&lt;/h3&gt;
-&lt;li&gt;instead of calling reverse within HTTPResponseredirect(), call redirect to move to the given url&lt;/li&gt;
-&lt;li&gt;cannot transfer data between pages&lt;/li&gt;
-&lt;li&gt;use names from url pattern in urls.py&lt;/li&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><category term="django" /><summary type="html">HTTP reponse code indicates a specific HTTP request has been successfully completed
-
-Informatioin responses(100-)
-Successful responses (200-)
-Redirects (300-)
-Client errors (400-)
-Server errors (400-)
-
-
-
-200 OK
-GET: fetching and transmission of the source in the message body
-HEAD: the entity headers are in the message body
-PUT or POST: transmission of the resource describing the result in the message body
-TRACE: the request message in the message body as received by the server</summary></entry><entry><title type="html">CSRF Token</title><link href="https://parkyo.github.io/categories/CSRF-token/" rel="alternate" type="text/html" title="CSRF Token" /><published>2020-06-21T00:00:00+09:00</published><updated>2020-06-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/CSRF-token</id><content type="html" xml:base="https://parkyo.github.io/categories/CSRF-token/">&lt;h3 id=&quot;csrf-token&quot;&gt;CSRF Token&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Cross-site Request Forgery token&lt;/strong&gt; is a token containing a random value generated by the server-side application in order to prevent hackers from forging the user’s data. 
-&lt;a href=&quot;https://www.youtube.com/watch?v=Ub5TLow9GL4&quot; class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/csrf_token.png&quot; /&gt;&lt;/a&gt;
-When a client logs in, the server gives a session token unique to that client. The client needs to provide the same token in order to request to the server so that the server validates it.&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">CSRF Token
-Cross-site Request Forgery token is a token containing a random value generated by the server-side application in order to prevent hackers from forging the user’s data. 
-
-When a client logs in, the server gives a session token unique to that client. The client needs to provide the same token in order to request to the server so that the server validates it.</summary></entry><entry><title type="html">Google Kick Start 2020 Round A - Allocation</title><link href="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Allocation" /><published>2020-06-19T00:00:00+09:00</published><updated>2020-06-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation</id><content type="html" xml:base="https://parkyo.github.io/categories/Google-kickstart-2020-A-allocation/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f56&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;There are N houses for sale. The i-th house costs Ai dollars to buy. You have a budget of B dollars to spend.
-What is the maximum number of houses you can buy?&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-3
-4 100
-20 90 40 90
-4 50
-30 30 10 10
-3 300
-999 999 999&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-Case #1: 2
-Case #2: 3
-Case #3: 0&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt; written in C++&lt;/blockquote&gt;
-
-&lt;p&gt;First of all, I read the word ‘maximum’ in the problem and automatically thought it was an optimization problem with dynamic programming. I tried to solve it with dp but NOPE lol. It was a simple problem.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Sort the prices in the ascending order. Increment the count as looping through and adding the prices to the total price until the total prices go over the given amount of dollars.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;strong&gt;int main(){
-    int tests, size, b;
-    cin &amp;gt;&amp;gt; tests;
-    while(--tests &amp;gt;= 0){
-        cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; b;
-        int cur;
-        vector &amp;lt;int&amp;gt; prices(size);
-        for(size_t i = 0; i &amp;lt; prices.size(); ++i){
-            cin &amp;gt;&amp;gt; cur;
-            prices[i] = cur;
-        }
-        int cur_total = 0;
-        int count = 0;
-        sort(prices.begin(), prices.end());
-        for(size_t i = 0; i &amp;lt; prices.size(); ++i){
-            if (cur_total + prices[i] &amp;lt;= b){
-                ++count;
-                cur_total += prices[i];
-            }
-        }
-        cout &amp;lt;&amp;lt; count;
-    }
-    return 0;
-    
-}   &lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Time Complexity = &lt;i&gt;O(nlogn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;Think about greedy algorithm first&lt;/blockquote&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="greedy" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+ex) MacOS, Android, Windows…</summary></entry></feed>
