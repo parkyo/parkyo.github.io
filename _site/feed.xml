@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-14T20:10:47+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Parse String into Date/Time</title><link href="https://parkyo.github.io/categories/django-datetime/" rel="alternate" type="text/html" title="Django - Parse String into Date/Time" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-datetime</id><content type="html" xml:base="https://parkyo.github.io/categories/django-datetime/">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - Web Scraping with Selenium</title><link href="https://parkyo.github.io/categories/django-selenium/" rel="alternate" type="text/html" title="Python - Web Scraping with Selenium" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-selenium</id><content type="html" xml:base="https://parkyo.github.io/categories/django-selenium/">&lt;pre&gt;&lt;code&gt;final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-15T04:30:11+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round D - Record Breaker</title><link href="https://parkyo.github.io/categories/google-kickstart-roundD/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round D - Record Breaker" /><published>2020-07-14T00:00:00+09:00</published><updated>2020-07-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-roundD</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-roundD/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--easy&quot;&gt;Level : Easy&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Isyana is given the number of visitors at her local theme park on N consecutive days. The number of visitors on the i-th day is Vi. A day is record breaking if it satisfies both of the following conditions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The number of visitors on the day is strictly larger than the number of visitors on each of the previous days.&lt;/li&gt;
+  &lt;li&gt;Either it is the last day, or the number of visitors on the day is strictly larger than the number of visitors on the following day.
+Note that the very first day could be a record breaking day!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please help Isyana find out the number of record breaking days.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input1&lt;/strong&gt;: 
+4
+3
+10 20 14
+4
+7 7 7 7
+5
+10 90 20 90 10
+3
+10 3 10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output1&lt;/strong&gt;:
+Case #1: 2
+Case #2: 1
+Case #3: 3
+Case #4: 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Know how to use indices&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int main(){
+    int tests;
+    cin &amp;gt;&amp;gt; tests;
+    for(size_t i = 0; i &amp;lt; tests; ++i){
+        int num;
+        cin &amp;gt;&amp;gt; num;
+        vector&lt;int&gt; list(num);
+        for(size_t j = 0; j &amp;lt; num; ++j){
+            int cur;
+            cin &amp;gt;&amp;gt; cur;
+            list[j] = cur;
+        }
+        int max = -1;
+        int count = 0;
+        for(size_t j = 0; j &amp;lt; num; ++j){
+            if(list[j] &amp;gt; max){
+                max = list[j];
+                if(j == list.size()-1||list[j+1]&amp;lt; list[j]){
+                    ++count;
+                }
+            }
+        }
+        
+
+        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; count  &amp;lt;&amp;lt; endl;
+    }
+    return 0;
+}&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;
+
+
+
+
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;
+
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Parse String into Date/Time</title><link href="https://parkyo.github.io/categories/django-datetime/" rel="alternate" type="text/html" title="Django - Parse String into Date/Time" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-datetime</id><content type="html" xml:base="https://parkyo.github.io/categories/django-datetime/">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - Web Scraping with Selenium</title><link href="https://parkyo.github.io/categories/django-selenium/" rel="alternate" type="text/html" title="Python - Web Scraping with Selenium" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-selenium</id><content type="html" xml:base="https://parkyo.github.io/categories/django-selenium/">&lt;pre&gt;&lt;code&gt;final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
 driver = webdriver.Chrome()
 driver.get(final_url)
 response = driver.execute_script(&quot;return document.documentElement.outerHTML&quot;)
@@ -181,58 +250,4 @@ Case #3: 1
 }&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="stack" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Bike Tour</title><link href="https://parkyo.github.io/categories/kickstart-biketour/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Bike Tour" /><published>2020-06-27T00:00:00+09:00</published><updated>2020-06-27T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-biketour</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-biketour/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Li has planned a bike tour through the mountains of Switzerland. His tour consists of N checkpoints, numbered from 1 to N in the order he will visit them. The i-th checkpoint has a height of Hi.&lt;/p&gt;
-
-&lt;p&gt;A checkpoint is a peak if:
-It is not the 1st checkpoint or the N-th checkpoint, and
-The height of the checkpoint is strictly greater than the checkpoint immediately before it and the checkpoint immediately after it.&lt;/p&gt;
-
-&lt;p&gt;Please help Li find out the number of peaks.&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input1&lt;/strong&gt;: 
-4
-3
-10 20 14
-4
-7 7 7 7
-5
-10 90 20 90 10
-3
-10 3 10&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output1&lt;/strong&gt;:
-Case #1: 1
-Case #2: 0
-Case #3: 2
-Case #4: 0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;As scanning through the list, keep track of three values: &lt;strong&gt;first, sec, third&lt;/strong&gt;. Check if any satisfies the conditions for being a peak.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int biketour(){
-    int tests, size;
-    cin &amp;gt;&amp;gt; tests;
-    for(size_t j = 0; j &amp;lt; tests; ++j){
-        cin &amp;gt;&amp;gt; size;
-        int bfr, cur, after, count = 0;
-        cin &amp;gt;&amp;gt; bfr;
-        cin &amp;gt;&amp;gt; cur;
-        for(size_t i = 0; i &amp;lt; size-2; ++i){
-            cin &amp;gt;&amp;gt; after;
-            if(bfr &amp;lt; cur &amp;amp;&amp;amp; cur &amp;gt; after){
-                    ++count;
-            }
-            bfr = cur;
-            cur = after;
-        }
-        
-        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;
-    }
-    return 0;
-}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="stack" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
