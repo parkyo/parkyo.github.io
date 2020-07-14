@@ -2,6 +2,105 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://parkyo.github.io/categories/beautifulsoup-nextsibling/</loc>
+      
+        <lastmod>2020-07-13T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/django-lambda/</loc>
+      
+        <lastmod>2020-07-03T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/django-vsc-debug/</loc>
+      
+        <lastmod>2020-07-03T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/django-datetime/</loc>
+      
+        <lastmod>2020-07-03T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/django-selenium/</loc>
+      
+        <lastmod>2020-07-03T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/python-attributeerror/</loc>
+      
+        <lastmod>2020-07-03T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/django-many-to-one/</loc>
+      
+        <lastmod>2020-06-30T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/kickstart-robotpath/</loc>
+      
+        <lastmod>2020-06-29T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/kickstart-busroutes/</loc>
+      
+        <lastmod>2020-06-27T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/kickstart-biketour/</loc>
+      
+        <lastmod>2020-06-27T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/google-kickstart-workout/</loc>
+      
+        <lastmod>2020-06-26T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/django-template-extending/</loc>
       
         <lastmod>2020-06-25T00:00:00+09:00</lastmod>
@@ -32,15 +131,6 @@
       <loc>https://parkyo.github.io/categories/Django-concepts/</loc>
       
         <lastmod>2020-06-25T00:00:00+09:00</lastmod>
-      
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-    </url>
-  
-    <url>
-      <loc>https://parkyo.github.io/categories/google-kickstart-workout/</loc>
-      
-        <lastmod>2020-06-24T00:00:00+09:00</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
@@ -415,6 +505,26 @@
   
     <url>
       <loc>https://parkyo.github.io/blog/page5/</loc>
+       <lastmod>2020-06-12T00:00:00+09:00</lastmod>
+      
+       <changefreq>weekly</changefreq>
+      
+       <priority>1.0</priority>
+      
+     </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/blog/page6/</loc>
+       <lastmod>2020-06-12T00:00:00+09:00</lastmod>
+      
+       <changefreq>weekly</changefreq>
+      
+       <priority>1.0</priority>
+      
+     </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/blog/page7/</loc>
        <lastmod>2020-06-12T00:00:00+09:00</lastmod>
       
        <changefreq>weekly</changefreq>

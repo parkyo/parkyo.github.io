@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title:  "Google Kick Start 2020 Round A - Plates"
+title:  "Google Kick Start 2020 Round A - Bundling"
 date:   2020-06-24
 tags: algorithm kick_start trie string
 image: ""

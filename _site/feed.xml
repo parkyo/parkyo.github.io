@@ -1,293 +1,238 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-06-26T15:20:33+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Django - template extending</title><link href="https://parkyo.github.io/categories/django-template-extending/" rel="alternate" type="text/html" title="Django - template extending" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-template-extending</id><content type="html" xml:base="https://parkyo.github.io/categories/django-template-extending/">&lt;p&gt;&lt;strong&gt;Template extending&lt;/strong&gt; means you can reuse same parts of HTML for different pages of website and prevent you from code repetition.&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to&quot;&gt;How To&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;Create a base template &lt;code&gt;templates/base.html&lt;/code&gt;&lt;/li&gt;
-&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/basehtml.png&quot; /&gt;&lt;/span&gt;
-
-&lt;li&gt;Replace the part which content is dependent on other templates with &lt;code&gt;&amp;#123;&amp;#37; block content &amp;#37;&amp;#125;&amp;#123;&amp;#37; endblock &amp;#37;&amp;#125;&lt;/code&gt;&lt;/li&gt;
-&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/basehtml2.png&quot; /&gt;&lt;/span&gt;
-
-&lt;li&gt;In other templates, extend &lt;code&gt;base.html&lt;/code&gt; and code what should be inside of &lt;code&gt;&amp;#123;&amp;#37; block content &amp;#37;&amp;#125;&amp;#123;&amp;#37; endblock &amp;#37;&amp;#125;&lt;/code&gt;&lt;/li&gt;
-&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/extendhtml.png&quot; /&gt;&lt;/span&gt;
-&lt;/ol&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Template extending means you can reuse same parts of HTML for different pages of website and prevent you from code repetition.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Object Relational Mapper Theory</title><link href="https://parkyo.github.io/categories/django-orm/" rel="alternate" type="text/html" title="Django - Object Relational Mapper Theory" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-orm</id><content type="html" xml:base="https://parkyo.github.io/categories/django-orm/">&lt;h2 id=&quot;orm&quot;&gt;ORM&lt;/h2&gt;
-&lt;p&gt;The user uses application to access data.&lt;/p&gt;
-
-&lt;p&gt;Database has tables with data. One object will represent each column.
-ex) product table customer table etc.
-Customer table wil have cust_id, cust_name, cust_phn data.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;classs Customer:
-    cust_id: int
-    cust_name: str
-    cust_phn: int
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-14T20:10:47+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Parse String into Date/Time</title><link href="https://parkyo.github.io/categories/django-datetime/" rel="alternate" type="text/html" title="Django - Parse String into Date/Time" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-datetime</id><content type="html" xml:base="https://parkyo.github.io/categories/django-datetime/">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - Web Scraping with Selenium</title><link href="https://parkyo.github.io/categories/django-selenium/" rel="alternate" type="text/html" title="Python - Web Scraping with Selenium" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-selenium</id><content type="html" xml:base="https://parkyo.github.io/categories/django-selenium/">&lt;pre&gt;&lt;code&gt;final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
+driver = webdriver.Chrome()
+driver.get(final_url)
+response = driver.execute_script(&quot;return document.documentElement.outerHTML&quot;)
+driver.quit()
+soup = BeautifulSoup(response, &quot;lxml&quot;)
+panel = soup.find('div', attrs={'id':'classScheduleBody'})
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; creates a table in database automatically when an object is created in &lt;strong&gt;models.py&lt;/strong&gt;, which is called &lt;strong&gt;ORM theory&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;how-to-web-scrape-without-opening-the-browser&quot;&gt;how to web scrape without opening the browser&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options
 
-&lt;h3 id=&quot;database-engine&quot;&gt;Database Engine&lt;/h3&gt;
+options = Options()
+options.add_argument('--headless')&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="python" /><category term="web_scraping" /><summary type="html">final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
+driver = webdriver.Chrome()
+driver.get(final_url)
+response = driver.execute_script(&quot;return document.documentElement.outerHTML&quot;)
+driver.quit()
+soup = BeautifulSoup(response, &quot;lxml&quot;)
+panel = soup.find('div', attrs={'id':'classScheduleBody'})</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - AttrbiuteError</title><link href="https://parkyo.github.io/categories/python-attributeerror/" rel="alternate" type="text/html" title="Python - AttrbiuteError" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-attributeerror</id><content type="html" xml:base="https://parkyo.github.io/categories/python-attributeerror/">&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/attributeerror.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;AttributeError&lt;/code&gt; is raised when an attribute reference or assignment fails.&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;x = 10
+x.append(6)&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="python" /><category term="error" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Many-to-One Relationship</title><link href="https://parkyo.github.io/categories/django-many-to-one/" rel="alternate" type="text/html" title="Django - Many-to-One Relationship" /><published>2020-06-30T00:00:00+09:00</published><updated>2020-06-30T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-many-to-one</id><content type="html" xml:base="https://parkyo.github.io/categories/django-many-to-one/">&lt;h3 id=&quot;foreignkey&quot;&gt;Foreignkey&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/db/examples/many_to_one/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Foreignkey
+doc</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Robot Path Decoding</title><link href="https://parkyo.github.io/categories/kickstart-robotpath/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Robot Path Decoding" /><published>2020-06-29T00:00:00+09:00</published><updated>2020-06-29T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-robotpath</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-robotpath/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83dc&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;Know how to use &lt;code&gt;mod&lt;/code&gt; appropriately&lt;/blockquote&gt;
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Your country’s space agency has just landed a rover on a new planet, which can be thought of as a grid of squares containing 109 columns (numbered starting from 1 from west to east) and 109 rows (numbered starting from 1 from north to south). Let (w, h) denote the square in the w-th column and the h-th row. The rover begins on the square (1, 1).&lt;/p&gt;
+&lt;p&gt;
+The rover can be maneuvered around on the surface of the planet by sending it a program, which is a string of characters representing movements in the four cardinal directions. The robot executes each character of the string in order:
+
+- N: Move one unit north.
+- S: Move one unit south.
+- E: Move one unit east.
+- W: Move one unit west.
+
+There is also a special instruction X(Y), where X is a number between 2 and 9 inclusive and Y is a non-empty subprogram. This denotes that the robot should repeat the subprogram Y a total of X times. For example:
+2(NWE) is equivalent to NWENWE.
+3(S2(E)) is equivalent to SEESEESEE.
+EEEE4(N)2(SS) is equivalent to EEEENNNNSSSS.&lt;/p&gt;
+
+&lt;p&gt;Since the planet is a torus, the first and last columns are adjacent, so moving east from column 109 will move the rover to column 1 and moving south from row 109 will move the rover to row 1. Similarly, moving west from column 1 will move the rover to column 109 and moving north from row 1 will move the rover to row 109. Given a program that the robot will execute, determine the final position of the robot after it has finished all its movements.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
+4
+SSSEEE
+N
+N3(S)N2(E)N
+2(3(NW)2(W2(EE)W))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
+Case #1: 4 4
+Case #2: 1 1000000000
+Case #3: 3 1
+Case #4: 3 999999995
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Oracle, MySQL, SQLite…&lt;/li&gt;
-&lt;/ul&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">ORM
-The user uses application to access data.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">HTTP Methods - GET vs POST</title><link href="https://parkyo.github.io/categories/django-get-post/" rel="alternate" type="text/html" title="HTTP Methods - GET vs POST" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-get-post</id><content type="html" xml:base="https://parkyo.github.io/categories/django-get-post/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OTmQOjsl0eg&quot;&gt; recommendation for Django tutorial&lt;/a&gt;&lt;/p&gt;
+  &lt;li&gt;Keep track of the multipliers with a stack&lt;/li&gt;
+  &lt;li&gt;if &lt;strong&gt;w&lt;/strong&gt; or &lt;strong&gt;h&lt;/strong&gt; is out of the boundary, make sure to use the mod value in case of multipliers being bigger than multiples of 10^9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int robotpath(){
+    int tests;
+    cin &amp;gt;&amp;gt; tests;
+       for(size_t i = 0; i &amp;lt; tests; ++i){
+           string line;
+           long w=1,h=1;
+           cin &amp;gt;&amp;gt; line;
+           stack&amp;lt;long&amp;gt; mults;
+           mults.push(1);
+           for(char c : line){
+               if(c == ')'){
+                   mults.pop();
+               }else if (c=='('){
+                   continue;
+               }else if(c == 'N'){
+                   h -= mults.top();
+                   if(h &amp;lt;= 0){
+                       h = h % (long)pow(10,9) + (long)pow(10,9);
+                   }
+               }
+               else if(c == 'S'){
+                   h+= mults.top();
+                   if(h &amp;gt; pow(10,9)){
+                       h = h % (long)pow(10,9);
+                   }
+                   
+               }else if(c == 'E'){
+                   w+= mults.top();
+                   if(w &amp;gt; pow(10,9)){
+                       w = w % (long)pow(10,9);
+                   }
+               }
+               else if(c == 'W'){
+                   w-= mults.top();
+                   if(w &amp;lt;= 0){
+                       w = w % (long)pow(10,9) + (long)pow(10,9);
+                   }
+               }else{
+                   long mult = mults.top() * ((int)c - 48);
+                   mults.push(mult);
+               }
+               
+           }
+           cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt;  w &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; h &amp;lt;&amp;lt; endl;
+       }
+       return 0;
+}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;http-protocol&quot;&gt;HTTP Protocol&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/httpprotocol.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><summary type="html">LINK
+Know how to use mod appropriately
+Problem
+Your country’s space agency has just landed a rover on a new planet, which can be thought of as a grid of squares containing 109 columns (numbered starting from 1 from west to east) and 109 rows (numbered starting from 1 from north to south). Let (w, h) denote the square in the w-th column and the h-th row. The rover begins on the square (1, 1).
 
-&lt;p&gt;&lt;strong&gt;Request Methods&lt;/strong&gt; GET POST PUT DELETE HEAD CONNECT OPTION TRACE PATCH&lt;/p&gt;
-
-&lt;h3 id=&quot;get&quot;&gt;GET&lt;/h3&gt;
-&lt;p&gt;: fetch data from the server
-The data is sent to the address bar. So we don’t want to use &lt;code&gt;GET&lt;/code&gt; for private data such as userID and password&lt;/p&gt;
-
-&lt;h3 id=&quot;post&quot;&gt;POST&lt;/h3&gt;
-&lt;p&gt;: update data of the server
-Use &lt;code&gt;CSRF Token&lt;/code&gt; for this method&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><category term="HTTP" /><summary type="html">recommendation for Django tutorial</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django Concepts</title><link href="https://parkyo.github.io/categories/Django-concepts/" rel="alternate" type="text/html" title="Django Concepts" /><published>2020-06-25T00:00:00+09:00</published><updated>2020-06-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Django-concepts</id><content type="html" xml:base="https://parkyo.github.io/categories/Django-concepts/">&lt;h3 id=&quot;django&quot;&gt;Django&lt;/h3&gt;
-&lt;p&gt;MVT - Model View Template&lt;/p&gt;
-
-&lt;p&gt;To accomplish &lt;strong&gt;Separation of Concern&lt;/strong&gt; by separating…&lt;/p&gt;
-&lt;li&gt;Data - Model&lt;/li&gt;
-&lt;li&gt;Layout - Django Template Language allows dynamic data&lt;/li&gt;
-&lt;li&gt;Logic&lt;/li&gt;
-
-&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/MVT.png&quot; /&gt;&lt;/span&gt;
-Data from database is linked with &lt;strong&gt;Model&lt;/strong&gt;. &lt;strong&gt;View&lt;/strong&gt; links &lt;strong&gt;Model&lt;/strong&gt; and &lt;strong&gt;Template&lt;/strong&gt; together. When the user sends a request, it goes to the framework forming a URL that navigates to &lt;strong&gt;View&lt;/strong&gt;. In &lt;strong&gt;View&lt;/strong&gt;, we write busienss logic. Then, it will use the model and template objects to decide what data to be sent on &lt;strong&gt;template &lt;/strong&gt;from &lt;strong&gt;model&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;mvt-vs-mvc&quot;&gt;MVT vs. MVC&lt;/h3&gt;
-&lt;li&gt;Model = Model&lt;/li&gt;
-&lt;li&gt;Template = View&lt;/li&gt;
-&lt;li&gt;View = Controller&lt;/li&gt;
-
-&lt;p&gt;However, MVC needs a configuration for &lt;strong&gt;Controller&lt;/strong&gt; where as &lt;strong&gt;Django&lt;/strong&gt; does it automatically.&lt;/p&gt;
-
-&lt;h3 id=&quot;advantages&quot;&gt;Advantages&lt;/h3&gt;
-&lt;li&gt;Develop Fast&lt;/li&gt;
-&lt;li&gt;Provide Bundled Components &lt;/li&gt;
-&lt;li&gt;Data Security &lt;/li&gt;
-&lt;li&gt;Scalability &lt;/li&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Django
-MVT - Model View Template</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Workout</title><link href="https://parkyo.github.io/categories/google-kickstart-workout/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Workout" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-workout</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-workout/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+The rover can be maneuvered around on the surface of the planet by sending it a program, which is a string of characters representing movements in the four cardinal directions. The robot executes each character of the string in order:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Bus Routes</title><link href="https://parkyo.github.io/categories/kickstart-busroutes/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Bus Routes" /><published>2020-06-27T00:00:00+09:00</published><updated>2020-06-27T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-busroutes</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-busroutes/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.&lt;/p&gt;
+&lt;p&gt;Bucket is planning to make a very long journey across the countryside by bus. Her journey consists of N bus routes, numbered from 1 to N in the order she must take them. The buses themselves are very fast, but do not run often. The i-th bus route only runs every Xi days.&lt;/p&gt;
 
-&lt;p&gt;The score of a group is equal to the length of the longest prefix shared by all the strings in that group. For example:
-The group {RAINBOW, RANK, RANDOM, RANK} has a score of 2 (the longest prefix is ‘RA’).
-The group {FIRE, FIREBALL, FIREFIGHTER} has a score of 4 (the longest prefix is ‘FIRE’).
-The group {ALLOCATION, PLATE, WORKOUT, BUNDLING} has a score of 0 (the longest prefix is ‘’).&lt;/p&gt;
+&lt;p&gt;More specifically, she can only take the i-th bus on day Xi, 2Xi, 3Xi and so on. Since the buses are very fast, she can take multiple buses on the same day.&lt;/p&gt;
 
-&lt;p&gt;Please help Pip bundle their strings into groups of size K, such that the sum of scores of the groups is maximized.&lt;/p&gt;
+&lt;p&gt;Bucket must finish her journey by day D, but she would like to start the journey as late as possible. What is the latest day she could take the first bus, and still finish her journey by day D?&lt;/p&gt;
+
+&lt;p&gt;It is guaranteed that it is possible for Bucket to finish her journey by day D.&lt;/p&gt;
 
 &lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-2
-2 2
-KICK
-START
-8 2
-G
-G
-GO
-GO
-GOO
-GOO
-GOOO
-GOOO&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-Case #1: 0
-Case #2: 10
+3
+3 10
+3 7 2
+4 100
+11 10 5 50
+1 1
+1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output1&lt;/strong&gt;:
+Case #1: 6
+Case #2: 99
+Case #3: 1
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
-&lt;blockquote&gt;(MLT for bigger test set)&lt;/blockquote&gt;
-&lt;p&gt;(explanation to come..)&lt;/p&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Store the bus days in a stack&lt;/li&gt;
+  &lt;li&gt;For each value in the stack, calculate the latest bus day for that bus route&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;*** It is important to use &lt;code&gt;long&lt;/code&gt; to keep track of the latest day since the last day can be any number up to 10^9.&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int busroutes(){
+    int tests, size;
+    long last;
+   cin &amp;gt;&amp;gt; tests;
+   for(size_t i = 0; i &amp;lt; tests; ++i){
+       cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; last;
+       long ans;
+       if(size==1){
+           cin &amp;gt;&amp;gt; ans;
+           ans = last/ans * ans;
+       }else{
+           stack&amp;lt;long&amp;gt; list;
+           while(--size &amp;gt;= 0){
+               long cur;
+               cin &amp;gt;&amp;gt; cur;
+               list.push(cur);
+           }
+           while(list.size() &amp;gt; 0){
+               long cur = list.top();
+               list.pop();
+               last = last/cur * cur;
+           }
+           ans = last;
+       }
+       
+       cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt;  ans &amp;lt;&amp;lt; endl;
+   }
+   return 0;
+}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-&lt;strong&gt;
-int main(){
-    int tests, size, b;
-    cin &amp;gt;&amp;gt; tests;
-    for(size_t j = 0; j &amp;lt; tests; ++j){
-        int score = 0;
-        cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; b;
-        unordered_map&amp;lt;string, int&amp;gt; list;
-        for(size_t i = 0; i &amp;lt; size; ++i){
-            string w;
-            cin &amp;gt;&amp;gt; w;
-            string cur = &quot;&quot;;
-            for(size_t k =0; k &amp;lt; w.size(); ++k){
-                cur.push_back(w[k]);
-                auto it = list.find(cur);
-                if(it == list.end()){
-                    list.insert(pair&amp;lt;string,int&amp;gt;(cur, 1));
-                }else{
-                    ++(it-&amp;gt;second);
-                }
-            }
-            
-            
-        }
-        for(auto it = list.begin(); it != list.end(); ++it){
-            score += ((it-&amp;gt;second)/b);
-        }
-        
-        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; score &amp;lt;&amp;lt; endl;
-    }
-    return 0;
-}
-   &lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h3&gt;
-&lt;p&gt;Use &lt;strong&gt;trie&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round A - Plates</title><link href="https://parkyo.github.io/categories/google-kickstart-bundling/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round A - Plates" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-bundling</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-bundling/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="stack" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Bike Tour</title><link href="https://parkyo.github.io/categories/kickstart-biketour/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Bike Tour" /><published>2020-06-27T00:00:00+09:00</published><updated>2020-06-27T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-biketour</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-biketour/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.&lt;/p&gt;
+&lt;p&gt;Li has planned a bike tour through the mountains of Switzerland. His tour consists of N checkpoints, numbered from 1 to N in the order he will visit them. The i-th checkpoint has a height of Hi.&lt;/p&gt;
 
-&lt;p&gt;The score of a group is equal to the length of the longest prefix shared by all the strings in that group. For example:
-The group {RAINBOW, RANK, RANDOM, RANK} has a score of 2 (the longest prefix is ‘RA’).
-The group {FIRE, FIREBALL, FIREFIGHTER} has a score of 4 (the longest prefix is ‘FIRE’).
-The group {ALLOCATION, PLATE, WORKOUT, BUNDLING} has a score of 0 (the longest prefix is ‘’).&lt;/p&gt;
+&lt;p&gt;A checkpoint is a peak if:
+It is not the 1st checkpoint or the N-th checkpoint, and
+The height of the checkpoint is strictly greater than the checkpoint immediately before it and the checkpoint immediately after it.&lt;/p&gt;
 
-&lt;p&gt;Please help Pip bundle their strings into groups of size K, such that the sum of scores of the groups is maximized.&lt;/p&gt;
+&lt;p&gt;Please help Li find out the number of peaks.&lt;/p&gt;
 
 &lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-2
-2 2
-KICK
-START
-8 2
-G
-G
-GO
-GO
-GOO
-GOO
-GOOO
-GOOO&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-Case #1: 0
-Case #2: 10
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input1&lt;/strong&gt;: 
+4
+3
+10 20 14
+4
+7 7 7 7
+5
+10 90 20 90 10
+3
+10 3 10&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output1&lt;/strong&gt;:
+Case #1: 1
+Case #2: 0
+Case #3: 2
+Case #4: 0
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
-&lt;blockquote&gt;(MLT for bigger test set)&lt;/blockquote&gt;
-&lt;p&gt;(explanation to come..)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;strong&gt;
-int main(){
-    int tests, size, b;
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;As scanning through the list, keep track of three values: &lt;strong&gt;first, sec, third&lt;/strong&gt;. Check if any satisfies the conditions for being a peak.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int biketour(){
+    int tests, size;
     cin &amp;gt;&amp;gt; tests;
     for(size_t j = 0; j &amp;lt; tests; ++j){
-        int score = 0;
-        cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; b;
-        unordered_map&amp;lt;string, int&amp;gt; list;
-        for(size_t i = 0; i &amp;lt; size; ++i){
-            string w;
-            cin &amp;gt;&amp;gt; w;
-            string cur = &quot;&quot;;
-            for(size_t k =0; k &amp;lt; w.size(); ++k){
-                cur.push_back(w[k]);
-                auto it = list.find(cur);
-                if(it == list.end()){
-                    list.insert(pair&amp;lt;string,int&amp;gt;(cur, 1));
-                }else{
-                    ++(it-&amp;gt;second);
-                }
+        cin &amp;gt;&amp;gt; size;
+        int bfr, cur, after, count = 0;
+        cin &amp;gt;&amp;gt; bfr;
+        cin &amp;gt;&amp;gt; cur;
+        for(size_t i = 0; i &amp;lt; size-2; ++i){
+            cin &amp;gt;&amp;gt; after;
+            if(bfr &amp;lt; cur &amp;amp;&amp;amp; cur &amp;gt; after){
+                    ++count;
             }
-            
-            
-        }
-        for(auto it = list.begin(); it != list.end(); ++it){
-            score += ((it-&amp;gt;second)/b);
+            bfr = cur;
+            cur = after;
         }
         
-        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; score &amp;lt;&amp;lt; endl;
+        cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; j+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;
     }
     return 0;
-}
-   &lt;/strong&gt;
-&lt;/code&gt;&lt;/pre&gt;
+}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h3&gt;
-&lt;p&gt;Use &lt;strong&gt;trie&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="trie" /><category term="string" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - dynamically type url</title><link href="https://parkyo.github.io/categories/dynamic-url-django/" rel="alternate" type="text/html" title="Django - dynamically type url" /><published>2020-06-24T00:00:00+09:00</published><updated>2020-06-24T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/dynamic-url-django</id><content type="html" xml:base="https://parkyo.github.io/categories/dynamic-url-django/">&lt;pre&gt;&lt;code&gt;&quot;adults&quot;: &quot;1&quot;
-&quot;childs&quot;:&quot;0&quot;
-&quot;infants&quot;:&quot;0&quot;
-&quot;res&quot;: &quot;0&quot;
-&quot;vehicle&quot;:&quot;0&quot;
-outbound_route = '1040'
-outbound_date = '19-02-2019'
-inbound_route = '1042'
-inbound_date = '20-02-2019'
-
-url = &quot;https://booking.snav.it/#/booking/rates&quot;  # no trailing /
-final_url = '/'.join([url, outbound_route, outbound_date, inbound_route, inbound_date])
-res = requests.get(final_url, params=params)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or you could use a formatted string literal:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;url = &quot;https://booking.snav.it/#/booking/rates/&quot;
-final_url = f'{url}{outbound_route}/{outbound_date}/{inbound_route}/{inbound_date}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;output&quot;&gt;output&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;https://booking.snav.it/#/booking/rates/1040/19-02-2019/1042/19-02-2019?adults=1&amp;amp;childs=0&amp;amp;infants=0&amp;amp;res=0&amp;amp;vehicle=0&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="web" /><category term="server-side" /><category term="django" /><category term="python" /><summary type="html">&quot;adults&quot;: &quot;1&quot;
-&quot;childs&quot;:&quot;0&quot;
-&quot;infants&quot;:&quot;0&quot;
-&quot;res&quot;: &quot;0&quot;
-&quot;vehicle&quot;:&quot;0&quot;
-outbound_route = '1040'
-outbound_date = '19-02-2019'
-inbound_route = '1042'
-inbound_date = '20-02-2019'</summary></entry><entry><title type="html">Django - how to fetch data from external website</title><link href="https://parkyo.github.io/categories/fetch/" rel="alternate" type="text/html" title="Django - how to fetch data from external website" /><published>2020-06-23T00:00:00+09:00</published><updated>2020-06-23T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/fetch</id><content type="html" xml:base="https://parkyo.github.io/categories/fetch/">&lt;h2 id=&quot;fetch&quot;&gt;Fetch&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Fetch&lt;/strong&gt; is a process of bringing or displaying data to an alternate location.&lt;/p&gt;
-
-&lt;h2 id=&quot;fetch-data-from-web&quot;&gt;Fetch data from web&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Web scraping&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;def fetchFilteredClasses(dpt):
-    classnames=[]
-    url = 'https://www.lsa.umich.edu/cg/cg_results.aspx?termArray=f_20_2310&amp;amp;cgtype=ug&amp;amp;department=&amp;amp;allsections=true'
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content,&quot;html.parser&quot;)
-    for a in soup.findAll('div', attrs = {'class' : 'row toppadding_main bottompadding_interior'}):
-        name = a.find('div', attrs={'class':'col-sm-12'})
-        classnames.append(name.text)
-
-    df = pd.DataFrame({'Class Name':classnames}) 
-    df.to_csv('products.csv', index=False, encoding='utf-8')
-
-&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="concepts" /><category term="web" /><category term="server-side" /><summary type="html">Fetch
-Fetch is a process of bringing or displaying data to an alternate location.</summary></entry><entry><title type="html">Python basics</title><link href="https://parkyo.github.io/categories/python-basics/" rel="alternate" type="text/html" title="Python basics" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-basics</id><content type="html" xml:base="https://parkyo.github.io/categories/python-basics/">&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
-&lt;li&gt;Web Development&lt;/li&gt;
-&lt;li&gt;Machine Learning&lt;/li&gt;
-&lt;li&gt;Data Analytics&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;self&quot;&gt;self&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;self&lt;/strong&gt; is an instance of the class to access properties and methods of the class&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="python" /><summary type="html">Uses
-Web Development
-Machine Learning
-Data Analytics</summary></entry><entry><title type="html">What is Operating System</title><link href="https://parkyo.github.io/categories/operating-system/" rel="alternate" type="text/html" title="What is Operating System" /><published>2020-06-22T00:00:00+09:00</published><updated>2020-06-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/operating-system</id><content type="html" xml:base="https://parkyo.github.io/categories/operating-system/">&lt;p&gt;&lt;strong&gt;Operating Systems&lt;/strong&gt; are programs for computers to operate on their own. 
-&lt;i&gt;ex) MacOS, Android, Windows…&lt;/i&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
-&lt;li&gt;&lt;strong&gt;Device Drivers&lt;/strong&gt; : intermediaries between software programs and hardware peripheral using API allowing talking to I/O hardware&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multitasking&lt;/strong&gt; : allows multiple programs on a single CPU&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Virtual Memory&lt;/strong&gt; : virtualizes locations of the memory allocated to each program to hide physical locations and simplify it for programmers&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dynamic Memory Allocation&lt;/strong&gt; : allows program sto have flexible memory size with virtual memory addresses&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Memory Protection&lt;/strong&gt; : prevets a program from destroying memory of the other progam&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Time Sharing&lt;/strong&gt; : manages multiple users&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;Unix &lt;/strong&gt;appears to simplify the engineering of the early OS by separating it into two parts:&lt;/p&gt;
-&lt;li&gt;&lt;strong&gt;Kernel&lt;/strong&gt; : manages memory and multi-tasking or deals with I/O&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;programs &amp;amp; libraries&lt;/strong&gt;&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;ubuntu&quot;&gt;Ubuntu&lt;/h3&gt;
-&lt;p&gt;An open-source, Debian based operating system&lt;/p&gt;</content><category term="blog" /><category term="concepts" /><category term="computer" /><summary type="html">Operating Systems are programs for computers to operate on their own. 
-ex) MacOS, Android, Windows…</summary></entry></feed>
+&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>

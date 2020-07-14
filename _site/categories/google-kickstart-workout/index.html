@@ -62,92 +62,55 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">24 Jun 2020</span>
+      				<span class="date">26 Jun 2020</span>
               <h1>Google Kick Start 2020 Round A - Workout</h1>
               
 								<li class="button small">algorithm</li>
 								
 								<li class="button small">kick_start</li>
 								
-      				<!-- <p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3">LINK</a></p>
+      				<!-- <p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f5b">LINK</a></p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3ff3">LINK</a></p>
+      			<p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc7/00000000001d3f5b">LINK</a></p>
 
 <h2 id="problem">Problem</h2>
-<p>Pip has N strings. Each string consists only of letters from A to Z. Pip would like to bundle their strings into groups of size K. Each string must belong to exactly one group.</p>
+<p>Tambourine has prepared a fitness program so that she can become more fit! The program is made of N sessions. During the i-th session, Tambourine will exercise for Mi minutes. The number of minutes she exercises in each session are strictly increasing.</p>
 
-<p>The score of a group is equal to the length of the longest prefix shared by all the strings in that group. For example:
-The group {RAINBOW, RANK, RANDOM, RANK} has a score of 2 (the longest prefix is ‘RA’).
-The group {FIRE, FIREBALL, FIREFIGHTER} has a score of 4 (the longest prefix is ‘FIRE’).
-The group {ALLOCATION, PLATE, WORKOUT, BUNDLING} has a score of 0 (the longest prefix is ‘’).</p>
+<p>The difficulty of her fitness program is equal to the maximum difference in the number of minutes between any two consecutive training sessions.</p>
 
-<p>Please help Pip bundle their strings into groups of size K, such that the sum of scores of the groups is maximized.</p>
+<p>To make her program less difficult, Tambourine has decided to add up to K additional training sessions to her fitness program. She can add these sessions anywhere in her fitness program, and exercise any positive integer number of minutes in each of them. After the additional training session are added, the number of minutes she exercises in each session must still be strictly increasing. What is the minimum difficulty possible?</p>
 
 <h2 id="example">Example</h2>
-<pre><code><strong>input</strong>: 
-2
-2 2
-KICK
-START
-8 2
-G
-G
-GO
-GO
-GOO
-GOO
-GOOO
-GOOO</code></pre>
+<pre><code><strong>input1</strong>: 
+1
+3 1
+100 200 230</code></pre>
+<pre><code><strong>output1</strong>:
+Case #1: 50
+</code></pre>
+
+<pre><code><strong>input2</strong>: 
+3
+5 2
+10 13 15 16 17
+5 6
+9 10 20 26 30
+8 3
+1 2 3 4 5 6 7 10</code></pre>
 <pre><code><strong>output</strong>:
-Case #1: 0
-Case #2: 10
+Case #1: 2
+Case #2: 3
+Case #3: 1
 </code></pre>
 
 <h2 id="solution-1">Solution 1</h2>
-<blockquote>(MLT for bigger test set)</blockquote>
-<p>(explanation to come..)</p>
+<p>
 
-<pre><code>
-<strong>
-int main(){
-    int tests, size, b;
-    cin &gt;&gt; tests;
-    for(size_t j = 0; j &lt; tests; ++j){
-        int score = 0;
-        cin &gt;&gt; size &gt;&gt; b;
-        unordered_map&lt;string, int&gt; list;
-        for(size_t i = 0; i &lt; size; ++i){
-            string w;
-            cin &gt;&gt; w;
-            string cur = "";
-            for(size_t k =0; k &lt; w.size(); ++k){
-                cur.push_back(w[k]);
-                auto it = list.find(cur);
-                if(it == list.end()){
-                    list.insert(pair&lt;string,int&gt;(cur, 1));
-                }else{
-                    ++(it-&gt;second);
-                }
-            }
-            
-            
-        }
-        for(auto it = list.begin(); it != list.end(); ++it){
-            score += ((it-&gt;second)/b);
-        }
-        
-        cout &lt;&lt; "Case #" &lt;&lt; j+1 &lt;&lt; ": " &lt;&lt; score &lt;&lt; endl;
-    }
-    return 0;
-}
-   </strong>
-</code></pre>
-
-<h3 id="solution-2">Solution 2</h3>
-<p>Use <strong>trie</strong></p>
+<strong>Time copmlexity: <i>O(log(max_diff)*n)</i></strong></p>
+<p><span class="image left"><img width="50%" src="/images/workout.png" /></span></p>
 
 <!-- <pre><code> -->
 

@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Younse's home</title>
+<title>Google Kick Start 2020 Round B - Bike Tour</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -26,28 +26,16 @@
 <link rel="stylesheet" href="/assets/css/main.css" />
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
-
-
 	</head>
 	<body class="is-loading">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-            <h1>Younse Park</h1>
-						<h2>Hi, I am a software enginner</h2>
-						<p>Java C++ Javascript(react) HTML CSS</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
-
 				<!-- Header -->
-					<header id="header">
-						<a href="/" class="logo">Younse Park</a>
-					</header>
+        <header id="header">
+          <a href="/" class="logo">Younse Park</a>
+        </header>
 
 				<!-- Nav -->
 					<nav id="nav">
@@ -55,7 +43,7 @@
             <ul class="links">
   <li class=""><a href="/">Home</a></li>
   <li class=""><a href="/about/">About</a></li>
-  <li class=" active "><a href="/blog/">Blog</a></li>
+  <li class=""><a href="/blog/">Blog</a></li>
   <li class=""><a href="/portfolio/">Portfolio</a></li>
   <li class=""><a href="/elements/">Elements Reference</a></li>
 </ul>
@@ -67,68 +55,118 @@
   <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
 </ul> -->
 
-
+						
 					</nav>
 
 				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Introduction</a></h2>
-									<p>Hi, I am a software engineer</p>
-								</header>
-								<p><span class = "image left"><img src="/images/profilepic.JPG" alt="" width = 70% height = YYY /></span>
-									I am <i>Younse Park</i>, a senior at <strong>University of Michigan</strong> in Ann Arbor studying Computer Science.
-									The dogs that welcomed you to my blog are <i>Samsoon</i> and <i>Bokdol</i>. 	
-									<br>I am recording all my journey as a developer in this blog including projects and errors I encounter.
-									Here is my <a href = "https://github.com/parkyo"><strong>Github</strong></a> portfolio.
-								</p>
-							</article>
+				<div id="main">
+          <section class="post">
+    				<header class="major">
+      				<span class="date">27 Jun 2020</span>
+              <h1>Google Kick Start 2020 Round B - Bike Tour</h1>
+              
+								<li class="button small">algorithm</li>
+								
+								<li class="button small">kick_start</li>
+								
+								<li class="button small">iteration</li>
+								
+      				<!-- <p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6">LINK</a></p>
 
-						<!-- Posts -->
-							<section class="portfolio_posts">
-                
-                
-  								<article>
-  									<header>
-  										<!-- <span class="date">14 Jun 2020</span> -->
-										  <h2><a href="/categories/FDTD/">FDTD</a></h2>
-										  <p style="text-align:center">June - Aug / 2018</p>
-  									</header>
-  									<a href="/categories/FDTD/" class="portfolio_posts"><img src="/images/gist.jpg" alt="" /></a>
-  									<!-- <p>June - Aug / 2018</p> -->
-  									<!-- <ul class="actions">
-  										<li><a href="/categories/FDTD/" class="button">Full Story</a></li>
-  									</ul> -->
-  								</article>
-                  
-                
-                
-  								<article>
-  									<header>
-  										<!-- <span class="date">13 Jun 2020</span> -->
-										  <h2><a href="/categories/travelymap/">travelymap</a></h2>
-										  <p style="text-align:center">June - Sep / 2019</p>
-  									</header>
-  									<a href="/categories/travelymap/" class="portfolio_posts"><img src="/images/travelymap.png" alt="" /></a>
-  									<!-- <p>June - Sep / 2019</p> -->
-  									<!-- <ul class="actions">
-  										<li><a href="/categories/travelymap/" class="button">Full Story</a></li>
-  									</ul> -->
-  								</article>
-                  
-                
+</p> -->
+      			</header>
+      			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
+      			<p><p><a href="https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6">LINK</a></p>
 
-							</section>
+<h2 id="problem">Problem</h2>
+<p>Li has planned a bike tour through the mountains of Switzerland. His tour consists of N checkpoints, numbered from 1 to N in the order he will visit them. The i-th checkpoint has a height of Hi.</p>
 
-						<!-- Footer -->
-							<!-- <footer>
-                <ul class="actions">
-                  <li><a href="/blog/" class="button">Our Blog</a></li>
-                </ul>
-							</footer> -->
+<p>A checkpoint is a peak if:
+It is not the 1st checkpoint or the N-th checkpoint, and
+The height of the checkpoint is strictly greater than the checkpoint immediately before it and the checkpoint immediately after it.</p>
 
+<p>Please help Li find out the number of peaks.</p>
+
+<h2 id="example">Example</h2>
+<pre><code><strong>input1</strong>: 
+4
+3
+10 20 14
+4
+7 7 7 7
+5
+10 90 20 90 10
+3
+10 3 10</code></pre>
+<pre><code><strong>output1</strong>:
+Case #1: 1
+Case #2: 0
+Case #3: 2
+Case #4: 0
+</code></pre>
+
+<h2 id="solution">Solution</h2>
+<p>As scanning through the list, keep track of three values: <strong>first, sec, third</strong>. Check if any satisfies the conditions for being a peak.</p>
+<pre><code><strong>int biketour(){
+    int tests, size;
+    cin &gt;&gt; tests;
+    for(size_t j = 0; j &lt; tests; ++j){
+        cin &gt;&gt; size;
+        int bfr, cur, after, count = 0;
+        cin &gt;&gt; bfr;
+        cin &gt;&gt; cur;
+        for(size_t i = 0; i &lt; size-2; ++i){
+            cin &gt;&gt; after;
+            if(bfr &lt; cur &amp;&amp; cur &gt; after){
+                    ++count;
+            }
+            bfr = cur;
+            cur = after;
+        }
+        
+        cout &lt;&lt; "Case #" &lt;&lt; j+1 &lt;&lt; ": " &lt;&lt; count &lt;&lt; endl;
+    }
+    return 0;
+}</strong></code></pre>
+<p><strong>Time copmlexity: <i>O(t*n)</i></strong></p>
+
+<!-- <pre><code> -->
+
+</p>
+      		</section>
+
+          <div class="comments-wrapper">
+          <div id="disqus_thread"></div>
+          <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
+
+              var disqus_config = function () {
+                  this.page.url = '/categories/kickstart-biketour/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/kickstart-biketour/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+              };
+
+              (function() {  /* dont endit below this line */
+                  var d = document, s = d.createElement('script');
+
+                  s.src = 'https://default.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div><!-- /.comments-wrapper -->
+
+
+					<!-- Footer -->
+						<!-- <footer>
+              <ul class="actions">
+                <li><a href="/blog/" class="button">Our Blog</a></li>
+              </ul>
+						</footer> -->
 					</div>
 
 				<!-- Footer -->
@@ -185,8 +223,8 @@
 
 			</div>
 
-		<!-- Scripts -->
-		<!-- DYN -->
+      <!-- Scripts -->
+  		<!-- DYN -->
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/jquery.scrollex.min.js"></script>
 <script src="/assets/js/jquery.scrolly.min.js"></script>
@@ -194,7 +232,7 @@
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
+			<script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};

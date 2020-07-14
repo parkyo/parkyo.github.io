@@ -69,8 +69,9 @@ sitemap:
                 {% assign mod3 = forloop.index | modulo: 3 %}
   								<article>
   									<header>
-  										<span class="date">{{ post.date | date_to_string }}</span>
-  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+  										<!-- <span class="date">{{ post.date | date_to_string }}</span> -->
+										  <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+										  <p style="text-align:center">{{post.excerpt}}</p>
   									</header>
   									<a href="{{ post.url | absolute_url }}" class="portfolio_posts"><img src="{{ post.image | absolute_url }}" alt="" /></a>
   									<!-- <p>{{ post.excerpt }}</p> -->

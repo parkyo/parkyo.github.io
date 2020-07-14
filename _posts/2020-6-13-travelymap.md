@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfolio_post
 category: portfolio
 title:  "travelymap"
 date:   2020-06-13
@@ -26,6 +26,6 @@ the places on their list</li>
 
 <br>
 ### Achievement
-<li>Won funding from 'National Tour Venture Startup Competition'</li>
+<li>Won funding from 'National Tour Venture Startup Competition'(aka 관광벤처기업 공모전)</li>
 <li>Attracted over 4,400 users within two months after the beta app realease</li>
 
