@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-15T04:30:11+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Google Kick Start 2020 Round D - Record Breaker</title><link href="https://parkyo.github.io/categories/google-kickstart-roundD/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round D - Record Breaker" /><published>2020-07-14T00:00:00+09:00</published><updated>2020-07-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-roundD</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-roundD/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-19T16:33:45+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Prim vs. Djikstra</title><link href="https://parkyo.github.io/categories/algorithm-prim-djikstra/" rel="alternate" type="text/html" title="Prim vs. Djikstra" /><published>2020-07-17T00:00:00+09:00</published><updated>2020-07-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/algorithm-prim-djikstra</id><content type="html" xml:base="https://parkyo.github.io/categories/algorithm-prim-djikstra/">&lt;p&gt;&lt;strong&gt;Prim’s algorithm&lt;/strong&gt; is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.&lt;/p&gt;
+&lt;li&gt;only work on undirected graph&lt;/li&gt;
+&lt;li&gt;can handle negative weights&lt;/li&gt;
+
+&lt;p&gt;&lt;strong&gt;Djikstra’s algorithm&lt;/strong&gt; is for finding the shortest path between two vertices with the lowest possibel sum of edge weights&lt;/p&gt;
+&lt;li&gt;can work on both directed and undirected graphs&lt;/li&gt;
+&lt;li&gt;cannot handle negative weights&lt;/li&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><summary type="html">Prim’s algorithm is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.
+only work on undirected graph
+can handle negative weights</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - SQL OperationalError : no such table</title><link href="https://parkyo.github.io/categories/django-operationalerror/" rel="alternate" type="text/html" title="Django - SQL OperationalError : no such table" /><published>2020-07-16T00:00:00+09:00</published><updated>2020-07-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-operationalerror</id><content type="html" xml:base="https://parkyo.github.io/categories/django-operationalerror/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round D - Record Breaker</title><link href="https://parkyo.github.io/categories/google-kickstart-roundD/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round D - Record Breaker" /><published>2020-07-14T00:00:00+09:00</published><updated>2020-07-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-roundD</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-roundD/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;level--easy&quot;&gt;Level : Easy&lt;/h3&gt;
 
@@ -95,159 +103,4 @@ panel = soup.find('div', attrs={'id':'classScheduleBody'})</summary><media:thumb
 x.append(6)&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="python" /><category term="error" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Many-to-One Relationship</title><link href="https://parkyo.github.io/categories/django-many-to-one/" rel="alternate" type="text/html" title="Django - Many-to-One Relationship" /><published>2020-06-30T00:00:00+09:00</published><updated>2020-06-30T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-many-to-one</id><content type="html" xml:base="https://parkyo.github.io/categories/django-many-to-one/">&lt;h3 id=&quot;foreignkey&quot;&gt;Foreignkey&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/db/examples/many_to_one/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Foreignkey
-doc</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Robot Path Decoding</title><link href="https://parkyo.github.io/categories/kickstart-robotpath/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Robot Path Decoding" /><published>2020-06-29T00:00:00+09:00</published><updated>2020-06-29T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-robotpath</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-robotpath/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d83dc&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;Know how to use &lt;code&gt;mod&lt;/code&gt; appropriately&lt;/blockquote&gt;
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Your country’s space agency has just landed a rover on a new planet, which can be thought of as a grid of squares containing 109 columns (numbered starting from 1 from west to east) and 109 rows (numbered starting from 1 from north to south). Let (w, h) denote the square in the w-th column and the h-th row. The rover begins on the square (1, 1).&lt;/p&gt;
-&lt;p&gt;
-The rover can be maneuvered around on the surface of the planet by sending it a program, which is a string of characters representing movements in the four cardinal directions. The robot executes each character of the string in order:
-
-- N: Move one unit north.
-- S: Move one unit south.
-- E: Move one unit east.
-- W: Move one unit west.
-
-There is also a special instruction X(Y), where X is a number between 2 and 9 inclusive and Y is a non-empty subprogram. This denotes that the robot should repeat the subprogram Y a total of X times. For example:
-2(NWE) is equivalent to NWENWE.
-3(S2(E)) is equivalent to SEESEESEE.
-EEEE4(N)2(SS) is equivalent to EEEENNNNSSSS.&lt;/p&gt;
-
-&lt;p&gt;Since the planet is a torus, the first and last columns are adjacent, so moving east from column 109 will move the rover to column 1 and moving south from row 109 will move the rover to row 1. Similarly, moving west from column 1 will move the rover to column 109 and moving north from row 1 will move the rover to row 109. Given a program that the robot will execute, determine the final position of the robot after it has finished all its movements.&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-4
-SSSEEE
-N
-N3(S)N2(E)N
-2(3(NW)2(W2(EE)W))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output&lt;/strong&gt;:
-Case #1: 4 4
-Case #2: 1 1000000000
-Case #3: 3 1
-Case #4: 3 999999995
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Keep track of the multipliers with a stack&lt;/li&gt;
-  &lt;li&gt;if &lt;strong&gt;w&lt;/strong&gt; or &lt;strong&gt;h&lt;/strong&gt; is out of the boundary, make sure to use the mod value in case of multipliers being bigger than multiples of 10^9&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int robotpath(){
-    int tests;
-    cin &amp;gt;&amp;gt; tests;
-       for(size_t i = 0; i &amp;lt; tests; ++i){
-           string line;
-           long w=1,h=1;
-           cin &amp;gt;&amp;gt; line;
-           stack&amp;lt;long&amp;gt; mults;
-           mults.push(1);
-           for(char c : line){
-               if(c == ')'){
-                   mults.pop();
-               }else if (c=='('){
-                   continue;
-               }else if(c == 'N'){
-                   h -= mults.top();
-                   if(h &amp;lt;= 0){
-                       h = h % (long)pow(10,9) + (long)pow(10,9);
-                   }
-               }
-               else if(c == 'S'){
-                   h+= mults.top();
-                   if(h &amp;gt; pow(10,9)){
-                       h = h % (long)pow(10,9);
-                   }
-                   
-               }else if(c == 'E'){
-                   w+= mults.top();
-                   if(w &amp;gt; pow(10,9)){
-                       w = w % (long)pow(10,9);
-                   }
-               }
-               else if(c == 'W'){
-                   w-= mults.top();
-                   if(w &amp;lt;= 0){
-                       w = w % (long)pow(10,9) + (long)pow(10,9);
-                   }
-               }else{
-                   long mult = mults.top() * ((int)c - 48);
-                   mults.push(mult);
-               }
-               
-           }
-           cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt;  w &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; h &amp;lt;&amp;lt; endl;
-       }
-       return 0;
-}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><summary type="html">LINK
-Know how to use mod appropriately
-Problem
-Your country’s space agency has just landed a rover on a new planet, which can be thought of as a grid of squares containing 109 columns (numbered starting from 1 from west to east) and 109 rows (numbered starting from 1 from north to south). Let (w, h) denote the square in the w-th column and the h-th row. The rover begins on the square (1, 1).
-
-The rover can be maneuvered around on the surface of the planet by sending it a program, which is a string of characters representing movements in the four cardinal directions. The robot executes each character of the string in order:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round B - Bus Routes</title><link href="https://parkyo.github.io/categories/kickstart-busroutes/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round B - Bus Routes" /><published>2020-06-27T00:00:00+09:00</published><updated>2020-06-27T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/kickstart-busroutes</id><content type="html" xml:base="https://parkyo.github.io/categories/kickstart-busroutes/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ffc8/00000000002d82e6&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Bucket is planning to make a very long journey across the countryside by bus. Her journey consists of N bus routes, numbered from 1 to N in the order she must take them. The buses themselves are very fast, but do not run often. The i-th bus route only runs every Xi days.&lt;/p&gt;
-
-&lt;p&gt;More specifically, she can only take the i-th bus on day Xi, 2Xi, 3Xi and so on. Since the buses are very fast, she can take multiple buses on the same day.&lt;/p&gt;
-
-&lt;p&gt;Bucket must finish her journey by day D, but she would like to start the journey as late as possible. What is the latest day she could take the first bus, and still finish her journey by day D?&lt;/p&gt;
-
-&lt;p&gt;It is guaranteed that it is possible for Bucket to finish her journey by day D.&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;input&lt;/strong&gt;: 
-3
-3 10
-3 7 2
-4 100
-11 10 5 50
-1 1
-1&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;output1&lt;/strong&gt;:
-Case #1: 6
-Case #2: 99
-Case #3: 1
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Store the bus days in a stack&lt;/li&gt;
-  &lt;li&gt;For each value in the stack, calculate the latest bus day for that bus route&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;*** It is important to use &lt;code&gt;long&lt;/code&gt; to keep track of the latest day since the last day can be any number up to 10^9.&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int busroutes(){
-    int tests, size;
-    long last;
-   cin &amp;gt;&amp;gt; tests;
-   for(size_t i = 0; i &amp;lt; tests; ++i){
-       cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; last;
-       long ans;
-       if(size==1){
-           cin &amp;gt;&amp;gt; ans;
-           ans = last/ans * ans;
-       }else{
-           stack&amp;lt;long&amp;gt; list;
-           while(--size &amp;gt;= 0){
-               long cur;
-               cin &amp;gt;&amp;gt; cur;
-               list.push(cur);
-           }
-           while(list.size() &amp;gt; 0){
-               long cur = list.top();
-               list.pop();
-               last = last/cur * cur;
-           }
-           ans = last;
-       }
-       
-       cout &amp;lt;&amp;lt; &quot;Case #&quot; &amp;lt;&amp;lt; i+1 &amp;lt;&amp;lt; &quot;: &quot; &amp;lt;&amp;lt;  ans &amp;lt;&amp;lt; endl;
-   }
-   return 0;
-}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(t*n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="stack" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+doc</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
