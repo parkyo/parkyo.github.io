@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Prim vs. Djikstra</title>
+<title>Bellman Ford algorithm</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,8 +62,8 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">17 Jul 2020</span>
-              <h1>Prim vs. Djikstra</h1>
+      				<span class="date">21 Jul 2020</span>
+              <h1>Bellman Ford algorithm</h1>
               
 								<li class="button small">algorithm</li>
 								
@@ -71,31 +71,63 @@
 								
 								<li class="button small">greedy</li>
 								
-      				<!-- <p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+      				<!-- <p><p><strong>Bellman Ford</strong> works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
+<br /></p>
+
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+      			<p><p><strong>Bellman Ford</strong> works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
+<br /></p>
+
+<h3 id="alogorithm">Alogorithm</h3>
+<pre><code><strong>void BellmanFord(struct Graph* graph, int src) 
+{ 
+    int V = graph-&gt;V; 
+    int E = graph-&gt;E; 
+    int dist[V]; 
+    </strong>
+    <i>// Step 1: Initialize distances from src to all other vertices 
+    // as INFINITE </i><strong>
+    for (int i = 0; i &lt; V; i++) 
+        dist[i] = INT_MAX; 
+    dist[src] = 0; 
+    </strong>
+    <i>// Step 2: Relax all edges |V| - 1 times. A simple shortest 
+    // path from src to any other vertex can have at-most |V| - 1 
+    // edges </i><strong>
+    for (int i = 1; i &lt;= V - 1; i++) { 
+        for (int j = 0; j &lt; E; j++) { 
+            int u = graph-&gt;edge[j].src; 
+            int v = graph-&gt;edge[j].dest; 
+            int weight = graph-&gt;edge[j].weight; 
+            if (dist[u] != INT_MAX &amp;&amp; dist[u] + weight &lt; dist[v]) 
+                dist[v] = dist[u] + weight; 
+        } 
+    } 
+  </strong>
+    <i>// Step 3: check for negative-weight cycles.  The above step 
+    // guarantees shortest distances if graph doesn't contain 
+    // negative weight cycle.  If we get a shorter path, then there 
+    // is a negative weight cycle. </i><strong>
+    for (int i = 0; i &lt; E; i++) { 
+        int u = graph-&gt;edge[i].src; 
+        int v = graph-&gt;edge[i].dest; 
+        int weight = graph-&gt;edge[i].weight; 
+        if (dist[u] != INT_MAX &amp;&amp; dist[u] + weight &lt; dist[v]) { 
+            printf("Graph contains negative weight cycle"); 
+            return; // If negative cycle is detected, simply return 
+        } 
+    } 
+  
+    printArr(dist, V); 
+  
+    return; 
+} </strong></code></pre>
+
+<blockquote>O(VE)</blockquote>
+
+<p><a href="https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/">GeeksForGeeks</a></p>
 </p>
       		</section>
 
@@ -108,8 +140,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/algorithm-prim-djikstra/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/algorithm-prim-djikstra/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/Bellmanford/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/Bellmanford/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

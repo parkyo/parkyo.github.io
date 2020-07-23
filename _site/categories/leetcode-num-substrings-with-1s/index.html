@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Prim vs. Djikstra</title>
+<title>Leetcode Weekly Contest 197 - The Number of Substrings with 1's</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,40 +62,59 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">17 Jul 2020</span>
-              <h1>Prim vs. Djikstra</h1>
+      				<span class="date">19 Jul 2020</span>
+              <h1>Leetcode Weekly Contest 197 - The Number of Substrings with 1's</h1>
               
 								<li class="button small">algorithm</li>
 								
 								<li class="button small">leetcode</li>
 								
-								<li class="button small">greedy</li>
+								<li class="button small">weekly_contest</li>
 								
-      				<!-- <p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-substrings-with-only-1s/">LINK</a></p>
+
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+      			<p><p><a href="https://leetcode.com/problems/number-of-substrings-with-only-1s/">LINK</a></p>
+
+<h3 id="level--medium">Level : Medium</h3>
+
+<h2 id="problem">Problem</h2>
+<p>Given a binary string s (a string consisting only of ‘0’ and ‘1’s).</p>
+
+<p>Return the number of substrings with all characters 1’s.</p>
+
+<p>Since the answer may be too large, return it modulo 10^9 + 7..</p>
+
+<h2 id="solution">Solution</h2>
+<pre><code><strong>class Solution {
+public:
+    unsigned long long count(unsigned long long n){
+        unsigned long long ans = (n + 1)*(n/2);
+        if(n%2 != 0){
+            ans += n/2 + 1;
+        }
+        return ans;
+    }
+    
+    int numSub(string s) {
+        unsigned long long ans = 0;
+        int num = 0;
+        for (auto c : s){
+            if (c == '1'){
+                ++num;
+            }else{
+                ans += count(num);
+                num = 0;
+            }
+        }
+        ans += count(num);
+        return ans % (unsigned long long)(pow(10,9) + 7);
+    }
+};</strong></code></pre>
+<p><strong>Time copmlexity: <i>O(n)</i></strong></p>
+
 </p>
       		</section>
 
@@ -108,8 +127,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/algorithm-prim-djikstra/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/algorithm-prim-djikstra/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/leetcode-num-substrings-with-1s/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/leetcode-num-substrings-with-1s/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

@@ -1,12 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-19T16:33:45+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Prim vs. Djikstra</title><link href="https://parkyo.github.io/categories/algorithm-prim-djikstra/" rel="alternate" type="text/html" title="Prim vs. Djikstra" /><published>2020-07-17T00:00:00+09:00</published><updated>2020-07-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/algorithm-prim-djikstra</id><content type="html" xml:base="https://parkyo.github.io/categories/algorithm-prim-djikstra/">&lt;p&gt;&lt;strong&gt;Prim’s algorithm&lt;/strong&gt; is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.&lt;/p&gt;
-&lt;li&gt;only work on undirected graph&lt;/li&gt;
-&lt;li&gt;can handle negative weights&lt;/li&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-21T20:22:06+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Bellman Ford algorithm</title><link href="https://parkyo.github.io/categories/Bellmanford/" rel="alternate" type="text/html" title="Bellman Ford algorithm" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Bellmanford</id><content type="html" xml:base="https://parkyo.github.io/categories/Bellmanford/">&lt;p&gt;&lt;strong&gt;Bellman Ford&lt;/strong&gt; works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
+&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Djikstra’s algorithm&lt;/strong&gt; is for finding the shortest path between two vertices with the lowest possibel sum of edge weights&lt;/p&gt;
+&lt;h3 id=&quot;alogorithm&quot;&gt;Alogorithm&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;void BellmanFord(struct Graph* graph, int src) 
+{ 
+    int V = graph-&amp;gt;V; 
+    int E = graph-&amp;gt;E; 
+    int dist[V]; 
+    &lt;/strong&gt;
+    &lt;i&gt;// Step 1: Initialize distances from src to all other vertices 
+    // as INFINITE &lt;/i&gt;&lt;strong&gt;
+    for (int i = 0; i &amp;lt; V; i++) 
+        dist[i] = INT_MAX; 
+    dist[src] = 0; 
+    &lt;/strong&gt;
+    &lt;i&gt;// Step 2: Relax all edges |V| - 1 times. A simple shortest 
+    // path from src to any other vertex can have at-most |V| - 1 
+    // edges &lt;/i&gt;&lt;strong&gt;
+    for (int i = 1; i &amp;lt;= V - 1; i++) { 
+        for (int j = 0; j &amp;lt; E; j++) { 
+            int u = graph-&amp;gt;edge[j].src; 
+            int v = graph-&amp;gt;edge[j].dest; 
+            int weight = graph-&amp;gt;edge[j].weight; 
+            if (dist[u] != INT_MAX &amp;amp;&amp;amp; dist[u] + weight &amp;lt; dist[v]) 
+                dist[v] = dist[u] + weight; 
+        } 
+    } 
+  &lt;/strong&gt;
+    &lt;i&gt;// Step 3: check for negative-weight cycles.  The above step 
+    // guarantees shortest distances if graph doesn't contain 
+    // negative weight cycle.  If we get a shorter path, then there 
+    // is a negative weight cycle. &lt;/i&gt;&lt;strong&gt;
+    for (int i = 0; i &amp;lt; E; i++) { 
+        int u = graph-&amp;gt;edge[i].src; 
+        int v = graph-&amp;gt;edge[i].dest; 
+        int weight = graph-&amp;gt;edge[i].weight; 
+        if (dist[u] != INT_MAX &amp;amp;&amp;amp; dist[u] + weight &amp;lt; dist[v]) { 
+            printf(&quot;Graph contains negative weight cycle&quot;); 
+            return; // If negative cycle is detected, simply return 
+        } 
+    } 
+  
+    printArr(dist, V); 
+  
+    return; 
+} &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;O(VE)&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="greedy" /><summary type="html">Bellman Ford works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Path with Maximum Probability</title><link href="https://parkyo.github.io/categories/leetcode-path-max-prob/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Path with Maximum Probability" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-path-max-prob</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-path-max-prob/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].&lt;/p&gt;
+
+&lt;p&gt;Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.&lt;/p&gt;
+
+&lt;p&gt;If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;BFS search&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;#include &lt;unordered_map&gt;
+#include &lt;queue&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+class Solution {
+
+    
+public:
+    
+    double maxProbability(int n, vector&amp;lt;vector&lt;int&gt;&amp;gt;&amp;amp; edges, vector&lt;double&gt;&amp;amp; succProb, int start, int end) {
+        vector&amp;lt;unordered_map&amp;lt;int, double&amp;gt;&amp;gt; graph(n);
+        for(size_t i = 0; i &amp;lt; edges.size(); ++i){
+            graph[edges[i][0]][edges[i][1]] =  succProb[i];
+            graph[edges[i][1]][edges[i][0]] = succProb[i];
+        }
+        
+        vector&lt;double&gt; ps(n, 0);
+        ps[start] = 1.0;
+        queue&lt;int&gt; q;
+        q.push(start);
+        while(!q.empty()){
+            int cur = q.front();
+            q.pop();
+            for (auto it = graph[cur].begin(); it != graph[cur].end(); ++it){
+                double pos = (it-&amp;gt;second) * ps[cur];
+                if(pos &amp;gt; ps[it-&amp;gt;first]){
+                    ps[it-&amp;gt;first] = pos;
+                    q.push(it-&amp;gt;first);
+                }
+            }
+
+        }
+        return ps[end];
+        
+    }
+};&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;strong&gt;Time copmlexity: &lt;i&gt;O(V*E)&lt;/i&gt;&lt;/strong&gt;
+
+
+
+
+
+&lt;/int&gt;&lt;/double&gt;&lt;/double&gt;&lt;/int&gt;&lt;/vector&gt;&lt;/queue&gt;&lt;/unordered_map&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="dijkastra" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - The Number of Substrings with 1’s</title><link href="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - The Number of Substrings with 1's" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-num-substrings-with-1s</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given a binary string s (a string consisting only of ‘0’ and ‘1’s).&lt;/p&gt;
+
+&lt;p&gt;Return the number of substrings with all characters 1’s.&lt;/p&gt;
+
+&lt;p&gt;Since the answer may be too large, return it modulo 10^9 + 7..&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class Solution {
+public:
+    unsigned long long count(unsigned long long n){
+        unsigned long long ans = (n + 1)*(n/2);
+        if(n%2 != 0){
+            ans += n/2 + 1;
+        }
+        return ans;
+    }
+    
+    int numSub(string s) {
+        unsigned long long ans = 0;
+        int num = 0;
+        for (auto c : s){
+            if (c == '1'){
+                ++num;
+            }else{
+                ans += count(num);
+                num = 0;
+            }
+        }
+        ans += count(num);
+        return ans % (unsigned long long)(pow(10,9) + 7);
+    }
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - The Number of Good Pairs</title><link href="https://parkyo.github.io/categories/leetcode-goodpairs/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - The Number of Good Pairs" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-goodpairs</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-goodpairs/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-good-pairs/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--easy&quot;&gt;Level : Easy&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given an array of integers nums.&lt;/p&gt;
+
+&lt;p&gt;A pair (i,j) is called good if nums[i] == nums[j] and i &amp;lt; j.&lt;/p&gt;
+
+&lt;p&gt;Return the number of good pairs.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class Solution {
+public:
+    
+    int count(int n){
+        int ans = (n + 1)*(n/2);
+        if(n%2 != 0){
+            ans += n/2 + 1;
+        }
+        return ans;
+    }
+    
+    int numIdenticalPairs(vector&amp;lt;int&amp;gt;&amp;amp; nums) {
+        int n=0;
+        unordered_map&amp;lt;int, int&amp;gt; list;
+        for (size_t i = 0; i &amp;lt; nums.size(); ++i){
+            auto it = list.find(nums[i]);
+            if(it != list.end()){
+                ++(it-&amp;gt;second);    
+            }else{
+                list.insert(pair&amp;lt;int,int&amp;gt;(nums[i],0));
+            }
+            
+        }
+        for (auto it : list){
+            if(it.second &amp;gt; 0){
+                n += count(it.second);
+            }
+        }
+        return n;
+    }
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="map" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - SQL OperationalError : no such table</title><link href="https://parkyo.github.io/categories/django-operationalerror/" rel="alternate" type="text/html" title="Django - SQL OperationalError : no such table" /><published>2020-07-18T00:00:00+09:00</published><updated>2020-07-18T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-operationalerror</id><content type="html" xml:base="https://parkyo.github.io/categories/django-operationalerror/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Prim vs. Djikstra</title><link href="https://parkyo.github.io/categories/algorithm-prim-djikstra/" rel="alternate" type="text/html" title="Prim vs. Djikstra" /><published>2020-07-17T00:00:00+09:00</published><updated>2020-07-17T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/algorithm-prim-djikstra</id><content type="html" xml:base="https://parkyo.github.io/categories/algorithm-prim-djikstra/">&lt;p&gt;&lt;strong&gt;Prim’s algorithm&lt;/strong&gt; is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;only work on undirected graph&lt;/li&gt;
+&lt;li&gt;can handle negative weights&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;strong&gt;Djikstra’s algorithm&lt;/strong&gt; is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;can work on both directed and undirected graphs&lt;/li&gt;
-&lt;li&gt;cannot handle negative weights&lt;/li&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><summary type="html">Prim’s algorithm is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.
+&lt;li&gt;cannot handle negative weights&lt;/li&gt;
+&lt;li&gt;O(VlogV)&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="greedy" /><summary type="html">Prim’s algorithm is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.
+
 only work on undirected graph
-can handle negative weights</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - SQL OperationalError : no such table</title><link href="https://parkyo.github.io/categories/django-operationalerror/" rel="alternate" type="text/html" title="Django - SQL OperationalError : no such table" /><published>2020-07-16T00:00:00+09:00</published><updated>2020-07-16T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-operationalerror</id><content type="html" xml:base="https://parkyo.github.io/categories/django-operationalerror/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round D - Record Breaker</title><link href="https://parkyo.github.io/categories/google-kickstart-roundD/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round D - Record Breaker" /><published>2020-07-14T00:00:00+09:00</published><updated>2020-07-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-roundD</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-roundD/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+can handle negative weights
+
+Djikstra’s algorithm is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights
+
+can work on both directed and undirected graphs
+cannot handle negative weights
+O(VlogV)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Google Kick Start 2020 Round D - Record Breaker</title><link href="https://parkyo.github.io/categories/google-kickstart-roundD/" rel="alternate" type="text/html" title="Google Kick Start 2020 Round D - Record Breaker" /><published>2020-07-14T00:00:00+09:00</published><updated>2020-07-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/google-kickstart-roundD</id><content type="html" xml:base="https://parkyo.github.io/categories/google-kickstart-roundD/">&lt;p&gt;&lt;a href=&quot;https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff08/0000000000387171&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;level--easy&quot;&gt;Level : Easy&lt;/h3&gt;
 
@@ -75,32 +273,4 @@ Case #4: 0
 
 &lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;
 
-&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Parse String into Date/Time</title><link href="https://parkyo.github.io/categories/django-datetime/" rel="alternate" type="text/html" title="Django - Parse String into Date/Time" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-datetime</id><content type="html" xml:base="https://parkyo.github.io/categories/django-datetime/">&lt;p&gt;&lt;a href=&quot;https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior&quot;&gt;link&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - Web Scraping with Selenium</title><link href="https://parkyo.github.io/categories/django-selenium/" rel="alternate" type="text/html" title="Python - Web Scraping with Selenium" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-selenium</id><content type="html" xml:base="https://parkyo.github.io/categories/django-selenium/">&lt;pre&gt;&lt;code&gt;final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
-driver = webdriver.Chrome()
-driver.get(final_url)
-response = driver.execute_script(&quot;return document.documentElement.outerHTML&quot;)
-driver.quit()
-soup = BeautifulSoup(response, &quot;lxml&quot;)
-panel = soup.find('div', attrs={'id':'classScheduleBody'})
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;how-to-web-scrape-without-opening-the-browser&quot;&gt;how to web scrape without opening the browser&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;from selenium.webdriver.chrome.options import Options
-
-options = Options()
-options.add_argument('--headless')&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="python" /><category term="web_scraping" /><summary type="html">final_url = f'{url}{name}001&amp;amp;termArray=f_20_2310/'
-driver = webdriver.Chrome()
-driver.get(final_url)
-response = driver.execute_script(&quot;return document.documentElement.outerHTML&quot;)
-driver.quit()
-soup = BeautifulSoup(response, &quot;lxml&quot;)
-panel = soup.find('div', attrs={'id':'classScheduleBody'})</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Python - AttrbiuteError</title><link href="https://parkyo.github.io/categories/python-attributeerror/" rel="alternate" type="text/html" title="Python - AttrbiuteError" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/python-attributeerror</id><content type="html" xml:base="https://parkyo.github.io/categories/python-attributeerror/">&lt;p&gt;&lt;span class=&quot;image fit&quot;&gt;&lt;img src=&quot;/images/attributeerror.png&quot; /&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;AttributeError&lt;/code&gt; is raised when an attribute reference or assignment fails.&lt;/p&gt;
-
-&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;x = 10
-x.append(6)&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="python" /><category term="error" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django - Many-to-One Relationship</title><link href="https://parkyo.github.io/categories/django-many-to-one/" rel="alternate" type="text/html" title="Django - Many-to-One Relationship" /><published>2020-06-30T00:00:00+09:00</published><updated>2020-06-30T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-many-to-one</id><content type="html" xml:base="https://parkyo.github.io/categories/django-many-to-one/">&lt;h3 id=&quot;foreignkey&quot;&gt;Foreignkey&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/3.0/topics/db/examples/many_to_one/&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="django" /><category term="concepts" /><category term="python" /><summary type="html">Foreignkey
-doc</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>

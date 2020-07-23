@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Prim vs. Djikstra</title>
+<title>Leetcode Weekly Contest 197 - The Number of Good Pairs</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,40 +62,67 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">17 Jul 2020</span>
-              <h1>Prim vs. Djikstra</h1>
+      				<span class="date">19 Jul 2020</span>
+              <h1>Leetcode Weekly Contest 197 - The Number of Good Pairs</h1>
               
 								<li class="button small">algorithm</li>
 								
 								<li class="button small">leetcode</li>
 								
-								<li class="button small">greedy</li>
+								<li class="button small">weekly_contest</li>
 								
-      				<!-- <p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+								<li class="button small">map</li>
+								
+      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-good-pairs/">LINK</a></p>
+
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><strong>Prim’s algorithm</strong> is for finding Minimum Spanning Tree that connects ALL vertices of an undirected weighted graph with the lowest possible sum of its edge weights.</p>
-<ul>
-<li>only work on undirected graph</li>
-<li>can handle negative weights</li></ul>
-<p><br />
-<strong>Djikstra’s algorithm</strong> is a greedy algorithm for finding the shortest path between two vertices with the lowest possibel sum of edge weights</p>
-<ul>
-<li>can work on both directed and undirected graphs</li>
-<li>cannot handle negative weights</li>
-<li>O(VlogV)</li></ul>
-<p><br /></p>
+      			<p><p><a href="https://leetcode.com/problems/number-of-good-pairs/">LINK</a></p>
+
+<h3 id="level--easy">Level : Easy</h3>
+
+<h2 id="problem">Problem</h2>
+<p>Given an array of integers nums.</p>
+
+<p>A pair (i,j) is called good if nums[i] == nums[j] and i &lt; j.</p>
+
+<p>Return the number of good pairs.</p>
+
+<h2 id="solution">Solution</h2>
+<pre><code><strong>class Solution {
+public:
+    
+    int count(int n){
+        int ans = (n + 1)*(n/2);
+        if(n%2 != 0){
+            ans += n/2 + 1;
+        }
+        return ans;
+    }
+    
+    int numIdenticalPairs(vector&lt;int&gt;&amp; nums) {
+        int n=0;
+        unordered_map&lt;int, int&gt; list;
+        for (size_t i = 0; i &lt; nums.size(); ++i){
+            auto it = list.find(nums[i]);
+            if(it != list.end()){
+                ++(it-&gt;second);    
+            }else{
+                list.insert(pair&lt;int,int&gt;(nums[i],0));
+            }
+            
+        }
+        for (auto it : list){
+            if(it.second &gt; 0){
+                n += count(it.second);
+            }
+        }
+        return n;
+    }
+};</strong></code></pre>
+<p><strong>Time copmlexity: <i>O(n)</i></strong></p>
+
 </p>
       		</section>
 
@@ -108,8 +135,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/algorithm-prim-djikstra/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/algorithm-prim-djikstra/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/leetcode-goodpairs/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/leetcode-goodpairs/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */
