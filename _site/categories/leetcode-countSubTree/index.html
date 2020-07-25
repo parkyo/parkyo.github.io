@@ -62,7 +62,7 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">22 Jul 2020</span>
+      				<span class="date">25 Jul 2020</span>
               <h1>Leetcode Weekly Contest 197 - Path with Maximum Probability</h1>
               
 								<li class="button small">algorithm</li>
@@ -71,65 +71,69 @@
 								
 								<li class="button small">weekly_contest</li>
 								
-								<li class="button small">dijkastra</li>
+								<li class="button small">DFS</li>
 								
-      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-substrings-with-only-1s/">LINK</a></p>
+      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://leetcode.com/problems/number-of-substrings-with-only-1s/">LINK</a></p>
+      			<p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
 
 <h3 id="level--medium">Level : Medium</h3>
 
 <h2 id="problem">Problem</h2>
-<p>You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].</p>
+<p>Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).</p>
 
-<p>Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.</p>
+<p>The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.</p>
 
-<p>If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.</p>
+<p>Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.</p>
+
+<p>A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.</p>
 
 <h2 id="solution">Solution</h2>
-<p>BFS search</p>
-<pre><code><strong>#include &lt;unordered_map&gt;
-#include &lt;queue&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-class Solution {
-
-    
+<p>DFS search on tree</p>
+<pre><code><strong>class Solution {
 public:
-    
-    double maxProbability(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, vector&lt;double&gt;&amp; succProb, int start, int end) {
-        vector&lt;unordered_map&lt;int, double&gt;&gt; graph(n);
-        for(size_t i = 0; i &lt; edges.size(); ++i){
-            graph[edges[i][0]][edges[i][1]] =  succProb[i];
-            graph[edges[i][1]][edges[i][0]] = succProb[i];
+    struct Node{
+        int val;
+        vector&lt;Node*&gt; children;
+        Node(int in_val): val(in_val){
         }
-        
-        vector&lt;double&gt; ps(n, 0);
-        ps[start] = 1.0;
-        queue&lt;int&gt; q;
-        q.push(start);
-        while(!q.empty()){
-            int cur = q.front();
-            q.pop();
-            for (auto it = graph[cur].begin(); it != graph[cur].end(); ++it){
-                double pos = (it-&gt;second) * ps[cur];
-                if(pos &gt; ps[it-&gt;first]){
-                    ps[it-&gt;first] = pos;
-                    q.push(it-&gt;first);
+    };
+    
+    void dfs(size_t root, size_t i, vector&lt;Node*&gt;&amp; tree, string&amp; labels, vector&lt;int&gt;&amp; ans){
+        if(i &lt; tree.size()){
+            for (auto n : tree[i]-&gt;children){
+                if(labels[n-&gt;val] == labels[root]){
+                    ++ans[root];
                 }
+                dfs(root, n-&gt;val, tree, labels, ans);
+                
             }
 
         }
-        return ps[end];
-        
+
+    }
+
+    vector&lt;int&amp;gt countSubTrees(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, string labels) {
+        vector&lt;int&gt; ans(n,1);
+        vector&lt;Node*&gt; tree(n);
+        for(size_t i = 0; i &lt; n; ++i){
+            Node* n = new Node((int)i);
+            tree[i] = n;
+        }
+        for(auto e : edges){
+            tree[e[0]]-&gt;children.push_back(tree[e[1]]);
+        }
+        for(size_t i = 0; i &lt; n; ++i){
+            dfs(i, i,tree, labels, ans);
+        }
+
+        return ans;
     }
 };</strong></code></pre>
-<p><strong>Time copmlexity: <i>O(V*E)</i></strong></p>
+<p><strong>Time copmlexity: <i>O(n*E)</i></strong></p>
 </p>
       		</section>
 
@@ -142,8 +146,8 @@ public:
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/leetcode-path-max-prob/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/leetcode-path-max-prob/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/leetcode-countSubTree/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/leetcode-countSubTree/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

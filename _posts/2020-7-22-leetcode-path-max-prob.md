@@ -2,7 +2,7 @@
 layout: post
 category: blog
 title:  "Leetcode Weekly Contest 197 - Path with Maximum Probability"
-date:   2020-07-19
+date:   2020-07-22
 tags: algorithm leetcode weekly_contest dijkastra
 image: ""
 ---
@@ -20,9 +20,9 @@ If there is no path from start to end, return 0. Your answer will be accepted if
 
 ## Solution
 BFS search
-<pre><code><strong>#include <unordered_map>
-#include <queue>
-#include <vector>
+<pre><code><strong>#include &lt;unordered_map&gt;
+#include &lt;queue&gt;
+#include &lt;vector&gt;
 
 using namespace std;
 
@@ -31,16 +31,16 @@ class Solution {
     
 public:
     
-    double maxProbability(int n, vector<vector<int>>& edges, vector<double>& succProb, int start, int end) {
-        vector<unordered_map<int, double>> graph(n);
+    double maxProbability(int n, vector&lt;vector&lt;int&gt;&gt;& edges, vector&lt;double&gt;& succProb, int start, int end) {
+        vector&lt;unordered_map&lt;int, double&gt;&gt; graph(n);
         for(size_t i = 0; i < edges.size(); ++i){
             graph[edges[i][0]][edges[i][1]] =  succProb[i];
             graph[edges[i][1]][edges[i][0]] = succProb[i];
         }
         
-        vector<double> ps(n, 0);
+        vector&lt;double&gt; ps(n, 0);
         ps[start] = 1.0;
-        queue<int> q;
+        queue&lt;int&gt; q;
         q.push(start);
         while(!q.empty()){
             int cur = q.front();
@@ -59,8 +59,3 @@ public:
     }
 };</strong></code></pre>
 <strong>Time copmlexity: <i>O(V*E)</i></strong>
-
-
-
-
-

@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-21T20:22:06+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Bellman Ford algorithm</title><link href="https://parkyo.github.io/categories/Bellmanford/" rel="alternate" type="text/html" title="Bellman Ford algorithm" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Bellmanford</id><content type="html" xml:base="https://parkyo.github.io/categories/Bellmanford/">&lt;p&gt;&lt;strong&gt;Bellman Ford&lt;/strong&gt; works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-07-25T22:17:11+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Leetcode Weekly Contest 197 - Path with Maximum Probability</title><link href="https://parkyo.github.io/categories/leetcode-countSubTree/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Path with Maximum Probability" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-countSubTree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-countSubTree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).&lt;/p&gt;
+
+&lt;p&gt;The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.&lt;/p&gt;
+
+&lt;p&gt;Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.&lt;/p&gt;
+
+&lt;p&gt;A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;DFS search on tree&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class Solution {
+public:
+    struct Node{
+        int val;
+        vector&amp;lt;Node*&amp;gt; children;
+        Node(int in_val): val(in_val){
+        }
+    };
+    
+    void dfs(size_t root, size_t i, vector&amp;lt;Node*&amp;gt;&amp;amp; tree, string&amp;amp; labels, vector&amp;lt;int&amp;gt;&amp;amp; ans){
+        if(i &amp;lt; tree.size()){
+            for (auto n : tree[i]-&amp;gt;children){
+                if(labels[n-&amp;gt;val] == labels[root]){
+                    ++ans[root];
+                }
+                dfs(root, n-&amp;gt;val, tree, labels, ans);
+                
+            }
+
+        }
+
+    }
+
+    vector&amp;lt;int&amp;amp;gt countSubTrees(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; edges, string labels) {
+        vector&amp;lt;int&amp;gt; ans(n,1);
+        vector&amp;lt;Node*&amp;gt; tree(n);
+        for(size_t i = 0; i &amp;lt; n; ++i){
+            Node* n = new Node((int)i);
+            tree[i] = n;
+        }
+        for(auto e : edges){
+            tree[e[0]]-&amp;gt;children.push_back(tree[e[1]]);
+        }
+        for(size_t i = 0; i &amp;lt; n; ++i){
+            dfs(i, i,tree, labels, ans);
+        }
+
+        return ans;
+    }
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Path with Maximum Probability</title><link href="https://parkyo.github.io/categories/leetcode-path-max-prob/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Path with Maximum Probability" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-path-max-prob</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-path-max-prob/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].&lt;/p&gt;
+
+&lt;p&gt;Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.&lt;/p&gt;
+
+&lt;p&gt;If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;BFS search&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;#include &amp;lt;unordered_map&amp;gt;
+#include &amp;lt;queue&amp;gt;
+#include &amp;lt;vector&amp;gt;
+
+using namespace std;
+
+class Solution {
+
+    
+public:
+    
+    double maxProbability(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; edges, vector&amp;lt;double&amp;gt;&amp;amp; succProb, int start, int end) {
+        vector&amp;lt;unordered_map&amp;lt;int, double&amp;gt;&amp;gt; graph(n);
+        for(size_t i = 0; i &amp;lt; edges.size(); ++i){
+            graph[edges[i][0]][edges[i][1]] =  succProb[i];
+            graph[edges[i][1]][edges[i][0]] = succProb[i];
+        }
+        
+        vector&amp;lt;double&amp;gt; ps(n, 0);
+        ps[start] = 1.0;
+        queue&amp;lt;int&amp;gt; q;
+        q.push(start);
+        while(!q.empty()){
+            int cur = q.front();
+            q.pop();
+            for (auto it = graph[cur].begin(); it != graph[cur].end(); ++it){
+                double pos = (it-&amp;gt;second) * ps[cur];
+                if(pos &amp;gt; ps[it-&amp;gt;first]){
+                    ps[it-&amp;gt;first] = pos;
+                    q.push(it-&amp;gt;first);
+                }
+            }
+
+        }
+        return ps[end];
+        
+    }
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(V*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="dijkastra" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Bellman Ford algorithm</title><link href="https://parkyo.github.io/categories/Bellmanford/" rel="alternate" type="text/html" title="Bellman Ford algorithm" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Bellmanford</id><content type="html" xml:base="https://parkyo.github.io/categories/Bellmanford/">&lt;p&gt;&lt;strong&gt;Bellman Ford&lt;/strong&gt; works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;alogorithm&quot;&gt;Alogorithm&lt;/h3&gt;
@@ -48,64 +154,7 @@
 
 &lt;blockquote&gt;O(VE)&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="greedy" /><summary type="html">Bellman Ford works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Path with Maximum Probability</title><link href="https://parkyo.github.io/categories/leetcode-path-max-prob/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Path with Maximum Probability" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-path-max-prob</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-path-max-prob/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].&lt;/p&gt;
-
-&lt;p&gt;Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.&lt;/p&gt;
-
-&lt;p&gt;If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;BFS search&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;#include &lt;unordered_map&gt;
-#include &lt;queue&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-class Solution {
-
-    
-public:
-    
-    double maxProbability(int n, vector&amp;lt;vector&lt;int&gt;&amp;gt;&amp;amp; edges, vector&lt;double&gt;&amp;amp; succProb, int start, int end) {
-        vector&amp;lt;unordered_map&amp;lt;int, double&amp;gt;&amp;gt; graph(n);
-        for(size_t i = 0; i &amp;lt; edges.size(); ++i){
-            graph[edges[i][0]][edges[i][1]] =  succProb[i];
-            graph[edges[i][1]][edges[i][0]] = succProb[i];
-        }
-        
-        vector&lt;double&gt; ps(n, 0);
-        ps[start] = 1.0;
-        queue&lt;int&gt; q;
-        q.push(start);
-        while(!q.empty()){
-            int cur = q.front();
-            q.pop();
-            for (auto it = graph[cur].begin(); it != graph[cur].end(); ++it){
-                double pos = (it-&amp;gt;second) * ps[cur];
-                if(pos &amp;gt; ps[it-&amp;gt;first]){
-                    ps[it-&amp;gt;first] = pos;
-                    q.push(it-&amp;gt;first);
-                }
-            }
-
-        }
-        return ps[end];
-        
-    }
-};&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;strong&gt;Time copmlexity: &lt;i&gt;O(V*E)&lt;/i&gt;&lt;/strong&gt;
-
-
-
-
-
-&lt;/int&gt;&lt;/double&gt;&lt;/double&gt;&lt;/int&gt;&lt;/vector&gt;&lt;/queue&gt;&lt;/unordered_map&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="dijkastra" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - The Number of Substrings with 1’s</title><link href="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - The Number of Substrings with 1's" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-num-substrings-with-1s</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="greedy" /><summary type="html">Bellman Ford works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - The Number of Substrings with 1’s</title><link href="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - The Number of Substrings with 1's" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-num-substrings-with-1s</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
 
@@ -273,4 +322,4 @@ Case #4: 0
 
 &lt;!-- &lt;pre&gt;&lt;code&gt; --&gt;
 
-&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Visual Studio Code - Debug</title><link href="https://parkyo.github.io/categories/django-vsc-debug/" rel="alternate" type="text/html" title="Django &amp; Visual Studio Code - Debug" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-vsc-debug</id><content type="html" xml:base="https://parkyo.github.io/categories/django-vsc-debug/">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/docs/python/tutorial-django&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="django" /><category term="python" /><category term="VS_code" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="kick_start" /><category term="iteration" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">BeautifulSoup - next_sibling</title><link href="https://parkyo.github.io/categories/beautifulsoup-nextsibling/" rel="alternate" type="text/html" title="BeautifulSoup - next_sibling" /><published>2020-07-13T00:00:00+09:00</published><updated>2020-07-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/beautifulsoup-nextsibling</id><content type="html" xml:base="https://parkyo.github.io/categories/beautifulsoup-nextsibling/">&lt;p&gt;&lt;a href=&quot;https://www.crummy.com/software/BeautifulSoup/bs4/doc/#going-sideways&quot;&gt;DOC&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="beautifulsoup" /><summary type="html">DOC</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Django &amp;amp; Python - Lambda</title><link href="https://parkyo.github.io/categories/django-lambda/" rel="alternate" type="text/html" title="Django &amp; Python - Lambda" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/django-lambda</id><content type="html" xml:base="https://parkyo.github.io/categories/django-lambda/"></content><category term="blog" /><category term="django" /><category term="python" /><category term="concepts" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
