@@ -2,6 +2,60 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://parkyo.github.io/categories/sliding-window/</loc>
+      
+        <lastmod>2020-08-01T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/dyanamic-sliding-window/</loc>
+      
+        <lastmod>2020-08-01T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/npm/</loc>
+      
+        <lastmod>2020-07-30T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/numOddSums/</loc>
+      
+        <lastmod>2020-07-29T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/coding-prob-tips/</loc>
+      
+        <lastmod>2020-07-27T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/leetcode-goodsplit/</loc>
+      
+        <lastmod>2020-07-25T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/leetcode-countSubTree/</loc>
       
         <lastmod>2020-07-25T00:00:00+09:00</lastmod>
@@ -607,6 +661,16 @@
   
     <url>
       <loc>https://parkyo.github.io/blog/page8/</loc>
+       <lastmod>2020-06-12T00:00:00+09:00</lastmod>
+      
+       <changefreq>weekly</changefreq>
+      
+       <priority>1.0</priority>
+      
+     </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/blog/page9/</loc>
        <lastmod>2020-06-12T00:00:00+09:00</lastmod>
       
        <changefreq>weekly</changefreq>

@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title>
+<title>Younse's home</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -26,16 +26,28 @@
 <link rel="stylesheet" href="/assets/css/main.css" />
 <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
+
+
 	</head>
 	<body class="is-loading">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
+				<!-- Intro -->
+					<div id="intro">
+            <h1>Younse Park</h1>
+						<h2>Hi, I am a software enginner</h2>
+						<p>Java C++ Javascript(react) HTML CSS</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
 				<!-- Header -->
-        <header id="header">
-          <a href="/" class="logo">Younse Park</a>
-        </header>
+					<header id="header">
+						<a href="/" class="logo">Younse Park</a>
+					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
@@ -43,7 +55,7 @@
             <ul class="links">
   <li class=""><a href="/">Home</a></li>
   <li class=""><a href="/about/">About</a></li>
-  <li class=""><a href="/blog/">Blog</a></li>
+  <li class=" active "><a href="/blog/">Blog</a></li>
   <li class=""><a href="/portfolio/">Portfolio</a></li>
   <li class=""><a href="/elements/">Elements Reference</a></li>
 </ul>
@@ -55,120 +67,68 @@
   <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
 </ul> -->
 
-						
+
 					</nav>
 
 				<!-- Main -->
-				<div id="main">
-          <section class="post">
-    				<header class="major">
-      				<span class="date">25 Jul 2020</span>
-              <h1>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</h1>
-              
-								<li class="button small">algorithm</li>
-								
-								<li class="button small">leetcode</li>
-								
-								<li class="button small">weekly_contest</li>
-								
-								<li class="button small">DFS</li>
-								
-      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
+					<div id="main">
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">Introduction</a></h2>
+									<p>Hi, I am a software engineer</p>
+								</header>
+								<p><span class = "image left"><img src="/images/profilepic.JPG" alt="" width = 70% height = YYY /></span>
+									I am <i>Younse Park</i>, a senior at <strong>University of Michigan</strong> in Ann Arbor studying Computer Science.
+									The dogs that welcomed you to my blog are <i>Samsoon</i> and <i>Bokdol</i>. 	
+									<br>I am recording all my journey as a developer in this blog including projects and errors I encounter.
+									Here is my <a href = "https://github.com/parkyo"><strong>Github</strong></a> portfolio.
+								</p>
+							</article>
 
-</p> -->
-      			</header>
-      			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
-
-<h3 id="level--medium">Level : Medium</h3>
-
-<h2 id="problem">Problem</h2>
-<p>Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).</p>
-
-<p>The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.</p>
-
-<p>Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.</p>
-
-<p>A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.</p>
-
-<h2 id="solution">Solution</h2>
-<p>DFS search on tree</p>
-<pre><code><strong>class Solution {
-public:
-    struct Node{
-        int val;
-        vector&lt;Node*&gt; children;
-        Node(int in_val): val(in_val){
-        }
-    };
-    
-    void dfs(size_t root, size_t i, vector&lt;Node*&gt;&amp; tree, string&amp; labels, vector&lt;int&gt;&amp; ans){
-        if(i &lt; tree.size()){
-            for (auto n : tree[i]-&gt;children){
-                if(labels[n-&gt;val] == labels[root]){
-                    ++ans[root];
-                }
-                dfs(root, n-&gt;val, tree, labels, ans);
+						<!-- Posts -->
+							<section class="portfolio_posts">
                 
-            }
+                
+  								<article>
+  									<header>
+  										<!-- <span class="date">14 Jun 2020</span> -->
+										  <h2><a href="/categories/FDTD/">FDTD</a></h2>
+										  <p style="text-align:center">June - Aug / 2018</p>
+  									</header>
+  									<a href="/categories/FDTD/" class="portfolio_posts"><img src="/images/gist.jpg" alt="" /></a>
+  									<!-- <p>June - Aug / 2018</p> -->
+  									<!-- <ul class="actions">
+  										<li><a href="/categories/FDTD/" class="button">Full Story</a></li>
+  									</ul> -->
+  								</article>
+                  
+                
+                
+  								<article>
+  									<header>
+  										<!-- <span class="date">13 Jun 2020</span> -->
+										  <h2><a href="/categories/travelymap/">travelymap</a></h2>
+										  <p style="text-align:center">June - Sep / 2019</p>
+  									</header>
+  									<a href="/categories/travelymap/" class="portfolio_posts"><img src="/images/travelymap.png" alt="" /></a>
+  									<!-- <p>June - Sep / 2019</p> -->
+  									<!-- <ul class="actions">
+  										<li><a href="/categories/travelymap/" class="button">Full Story</a></li>
+  									</ul> -->
+  								</article>
+                  
+                
 
-        }
+							</section>
 
-    }
+						<!-- Footer -->
+							<!-- <footer>
+                <ul class="actions">
+                  <li><a href="/blog/" class="button">Our Blog</a></li>
+                </ul>
+							</footer> -->
 
-    vector&lt;int&amp;gt countSubTrees(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, string labels) {
-        vector&lt;int&gt; ans(n,1);
-        vector&lt;Node*&gt; tree(n);
-        for(size_t i = 0; i &lt; n; ++i){
-            Node* n = new Node((int)i);
-            tree[i] = n;
-        }
-        for(auto e : edges){
-            tree[e[0]]-&gt;children.push_back(tree[e[1]]);
-        }
-        for(size_t i = 0; i &lt; n; ++i){
-            dfs(i, i,tree, labels, ans);
-        }
-
-        return ans;
-    }
-};</strong></code></pre>
-<p><strong>Time copmlexity: <i>O(n*E)</i></strong></p>
-</p>
-      		</section>
-
-          <div class="comments-wrapper">
-          <div id="disqus_thread"></div>
-          <script>
-              /**
-               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-               */
-
-              var disqus_config = function () {
-                  this.page.url = '/categories/leetcode-countSubTree/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/leetcode-countSubTree/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
-              };
-
-              (function() {  /* dont endit below this line */
-                  var d = document, s = d.createElement('script');
-
-                  s.src = 'https://default.disqus.com/embed.js';
-
-                  s.setAttribute('data-timestamp', +new Date());
-                  (d.head || d.body).appendChild(s);
-              })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </div><!-- /.comments-wrapper -->
-
-
-					<!-- Footer -->
-						<!-- <footer>
-              <ul class="actions">
-                <li><a href="/blog/" class="button">Our Blog</a></li>
-              </ul>
-						</footer> -->
 					</div>
 
 				<!-- Footer -->
@@ -225,8 +185,8 @@ public:
 
 			</div>
 
-      <!-- Scripts -->
-  		<!-- DYN -->
+		<!-- Scripts -->
+		<!-- DYN -->
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/jquery.scrollex.min.js"></script>
 <script src="/assets/js/jquery.scrolly.min.js"></script>
@@ -234,7 +194,7 @@ public:
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
 
-			<script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};

@@ -1,7 +1,7 @@
 ---
 layout: post
 category: blog
-title:  "Leetcode Weekly Contest 197 - Path with Maximum Probability"
+title:  "Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees"
 date:   2020-07-25
 tags: algorithm leetcode weekly_contest DFS
 image: ""

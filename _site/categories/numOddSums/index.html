@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title>
+<title>Leetcode Biweekly Contest 30 - Number of Subarrays with Odd Sums</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,78 +62,50 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">25 Jul 2020</span>
-              <h1>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</h1>
+      				<span class="date">29 Jul 2020</span>
+              <h1>Leetcode Biweekly Contest 30 - Number of Subarrays with Odd Sums</h1>
               
 								<li class="button small">algorithm</li>
 								
 								<li class="button small">leetcode</li>
 								
-								<li class="button small">weekly_contest</li>
+								<li class="button small">biweekly_contest</li>
 								
-								<li class="button small">DFS</li>
-								
-      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
+      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/">LINK</a></p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
+      			<p><p><a href="https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/">LINK</a></p>
 
 <h3 id="level--medium">Level : Medium</h3>
 
 <h2 id="problem">Problem</h2>
-<p>Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).</p>
+<p>Given an array of integers arr. Return the number of sub-arrays with odd sum.</p>
 
-<p>The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.</p>
-
-<p>Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.</p>
-
-<p>A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.</p>
+<p>As the answer may grow large, the answer must be computed modulo 10^9 + 7.</p>
 
 <h2 id="solution">Solution</h2>
-<p>DFS search on tree</p>
-<pre><code><strong>class Solution {
-public:
-    struct Node{
-        int val;
-        vector&lt;Node*&gt; children;
-        Node(int in_val): val(in_val){
-        }
-    };
-    
-    void dfs(size_t root, size_t i, vector&lt;Node*&gt;&amp; tree, string&amp; labels, vector&lt;int&gt;&amp; ans){
-        if(i &lt; tree.size()){
-            for (auto n : tree[i]-&gt;children){
-                if(labels[n-&gt;val] == labels[root]){
-                    ++ans[root];
-                }
-                dfs(root, n-&gt;val, tree, labels, ans);
-                
-            }
-
-        }
-
-    }
-
-    vector&lt;int&amp;gt countSubTrees(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, string labels) {
-        vector&lt;int&gt; ans(n,1);
-        vector&lt;Node*&gt; tree(n);
-        for(size_t i = 0; i &lt; n; ++i){
-            Node* n = new Node((int)i);
-            tree[i] = n;
-        }
-        for(auto e : edges){
-            tree[e[0]]-&gt;children.push_back(tree[e[1]]);
-        }
-        for(size_t i = 0; i &lt; n; ++i){
-            dfs(i, i,tree, labels, ans);
-        }
-
-        return ans;
-    }
-};</strong></code></pre>
-<p><strong>Time copmlexity: <i>O(n*E)</i></strong></p>
+<ol>
+  <li>Keep track of the number of subarrays of odd sums and even sums.</li>
+  <li>If the element is odd, swap odd and even and increment odd</li>
+  <li>If the element is even, increment even</li>
+  <li>Add the number for every element to the sum</li>
+</ol>
+<pre><code><strong>int numOfSubarrays(vector&lt;int&gt;&amp; arr) {
+      int odd = 0, even = 0, sum = 0;
+      for(auto a : arr){
+          if(a % 2 == 1){
+              swap(odd, even);
+              ++odd;
+          }else{
+              ++even;
+          }
+          sum += odd;
+      }
+      return sum % 10000000007;
+  }</strong></code></pre>
+<p><strong>Time copmlexity: <i>O(n)</i></strong></p>
 </p>
       		</section>
 
@@ -146,8 +118,8 @@ public:
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/leetcode-countSubTree/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/leetcode-countSubTree/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/numOddSums/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/numOddSums/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

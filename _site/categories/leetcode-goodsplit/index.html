@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title>
+<title>Leetcode Bi-Weekly Contest 31 - Good ways to split a string</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -63,7 +63,7 @@
           <section class="post">
     				<header class="major">
       				<span class="date">25 Jul 2020</span>
-              <h1>Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</h1>
+              <h1>Leetcode Bi-Weekly Contest 31 - Good ways to split a string</h1>
               
 								<li class="button small">algorithm</li>
 								
@@ -73,67 +73,45 @@
 								
 								<li class="button small">DFS</li>
 								
-      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
+      				<!-- <p><p><a href="https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/">LINK</a></p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><p><a href="https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/">LINK</a></p>
+      			<p><p><a href="https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/">LINK</a></p>
 
 <h3 id="level--medium">Level : Medium</h3>
 
 <h2 id="problem">Problem</h2>
-<p>Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).</p>
+<p>You are given a string s, a split is called good if you can split s into 2 non-empty strings p and q where its concatenation is equal to s and the number of distinct letters in p and q are the same.</p>
 
-<p>The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.</p>
-
-<p>Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.</p>
-
-<p>A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.</p>
+<p>Return the number of good splits you can make in s.</p>
 
 <h2 id="solution">Solution</h2>
-<p>DFS search on tree</p>
-<pre><code><strong>class Solution {
-public:
-    struct Node{
-        int val;
-        vector&lt;Node*&gt; children;
-        Node(int in_val): val(in_val){
+<p><a href="/sliding-window/">Sliding Window Technique</a></p>
+<pre><code><strong>int numSplits(string s) {
+        vector&lt;vector&lt;int&gt;&gt; chars(s.size()-1, vector&lt;int&gt; (2,0));
+        int count = 0;
+        unordered_set&lt;char&gt; s1;
+        unordered_set&lt;char&gt; s2;
+        size_t i = 0, j = chars.size() -1;
+        while(i &lt; chars.size() &amp;&amp; j &gt;= 0){
+            s1.insert(s[i]);
+            s2.insert(s[j+1]);
+            chars[i][0] = (int)s1.size();
+            chars[j][1] = (int)s2.size();
+            ++i;
+            --j;
         }
-    };
-    
-    void dfs(size_t root, size_t i, vector&lt;Node*&gt;&amp; tree, string&amp; labels, vector&lt;int&gt;&amp; ans){
-        if(i &lt; tree.size()){
-            for (auto n : tree[i]-&gt;children){
-                if(labels[n-&gt;val] == labels[root]){
-                    ++ans[root];
-                }
-                dfs(root, n-&gt;val, tree, labels, ans);
-                
+        for(auto i : chars){
+            if(i[0] == i[1]){
+                ++count;
             }
-
         }
-
-    }
-
-    vector&lt;int&amp;gt countSubTrees(int n, vector&lt;vector&lt;int&gt;&gt;&amp; edges, string labels) {
-        vector&lt;int&gt; ans(n,1);
-        vector&lt;Node*&gt; tree(n);
-        for(size_t i = 0; i &lt; n; ++i){
-            Node* n = new Node((int)i);
-            tree[i] = n;
-        }
-        for(auto e : edges){
-            tree[e[0]]-&gt;children.push_back(tree[e[1]]);
-        }
-        for(size_t i = 0; i &lt; n; ++i){
-            dfs(i, i,tree, labels, ans);
-        }
-
-        return ans;
+        return count;
     }
 };</strong></code></pre>
-<p><strong>Time copmlexity: <i>O(n*E)</i></strong></p>
+<p><strong>Time copmlexity: <i>O(b)</i></strong></p>
 </p>
       		</section>
 
@@ -146,8 +124,8 @@ public:
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/leetcode-countSubTree/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/leetcode-countSubTree/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/leetcode-goodsplit/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/leetcode-goodsplit/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */
