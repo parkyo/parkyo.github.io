@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Python basics</title>
+<title>GeeksForGeeks - LRU Cache</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -62,30 +62,110 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">22 Jun 2020</span>
-              <h1>Python basics</h1>
+      				<span class="date">08 Aug 2020</span>
+              <h1>GeeksForGeeks - LRU Cache</h1>
               
-								<li class="button small">concepts</li>
+								<li class="button small">algorithm</li>
 								
-								<li class="button small">python</li>
+								<li class="button small">must_do</li>
 								
-      				<!-- <p><h3 id="uses">Uses</h3>
-<li>Web Development</li>
-<li>Machine Learning</li>
-<li>Data Analytics</li>
-<p><br /></p>
+      				<!-- <p><p><a href="https://practice.geeksforgeeks.org/problems/lru-cache/1">link</a></p>
 
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><h3 id="uses">Uses</h3>
-<li>Web Development</li>
-<li>Machine Learning</li>
-<li>Data Analytics</li>
-<p><br /></p>
+      			<p><p><a href="https://practice.geeksforgeeks.org/problems/lru-cache/1">link</a></p>
 
-<h3 id="self">self</h3>
-<p><strong>self</strong> is an instance of the class to access properties and methods of the class</p>
+<h2 id="problem">Problem</h2>
+<p>The task is to design and implement methods of an LRU cache. The class has two methods get() and set() which are defined as follows.
+get(x)   : Returns the value of the key x if the key exists in the cache otherwise returns -1.
+set(x,y) : inserts the value if the key x is not already present. If the cache reaches its capacity it should invalidate the least recently used item before inserting the new item.
+In the constructor of the class the size of the cache should be intitialized.</p>
+
+<h2 id="solution">Solution</h2>
+<p>Use <strong>Doubly Linked List</strong> and <strong>Unordered Map</strong>.
+<strong>DLL</strong> gives the advantage of removing nodes and changing the order while <strong>map</strong> can efficiently find if a key exists in the list.</p>
+<pre><code><strong>struct Node{
+    int key;
+  int value;
+  Node* next;
+  Node* prev;
+  
+  Node(int key, int value):key(key), value(value){}
+};
+
+class LRUCache
+{
+private:
+    Node* last;
+    Node* first;
+    unordered_map&lt;int, Node*&gt; map;
+    int size;
+
+public:
+    LRUCache(int cap):size(cap)
+    {}
+    
+     int get(int key)
+    {
+        // this function should return value corresponding to key
+        auto it = map.find(key);
+        if(it != map.end()){
+            Node* cur = it-&gt;second;
+            if(cur-&gt;prev){
+                (cur-&gt;prev)-&gt;next = cur-&gt;next;    
+            }
+            if(cur-&gt;next){
+                (cur-&gt;next)-&gt;prev = cur-&gt;prev;    
+            }
+            cur-&gt;next = first;
+            first-&gt;prev = cur;
+            first = cur;
+            return (it-&gt;second)-&gt;value;
+        }
+        return -1;
+    }
+    
+     void set(int key, int value)
+    {
+        // storing key, value pair
+        
+        auto it = map.find(key);
+        if(it == map.end()){
+            if(map.size() == size){
+                int rem_key = first-&gt;key;
+                auto it = map.find(rem_key);
+                if(first-&gt;next){
+                    (first-&gt;next)-&gt;prev = nullptr;    
+                }
+                first = first-&gt;next;
+                map.erase(it);
+            }
+            Node* n = new Node(key, value);
+            last-&gt;next = n;
+            n-&gt;prev = last;
+            last = n;
+            if(!first){
+                first = n;
+            }
+            map.insert(pair&lt;int,Node*&gt;(key, n));
+        }else{
+            Node* n = it-&gt;second;
+            if(n-&gt;prev){
+                (n-&gt;prev)-&gt;next = n-&gt;next;
+            }
+            if(n-&gt;next){
+                (n-&gt;next)-&gt;prev = n-&gt;prev;
+            }
+            last-&gt;next = n;
+            n-&gt;prev = last;
+            last = n;
+            if(first == n &amp;&amp; map.size() &gt; 1){
+                first = n-&gt;next;
+            }
+        }
+    }
+};</strong></code></pre>
 </p>
       		</section>
 
@@ -98,8 +178,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/python-basics/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/python-basics/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/Geeks-LRUcache/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/Geeks-LRUcache/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

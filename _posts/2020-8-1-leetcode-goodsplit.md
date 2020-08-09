@@ -40,4 +40,4 @@ Return the number of good splits you can make in s.
         return count;
     }
 };</strong></code></pre>
-<strong>Time copmlexity: <i>O(b)</i></strong>
+<strong>Time copmlexity: <i>O(n)w</i></strong>

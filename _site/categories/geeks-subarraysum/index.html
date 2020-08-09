@@ -10,7 +10,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-<title>Tips for Solving Coding Problems</title>
+<title>GeeksForGeeks - Subarrays with Give Sum</title>
 <!-- <meta name="description" ></meta> -->
 
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
@@ -42,7 +42,7 @@
 
             <ul class="links">
   <li class=""><a href="/">Home</a></li>
-  <li class=""><a href="/about/">About</a></li>
+  <!-- <li class=""><a href="/about/">About</a></li> -->
   <li class=""><a href="/blog/">Blog</a></li>
   <li class=""><a href="/portfolio/">Portfolio</a></li>
   <li class=""><a href="/elements/">Elements Reference</a></li>
@@ -62,28 +62,56 @@
 				<div id="main">
           <section class="post">
     				<header class="major">
-      				<span class="date">27 Jul 2020</span>
-              <h1>Tips for Solving Coding Problems</h1>
+      				<span class="date">02 Aug 2020</span>
+              <h1>GeeksForGeeks - Subarrays with Give Sum</h1>
               
 								<li class="button small">algorithm</li>
 								
-      				<!-- <p><li>When the only solution seems to be a long search, then focus on finding the 'bound' 
-<a href="https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target/">ex</a></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+								<li class="button small">sliding_window</li>
+								
+								<li class="button small">must_do</li>
+								
+      				<!-- <p><h2 id="problem">Problem</h2>
+<p>Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.</p>
+
 </p> -->
       			</header>
       			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
-      			<p><li>When the only solution seems to be a long search, then focus on finding the 'bound' 
-<a href="https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target/">ex</a></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+      			<p><h2 id="problem">Problem</h2>
+<p>Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.</p>
+
+<h2 id="solution">Solution</h2>
+<p>Sliding window technique</p>
+<pre><code><strong>int subarraySum(){
+    int t, n, s;
+    int cur_sum = 0, start=0, end = -1;
+    cin &gt;&gt; t &gt;&gt; n &gt;&gt; s;
+    vector<int> list(n,0);
+    for(size_t j = 0; j &lt; t; ++j){
+        for(size_t i = 0; i &lt; n; ++i){
+            int cur;
+            cin &gt;&gt; cur;
+            list[i] = cur;
+        }
+        for(auto i : list){
+            cur_sum += i;
+            ++end;
+            while(start &lt;= end &amp;&amp; cur_sum &gt; s){
+                cur_sum -= list[start];
+                ++start;
+            }
+            if(cur_sum == s){
+                cout &lt;&lt; start+1 &lt;&lt; " " &lt;&lt; end+1;
+                return 0;
+            }
+        }
+    }
+    
+    cout &lt;&lt; -1;
+    return 0;
+    
+}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+</int></strong></code></pre>
 </p>
       		</section>
 
@@ -96,8 +124,8 @@
                */
 
               var disqus_config = function () {
-                  this.page.url = '/categories/coding-prob-tips/';  /*Replace PAGE_URL with your page's canonical URL variable*/
-                  this.page.identifier = '/categories/coding-prob-tips/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+                  this.page.url = '/categories/geeks-subarraysum/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/geeks-subarraysum/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
               };
 
               (function() {  /* dont endit below this line */

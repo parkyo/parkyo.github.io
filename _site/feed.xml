@@ -1,4 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-08-01T20:05:50+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Sliding Window Technique</title><link href="https://parkyo.github.io/categories/sliding-window/" rel="alternate" type="text/html" title="Sliding Window Technique" /><published>2020-08-01T00:00:00+09:00</published><updated>2020-08-01T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/sliding-window</id><content type="html" xml:base="https://parkyo.github.io/categories/sliding-window/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MK-NZ4hN7rs&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-08-09T13:47:30+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">GeeksForGeeks - LRU Cache</title><link href="https://parkyo.github.io/categories/Geeks-LRUcache/" rel="alternate" type="text/html" title="GeeksForGeeks - LRU Cache" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Geeks-LRUcache</id><content type="html" xml:base="https://parkyo.github.io/categories/Geeks-LRUcache/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/lru-cache/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;The task is to design and implement methods of an LRU cache. The class has two methods get() and set() which are defined as follows.
+get(x)   : Returns the value of the key x if the key exists in the cache otherwise returns -1.
+set(x,y) : inserts the value if the key x is not already present. If the cache reaches its capacity it should invalidate the least recently used item before inserting the new item.
+In the constructor of the class the size of the cache should be intitialized.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;Doubly Linked List&lt;/strong&gt; and &lt;strong&gt;Unordered Map&lt;/strong&gt;.
+&lt;strong&gt;DLL&lt;/strong&gt; gives the advantage of removing nodes and changing the order while &lt;strong&gt;map&lt;/strong&gt; can efficiently find if a key exists in the list.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;struct Node{
+    int key;
+  int value;
+  Node* next;
+  Node* prev;
+  
+  Node(int key, int value):key(key), value(value){}
+};
+
+class LRUCache
+{
+private:
+    Node* last;
+    Node* first;
+    unordered_map&amp;lt;int, Node*&amp;gt; map;
+    int size;
+
+public:
+    LRUCache(int cap):size(cap)
+    {}
+    
+     int get(int key)
+    {
+        // this function should return value corresponding to key
+        auto it = map.find(key);
+        if(it != map.end()){
+            Node* cur = it-&amp;gt;second;
+            if(cur-&amp;gt;prev){
+                (cur-&amp;gt;prev)-&amp;gt;next = cur-&amp;gt;next;    
+            }
+            if(cur-&amp;gt;next){
+                (cur-&amp;gt;next)-&amp;gt;prev = cur-&amp;gt;prev;    
+            }
+            cur-&amp;gt;next = first;
+            first-&amp;gt;prev = cur;
+            first = cur;
+            return (it-&amp;gt;second)-&amp;gt;value;
+        }
+        return -1;
+    }
+    
+     void set(int key, int value)
+    {
+        // storing key, value pair
+        
+        auto it = map.find(key);
+        if(it == map.end()){
+            if(map.size() == size){
+                int rem_key = first-&amp;gt;key;
+                auto it = map.find(rem_key);
+                if(first-&amp;gt;next){
+                    (first-&amp;gt;next)-&amp;gt;prev = nullptr;    
+                }
+                first = first-&amp;gt;next;
+                map.erase(it);
+            }
+            Node* n = new Node(key, value);
+            last-&amp;gt;next = n;
+            n-&amp;gt;prev = last;
+            last = n;
+            if(!first){
+                first = n;
+            }
+            map.insert(pair&amp;lt;int,Node*&amp;gt;(key, n));
+        }else{
+            Node* n = it-&amp;gt;second;
+            if(n-&amp;gt;prev){
+                (n-&amp;gt;prev)-&amp;gt;next = n-&amp;gt;next;
+            }
+            if(n-&amp;gt;next){
+                (n-&amp;gt;next)-&amp;gt;prev = n-&amp;gt;prev;
+            }
+            last-&amp;gt;next = n;
+            n-&amp;gt;prev = last;
+            last = n;
+            if(first == n &amp;amp;&amp;amp; map.size() &amp;gt; 1){
+                first = n-&amp;gt;next;
+            }
+        }
+    }
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Count Triplets</title><link href="https://parkyo.github.io/categories/geeks-triplets/" rel="alternate" type="text/html" title="GeeksForGeeks - Count Triplets" /><published>2020-08-07T00:00:00+09:00</published><updated>2020-08-07T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-triplets</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-triplets/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given an array of distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int triplets(){
+    int t, n;
+    cin &amp;gt;&amp;gt; t;
+    while(t &amp;gt; 0){
+        cin &amp;gt;&amp;gt; n;
+        vector&lt;int&gt; list(n);
+        int count = 0;
+        size_t i = 0;
+        while(i &amp;lt; n){
+            int cur;
+            cin &amp;gt;&amp;gt; cur;
+            list[i] = cur;
+            ++i;
+        }
+        sort(list.begin(), list.end());
+        for(size_t i = n-1; i &amp;gt;= 0; --i){
+            size_t j = 0, k = i-1;
+            while(j &amp;lt; k){
+                int sum = list[j] + list[k];
+                if(sum == list[i]){
+                    ++count;
+                }else if(sum &amp;gt; list[i]){
+                    --k;
+                }else{
+                    ++i;
+                }
+            }
+        }
+        if(count &amp;gt; 0){
+            cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;
+        }else{
+            cout &amp;lt;&amp;lt; -1 &amp;lt;&amp;lt; endl;
+        }
+        --t;
+    }
+    return 0;
+}&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><summary type="html">Problem
+Given an array of distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Kadane’s algorithm</title><link href="https://parkyo.github.io/categories/geeks-kadane/" rel="alternate" type="text/html" title="GeeksForGeeks - Kadane's algorithm" /><published>2020-08-07T00:00:00+09:00</published><updated>2020-08-07T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-kadane</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-kadane/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given an array arr of N integers. Find the contiguous sub-array with maximum sum.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;I used 2D array with bottom-top DP approach iniitally. 
+However, I figured that I only need 1D array and as iterating through, it only matters what the best sum is until the previous index for the current index since it is supposed to be contiguous.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int kadane() {
+    int t, n;
+    cin &amp;gt;&amp;gt; t;
+    while(t &amp;gt; 0){
+        cin &amp;gt;&amp;gt; n;
+        int list[n]={0};
+        int max = INT_MIN;
+        size_t i = 0;
+        while(i &amp;lt; n){
+            int cur;
+            cin &amp;gt;&amp;gt; cur;
+            list[i] = cur;
+            ++i;
+        }
+        for(size_t i = 1; i &amp;lt; n; ++i){
+            list[i] = max(list[i], list[i]+list[i-1]);
+            max = max(max, list[i]);
+        }
+        --t;
+        cout &amp;lt;&amp;lt; max &amp;lt;&amp;lt; endl;
+    }
+    return 0;
+}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="kadane" /><summary type="html">Problem
+Given an array arr of N integers. Find the contiguous sub-array with maximum sum.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Subarrays with Give Sum</title><link href="https://parkyo.github.io/categories/geeks-subarraysum/" rel="alternate" type="text/html" title="GeeksForGeeks - Subarrays with Give Sum" /><published>2020-08-02T00:00:00+09:00</published><updated>2020-08-02T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-subarraysum</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-subarraysum/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Sliding window technique&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int subarraySum(){
+    int t, n, s;
+    int cur_sum = 0, start=0, end = -1;
+    cin &amp;gt;&amp;gt; t &amp;gt;&amp;gt; n &amp;gt;&amp;gt; s;
+    vector&lt;int&gt; list(n,0);
+    for(size_t j = 0; j &amp;lt; t; ++j){
+        for(size_t i = 0; i &amp;lt; n; ++i){
+            int cur;
+            cin &amp;gt;&amp;gt; cur;
+            list[i] = cur;
+        }
+        for(auto i : list){
+            cur_sum += i;
+            ++end;
+            while(start &amp;lt;= end &amp;amp;&amp;amp; cur_sum &amp;gt; s){
+                cur_sum -= list[start];
+                ++start;
+            }
+            if(cur_sum == s){
+                cout &amp;lt;&amp;lt; start+1 &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; end+1;
+                return 0;
+            }
+        }
+    }
+    
+    cout &amp;lt;&amp;lt; -1;
+    return 0;
+    
+}&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="sliding_window" /><category term="must_do" /><summary type="html">Problem
+Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Sliding Window Technique</title><link href="https://parkyo.github.io/categories/sliding-window/" rel="alternate" type="text/html" title="Sliding Window Technique" /><published>2020-08-01T00:00:00+09:00</published><updated>2020-08-01T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/sliding-window</id><content type="html" xml:base="https://parkyo.github.io/categories/sliding-window/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MK-NZ4hN7rs&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Sliding window technique&lt;/strong&gt; improves the efficiency of iteration from O(n*k) to O(n)&lt;/p&gt;
 
@@ -166,14 +363,7 @@ Keep track of the number of each distinct character in a hashmap and check the s
       }
       return sum % 10000000007;
   }&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="biweekly_contest" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Tips for Solving Coding Problems</title><link href="https://parkyo.github.io/categories/coding-prob-tips/" rel="alternate" type="text/html" title="Tips for Solving Coding Problems" /><published>2020-07-27T00:00:00+09:00</published><updated>2020-07-27T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/coding-prob-tips</id><content type="html" xml:base="https://parkyo.github.io/categories/coding-prob-tips/">&lt;li&gt;When the only solution seems to be a long search, then focus on finding the 'bound' 
-&lt;a href=&quot;https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target/&quot;&gt;ex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;</content><category term="blog" /><category term="algorithm" /><summary type="html">When the only solution seems to be a long search, then focus on finding the 'bound' 
-ex</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Bi-Weekly Contest 31 - Good ways to split a string</title><link href="https://parkyo.github.io/categories/leetcode-goodsplit/" rel="alternate" type="text/html" title="Leetcode Bi-Weekly Contest 31 - Good ways to split a string" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-goodsplit</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-goodsplit/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="biweekly_contest" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Bi-Weekly Contest 31 - Good ways to split a string</title><link href="https://parkyo.github.io/categories/leetcode-goodsplit/" rel="alternate" type="text/html" title="Leetcode Bi-Weekly Contest 31 - Good ways to split a string" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-goodsplit</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-goodsplit/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
 
@@ -206,7 +396,7 @@ ex</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="ht
         return count;
     }
 };&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(b)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title><link href="https://parkyo.github.io/categories/leetcode-countSubTree/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-countSubTree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-countSubTree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)w&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title><link href="https://parkyo.github.io/categories/leetcode-countSubTree/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-countSubTree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-countSubTree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
 
@@ -261,142 +451,4 @@ public:
         return ans;
     }
 };&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Path with Maximum Probability</title><link href="https://parkyo.github.io/categories/leetcode-path-max-prob/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Path with Maximum Probability" /><published>2020-07-22T00:00:00+09:00</published><updated>2020-07-22T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-path-max-prob</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-path-max-prob/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].&lt;/p&gt;
-
-&lt;p&gt;Given two nodes start and end, find the path with the maximum probability of success to go from start to end and return its success probability.&lt;/p&gt;
-
-&lt;p&gt;If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;BFS search&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;#include &amp;lt;unordered_map&amp;gt;
-#include &amp;lt;queue&amp;gt;
-#include &amp;lt;vector&amp;gt;
-
-using namespace std;
-
-class Solution {
-
-    
-public:
-    
-    double maxProbability(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; edges, vector&amp;lt;double&amp;gt;&amp;amp; succProb, int start, int end) {
-        vector&amp;lt;unordered_map&amp;lt;int, double&amp;gt;&amp;gt; graph(n);
-        for(size_t i = 0; i &amp;lt; edges.size(); ++i){
-            graph[edges[i][0]][edges[i][1]] =  succProb[i];
-            graph[edges[i][1]][edges[i][0]] = succProb[i];
-        }
-        
-        vector&amp;lt;double&amp;gt; ps(n, 0);
-        ps[start] = 1.0;
-        queue&amp;lt;int&amp;gt; q;
-        q.push(start);
-        while(!q.empty()){
-            int cur = q.front();
-            q.pop();
-            for (auto it = graph[cur].begin(); it != graph[cur].end(); ++it){
-                double pos = (it-&amp;gt;second) * ps[cur];
-                if(pos &amp;gt; ps[it-&amp;gt;first]){
-                    ps[it-&amp;gt;first] = pos;
-                    q.push(it-&amp;gt;first);
-                }
-            }
-
-        }
-        return ps[end];
-        
-    }
-};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(V*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="dijkastra" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Bellman Ford algorithm</title><link href="https://parkyo.github.io/categories/Bellmanford/" rel="alternate" type="text/html" title="Bellman Ford algorithm" /><published>2020-07-21T00:00:00+09:00</published><updated>2020-07-21T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Bellmanford</id><content type="html" xml:base="https://parkyo.github.io/categories/Bellmanford/">&lt;p&gt;&lt;strong&gt;Bellman Ford&lt;/strong&gt; works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system. 
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;alogorithm&quot;&gt;Alogorithm&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;void BellmanFord(struct Graph* graph, int src) 
-{ 
-    int V = graph-&amp;gt;V; 
-    int E = graph-&amp;gt;E; 
-    int dist[V]; 
-    &lt;/strong&gt;
-    &lt;i&gt;// Step 1: Initialize distances from src to all other vertices 
-    // as INFINITE &lt;/i&gt;&lt;strong&gt;
-    for (int i = 0; i &amp;lt; V; i++) 
-        dist[i] = INT_MAX; 
-    dist[src] = 0; 
-    &lt;/strong&gt;
-    &lt;i&gt;// Step 2: Relax all edges |V| - 1 times. A simple shortest 
-    // path from src to any other vertex can have at-most |V| - 1 
-    // edges &lt;/i&gt;&lt;strong&gt;
-    for (int i = 1; i &amp;lt;= V - 1; i++) { 
-        for (int j = 0; j &amp;lt; E; j++) { 
-            int u = graph-&amp;gt;edge[j].src; 
-            int v = graph-&amp;gt;edge[j].dest; 
-            int weight = graph-&amp;gt;edge[j].weight; 
-            if (dist[u] != INT_MAX &amp;amp;&amp;amp; dist[u] + weight &amp;lt; dist[v]) 
-                dist[v] = dist[u] + weight; 
-        } 
-    } 
-  &lt;/strong&gt;
-    &lt;i&gt;// Step 3: check for negative-weight cycles.  The above step 
-    // guarantees shortest distances if graph doesn't contain 
-    // negative weight cycle.  If we get a shorter path, then there 
-    // is a negative weight cycle. &lt;/i&gt;&lt;strong&gt;
-    for (int i = 0; i &amp;lt; E; i++) { 
-        int u = graph-&amp;gt;edge[i].src; 
-        int v = graph-&amp;gt;edge[i].dest; 
-        int weight = graph-&amp;gt;edge[i].weight; 
-        if (dist[u] != INT_MAX &amp;amp;&amp;amp; dist[u] + weight &amp;lt; dist[v]) { 
-            printf(&quot;Graph contains negative weight cycle&quot;); 
-            return; // If negative cycle is detected, simply return 
-        } 
-    } 
-  
-    printArr(dist, V); 
-  
-    return; 
-} &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;O(VE)&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/&quot;&gt;GeeksForGeeks&lt;/a&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="greedy" /><summary type="html">Bellman Ford works like Dijkstra’s algorithm except that it also allows negative weights. It is simpler and suites better for the distributed system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - The Number of Substrings with 1’s</title><link href="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - The Number of Substrings with 1's" /><published>2020-07-19T00:00:00+09:00</published><updated>2020-07-19T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-num-substrings-with-1s</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-num-substrings-with-1s/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-substrings-with-only-1s/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given a binary string s (a string consisting only of ‘0’ and ‘1’s).&lt;/p&gt;
-
-&lt;p&gt;Return the number of substrings with all characters 1’s.&lt;/p&gt;
-
-&lt;p&gt;Since the answer may be too large, return it modulo 10^9 + 7..&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class Solution {
-public:
-    unsigned long long count(unsigned long long n){
-        unsigned long long ans = (n + 1)*(n/2);
-        if(n%2 != 0){
-            ans += n/2 + 1;
-        }
-        return ans;
-    }
-    
-    int numSub(string s) {
-        unsigned long long ans = 0;
-        int num = 0;
-        for (auto c : s){
-            if (c == '1'){
-                ++num;
-            }else{
-                ans += count(num);
-                num = 0;
-            }
-        }
-        ans += count(num);
-        return ans % (unsigned long long)(pow(10,9) + 7);
-    }
-};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
