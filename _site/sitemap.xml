@@ -2,6 +2,87 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>https://parkyo.github.io/categories/leetcode-zigzag-tree/</loc>
+      
+        <lastmod>2020-08-14T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/leetcode-connect-siblings-tree/</loc>
+      
+        <lastmod>2020-08-14T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-vertical_order_tree/</loc>
+      
+        <lastmod>2020-08-13T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-check_bst/</loc>
+      
+        <lastmod>2020-08-11T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/leetcode-kth-missing/</loc>
+      
+        <lastmod>2020-08-11T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-LL-loop/</loc>
+      
+        <lastmod>2020-08-09T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-stackqueue/</loc>
+      
+        <lastmod>2020-08-08T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-petrol_cycle/</loc>
+      
+        <lastmod>2020-08-08T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/categories/geeks-LL-intersect/</loc>
+      
+        <lastmod>2020-08-08T00:00:00+09:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.7</priority>
+    </url>
+  
+    <url>
       <loc>https://parkyo.github.io/categories/Geeks-LRUcache/</loc>
       
         <lastmod>2020-08-08T00:00:00+09:00</lastmod>
@@ -708,6 +789,16 @@
   
     <url>
       <loc>https://parkyo.github.io/blog/page10/</loc>
+       <lastmod>2020-06-12T00:00:00+09:00</lastmod>
+      
+       <changefreq>weekly</changefreq>
+      
+       <priority>1.0</priority>
+      
+     </url>
+  
+    <url>
+      <loc>https://parkyo.github.io/blog/page11/</loc>
        <lastmod>2020-06-12T00:00:00+09:00</lastmod>
       
        <changefreq>weekly</changefreq>

@@ -1,4 +1,403 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-08-09T13:47:30+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">GeeksForGeeks - LRU Cache</title><link href="https://parkyo.github.io/categories/Geeks-LRUcache/" rel="alternate" type="text/html" title="GeeksForGeeks - LRU Cache" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Geeks-LRUcache</id><content type="html" xml:base="https://parkyo.github.io/categories/Geeks-LRUcache/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/lru-cache/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://parkyo.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="https://parkyo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://parkyo.github.io/" rel="alternate" type="text/html" /><updated>2020-08-14T20:01:00+09:00</updated><id>https://parkyo.github.io/</id><title type="html">Younse Park</title><subtitle>Hi, I am a software engineer</subtitle><entry><title type="html">Leetcode - Binary Tree Zig Zag Level Order Traversal</title><link href="https://parkyo.github.io/categories/leetcode-zigzag-tree/" rel="alternate" type="text/html" title="Leetcode - Binary Tree Zig Zag Level Order Traversal" /><published>2020-08-14T00:00:00+09:00</published><updated>2020-08-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-zigzag-tree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-zigzag-tree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Traverse the tree verticall from left to right&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Level order traversal with two stacks. 
+Second stack should store the children reversely (right and left)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; zigzagLevelOrder(TreeNode* root) {
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; list;
+        if(root){
+            stack&amp;lt;TreeNode*&amp;gt; s1;
+            stack&amp;lt;TreeNode*&amp;gt; s2;
+            s1.push(root);
+            while(!s1.empty() || !s2.empty()){
+                if(!s1.empty()){
+                    list.resize(list.size() + 1);
+                }
+                while(!s1.empty()){
+                    TreeNode* cur = s1.top();
+                    s1.pop();
+                    if(cur-&amp;gt;left){
+                        s2.push(cur-&amp;gt;left);
+                    }
+                    if(cur-&amp;gt;right){
+                        s2.push(cur-&amp;gt;right);
+                    }
+                    list[list.size()-1].push_back(cur-&amp;gt;val);
+                }
+                if(!s2.empty()){
+                    list.resize(list.size()+1);
+                }
+                while(!s2.empty()){
+                    TreeNode* cur = s2.top();
+                    s2.pop();
+                    if(cur-&amp;gt;right){
+                        s1.push(cur-&amp;gt;right);
+                    }
+                    if(cur-&amp;gt;left){
+                        s1.push(cur-&amp;gt;left);
+                    }
+                    list[list.size()-1].push_back(cur-&amp;gt;val);
+                }
+            }
+        }
+        
+        return list;
+    }
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="tree" /><category term="BTS" /><category term="important" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode - Populating Next Right Pointers in Each Node</title><link href="https://parkyo.github.io/categories/leetcode-connect-siblings-tree/" rel="alternate" type="text/html" title="Leetcode - Populating Next Right Pointers in Each Node" /><published>2020-08-14T00:00:00+09:00</published><updated>2020-08-14T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-connect-siblings-tree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-connect-siblings-tree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;You are given a perfect binary tree where all leaves are on the same level, and every parent has two children. 
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.&lt;/p&gt;
+
+&lt;p&gt;Initially, all next pointers are set to NULL.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;I initially had,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;Node* connect(Node* root) {
+        Node* arr[4096];
+        Node* cur = root;
+        size_t i = 1;
+        arr[i-1] = root;
+        if(root){
+            int level = 2;
+            int count = 1;
+            while(arr[i-1]-&amp;gt;left){
+                arr[i*2-1] = arr[i-1]-&amp;gt;left;
+                arr[i*2] = arr[i-1]-&amp;gt;right;
+                count += 2;
+                arr[i*2-1]-&amp;gt;next = arr[i*2];
+                if(count &amp;lt; pow(2, level)-1){
+                    arr[i*2]-&amp;gt;next = arr[i]-&amp;gt;left;
+                }else{
+                    ++level;
+                }
+                ++i;
+            }
+        }
+        
+        return arr[0];
+    }
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;
+&lt;br /&gt;
+However, I optimized the space to O(1) by removing the vector since you can traverse with previously connected nodes&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt; Node* connect(Node* root) {
+        size_t i = 1;
+        if(!root){
+            return root;
+        }
+        Node* first = root;
+        while(first-&amp;gt;left){
+            Node* cur = first;
+            while(cur){
+            (cur-&amp;gt;left)-&amp;gt;next = cur-&amp;gt;right;
+            if(cur-&amp;gt;next){
+                (cur-&amp;gt;right)-&amp;gt;next = (cur-&amp;gt;next)-&amp;gt;left;
+            }
+            cur = cur-&amp;gt;next;
+            }
+            first = first-&amp;gt;left;
+        }
+        
+        return root;
+    }&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="tree" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Vertical Traversal of Tree</title><link href="https://parkyo.github.io/categories/geeks-vertical_order_tree/" rel="alternate" type="text/html" title="GeeksForGeeks - Vertical Traversal of Tree" /><published>2020-08-13T00:00:00+09:00</published><updated>2020-08-13T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-vertical_order_tree</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-vertical_order_tree/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/check-for-bst/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Traverse the tree verticall from left to right&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Use &lt;strong&gt;bfs&lt;/strong&gt; and group the nodes in the same vertical axis in order.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;void bfs(Node* root, map&amp;lt;int, queue&amp;lt;int&amp;gt;&amp;gt;&amp;amp; mp){
+    queue&amp;lt;Node*&amp;gt; q;
+    queue&amp;lt;int&amp;gt; axis;
+    q.push(root);
+    axis.push(0);
+    mp[0].push(root-&amp;gt;data);
+    while(!q.empty()){
+        Node* cur = q.front();
+        if(cur-&amp;gt;left){
+            q.push(cur-&amp;gt;left);
+            int haxis = axis.front() - 1;
+            mp[haxis].push((cur-&amp;gt;left)-&amp;gt;data);
+        }
+        if(cur-&amp;gt;right){
+            q.push(cur-&amp;gt;right);
+            int haxis = axis.front() + 1;
+            mp[haxis].push((cur-&amp;gt;right)-&amp;gt;data);
+        }
+        
+        q.pop();
+        axis.pop();
+    }
+}
+
+vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; verticalOrder(Node* root) {
+    map&amp;lt;int, queue&amp;lt;int&amp;gt;&amp;gt; mp;
+    bfs(root, mp);
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; list(mp.size());
+
+    size_t i = 0;
+    for(auto it = mp.begin(); it != mp.end(); ++it){
+        list[i].resize((it-&amp;gt;second).size());
+        size_t j = 0;
+        while(!(it-&amp;gt;second).empty()){
+            list[i][j] = (it-&amp;gt;second).front();
+            (it-&amp;gt;second).pop();
+            ++j;
+        }
+        ++i;
+    }
+    return list;
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(logn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="geeks" /><category term="important" /><category term="tree" /><category term="bfs" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Check if the tree is a binary search tree</title><link href="https://parkyo.github.io/categories/geeks-check_bst/" rel="alternate" type="text/html" title="GeeksForGeeks - Check if the tree is a binary search tree" /><published>2020-08-11T00:00:00+09:00</published><updated>2020-08-11T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-check_bst</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-check_bst/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/check-for-bst/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given a binary tree. Check whether it is a BST or not.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;p&gt;Use recursioin by setting the low and high points&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;bool helper(Node* root, Node* low, Node* high){
+    if(!root){ &lt;/strong&gt;&lt;i&gt;//ALWAYS base case for tree recursion&lt;/i&gt;&lt;strong&gt;
+        return true;
+    }
+    if(low &amp;amp;&amp;amp; low-&amp;gt;data &amp;gt;= root-&amp;gt;data){&lt;/strong&gt;&lt;i&gt;// Base 2 - !low can mean it is left-side node&lt;/i&gt;&lt;strong&gt;
+        return false;
+    }
+    if(high &amp;amp;&amp;amp; high-&amp;gt;data &amp;lt;= root-&amp;gt;data){
+        return false;
+    }
+    return helper(root-&amp;gt;left, low, root) &amp;amp;&amp;amp; helper(root-&amp;gt;right, root, high);
+     &lt;/strong&gt;&lt;i&gt;// BOTH should be true therefore use &amp;amp;&amp;amp;
+     // doesn't need to change low if it moves to the left side (vice versa)&lt;/i&gt;&lt;strong&gt;
+}
+
+bool isBST(Node* root) {
+    helper(root, NULL, NULL);
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(logn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="geeks" /><category term="tree" /><category term="recursion" /><category term="important" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode - Find Kth Positive Number</title><link href="https://parkyo.github.io/categories/leetcode-kth-missing/" rel="alternate" type="text/html" title="Leetcode - Find Kth Positive Number" /><published>2020-08-11T00:00:00+09:00</published><updated>2020-08-11T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-kth-missing</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-kth-missing/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/lru-cache/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given an array arr of positive integers sorted in a strictly increasing order, and an integer k.
+Find the kth positive integer that is missing from this array.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-1&quot;&gt;Solution 1&lt;/h2&gt;
+&lt;p&gt;Use binary search to find the gap where the Kth missing number exists&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;arr[i-1] = i&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;[ l ,  r )&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;m-1&lt;/code&gt; is the midpoint of the subarray in the binary search&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int findKthPositive(vector&amp;lt;int&amp;gt;&amp;amp; arr, int k) {
+    size_t l = 0, r = arr.size();
+    while(l &amp;lt; r){
+        size_t m = (l + r + 1)/2 ;
+        if(arr[m-1] - m &amp;lt; k){
+            l = m;
+        }else{
+            r = m-1;
+        }
+    }
+    &lt;/strong&gt;&lt;i&gt;//(l-1) + 1 + k&lt;/i&gt;&lt;strong&gt;
+    return l + k;
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(logn)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int findKthPositive(vector&amp;lt;int&amp;gt;&amp;amp; arr, int k) {
+        int count = arr[0]-1;
+        size_t i = 1;
+        while(i &amp;lt; arr.size() &amp;amp;&amp;amp; count &amp;lt; k){
+            count += arr[i]-arr[i-1]-1;
+            ++i;
+        }
+        if (count &amp;gt;= k){
+            return i-1 + k;
+        }
+        return i + k;
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="leetcode" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Detect Loop in Linked List</title><link href="https://parkyo.github.io/categories/geeks-LL-loop/" rel="alternate" type="text/html" title="GeeksForGeeks - Detect Loop in Linked List" /><published>2020-08-09T00:00:00+09:00</published><updated>2020-08-09T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-LL-loop</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-LL-loop/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given a linked list of N nodes. The task is to check if the the linked list has a loop. Linked list can contain self loop.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;struct Node
+{
+    int data;
+    struct Node *next;
+    Node(int x) {
+        data = x;
+        next = NULL;
+    }
+
+
+bool detectLoop(Node* head)
+{
+    // your code here
+    while(head){
+        if(head-&amp;gt;data &amp;lt; 0){
+            return true;
+        }
+        head-&amp;gt;data *= -1;
+        head = head-&amp;gt;next;
+    }
+    return false;
+}
+
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="LinkedList" /><category term="geeks" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Queue using two stacks</title><link href="https://parkyo.github.io/categories/geeks-stackqueue/" rel="alternate" type="text/html" title="GeeksForGeeks - Queue using two stacks" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-stackqueue</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-stackqueue/">&lt;p&gt;&amp;lt;a href=”https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1&amp;gt;link&amp;lt;/a&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Implement a Queue using 2 stacks s1 and s2 .
+A Query Q is of 2 Types&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;1 x (a query of this type means  pushing ‘x’ into the queue)&lt;/li&gt;
+  &lt;li&gt;2   (a query of this type means to pop element from queue and print the poped element)
+    &lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class StackQueue{
+private:
+    stack&lt;int&gt; s1;
+    stack&lt;int&gt; s2;
+    
+public:
+    void push(int v){
+        s1.push(v);
+    }
+    
+    int pop(){
+        if(s1.empty()){
+            return -1;
+        }
+        while(s1.size() &amp;gt; 1){
+            s2.push(s1.top());
+            s1.pop();
+        }
+        int rem = s1.top();
+        s1.pop();
+        while(!s2.empty()){
+            s1.push(s2.top());
+            s2.pop();
+        }
+        return rem;
+    }
+};
+&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+&lt;/int&gt;&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="stack" /><category term="queue" /><category term="geeks" /><summary type="html">&amp;lt;a href=”https://practice.geeksforgeeks.org/problems/queue-using-two-stacks/1&amp;gt;link&amp;lt;/a&amp;gt;</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Circular Tour</title><link href="https://parkyo.github.io/categories/geeks-petrol_cycle/" rel="alternate" type="text/html" title="GeeksForGeeks - Circular Tour" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-petrol_cycle</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-petrol_cycle/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/lru-cache/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Suppose there is a circle. There are N petrol pumps on that circle. You will be given two sets of data.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The amount of petrol that every petrol pump has.&lt;/li&gt;
+  &lt;li&gt;Distance from that petrol pump to the next petrol pump.
+Find a starting point where the truck can start to get through the complete circle without exhausting its petrol in between.
+Note :  Assume for 1 litre petrol, the truck can go 1 unit of distance.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;struct petrolPump{
+    int petrol;
+    int distance;
+};
+
+
+int tour(petrolPump p[], int n){
+    int start = 0, i = 0, pet = 0, loc = 0;
+    while(start &amp;lt; n &amp;amp;&amp;amp; i &amp;lt; n){
+        pet += p[loc].petrol - p[loc].distance;
+        ++i;
+        if(pet &amp;lt; 0){
+            ++start;
+            i = 0;
+            pet = 0;
+        }
+        loc = (start + i)%n;
+    }
+    if(pet &amp;gt;= 0 &amp;amp;&amp;amp; i == n){
+        return pet;
+    }else{
+        
+    }
+}
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="geeks" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Intersection Point in Y Shaped Linked List</title><link href="https://parkyo.github.io/categories/geeks-LL-intersect/" rel="alternate" type="text/html" title="GeeksForGeeks - Intersection Point in Y Shaped Linked List" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-LL-intersect</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-LL-intersect/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given two singly linked lists of size N and M, write a program to get the point where two linked lists intersect each other.&lt;/p&gt;
+
+&lt;h2 id=&quot;solution1&quot;&gt;Solution1&lt;/h2&gt;
+&lt;p&gt;My initial thought was to iterate through two lists to figure out the size difference.
+Then, I can set the starting point for the longer Linked List and iterate through both to see if the data of the current nodes are the same.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int intersectPoint(Node* head1, Node* head2)
+{
+    int diff = -1, ans = 0;
+    Node* n1 = head1;
+    Node* n2 = head2;
+    Node* longer = head1;
+    Node* shorter = head2;
+    while(n1 &amp;amp;&amp;amp; n2){
+        n1 = n1-&amp;gt;next;
+        n2 = n2-&amp;gt;next;
+        ++diff;
+    }
+    if(n2){
+        longer = head2;
+        shorter = head1;
+    }
+    if(!n1 &amp;amp;&amp;amp; !n2){
+        diff = 0;
+    }
+    while(diff &amp;gt; 0){
+        longer = longer-&amp;gt;next;
+        --diff;
+    }
+    while(longer){
+        if(longer-&amp;gt;data == shorter-&amp;gt;data){
+            ans = longer-&amp;gt;data;
+        }else{
+            ans = -1;
+        }
+        longer = longer-&amp;gt;next;
+        shorter = shorter-&amp;gt;next;
+    }
+    return ans;
+}
+
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n+m)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;solution-2&quot;&gt;Solution 2&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;*** Much better solution&lt;/strong&gt;
+Iterate through either list and multiply -1 to all nodes.
+Then iterate through the other list and any negative number you encounter is the intersection. &lt;i&gt;(fcking brilliant)&lt;/i&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int intersectPoint(Node* head1, Node* head2)
+{
+    int ans = -1;
+    while(head1){
+        head1-&amp;gt;data *= -1;
+        head1 = head1-&amp;gt;next;
+    }
+    while(head2){
+        if(head2-&amp;gt;data &amp;lt; 0){
+            ans = head2-&amp;gt;data;
+        }
+        head2 = head2-&amp;gt;next;
+    }
+    return ans;
+&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;how-to-approach-this-solution&quot;&gt;How to approach this solution&lt;/h3&gt;
+&lt;p&gt;Consider that the intersection is not only when the data are the same but the &lt;strong&gt;addresses&lt;/strong&gt; are the same. So if the intersected node’s data changes, the other list will change as well. Also, always try to use all the &lt;strong&gt;conditions&lt;/strong&gt; given as advantages: all node values are positive. We could’ve changed the node values as 0 or any negative number that the default value can’t be.&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="LinkedList" /><category term="important" /><category term="geeks" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - LRU Cache</title><link href="https://parkyo.github.io/categories/Geeks-LRUcache/" rel="alternate" type="text/html" title="GeeksForGeeks - LRU Cache" /><published>2020-08-08T00:00:00+09:00</published><updated>2020-08-08T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/Geeks-LRUcache</id><content type="html" xml:base="https://parkyo.github.io/categories/Geeks-LRUcache/">&lt;p&gt;&lt;a href=&quot;https://practice.geeksforgeeks.org/problems/lru-cache/1&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The task is to design and implement methods of an LRU cache. The class has two methods get() and set() which are defined as follows.
@@ -89,366 +488,4 @@ public:
             }
         }
     }
-};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Count Triplets</title><link href="https://parkyo.github.io/categories/geeks-triplets/" rel="alternate" type="text/html" title="GeeksForGeeks - Count Triplets" /><published>2020-08-07T00:00:00+09:00</published><updated>2020-08-07T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-triplets</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-triplets/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given an array of distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int triplets(){
-    int t, n;
-    cin &amp;gt;&amp;gt; t;
-    while(t &amp;gt; 0){
-        cin &amp;gt;&amp;gt; n;
-        vector&lt;int&gt; list(n);
-        int count = 0;
-        size_t i = 0;
-        while(i &amp;lt; n){
-            int cur;
-            cin &amp;gt;&amp;gt; cur;
-            list[i] = cur;
-            ++i;
-        }
-        sort(list.begin(), list.end());
-        for(size_t i = n-1; i &amp;gt;= 0; --i){
-            size_t j = 0, k = i-1;
-            while(j &amp;lt; k){
-                int sum = list[j] + list[k];
-                if(sum == list[i]){
-                    ++count;
-                }else if(sum &amp;gt; list[i]){
-                    --k;
-                }else{
-                    ++i;
-                }
-            }
-        }
-        if(count &amp;gt; 0){
-            cout &amp;lt;&amp;lt; count &amp;lt;&amp;lt; endl;
-        }else{
-            cout &amp;lt;&amp;lt; -1 &amp;lt;&amp;lt; endl;
-        }
-        --t;
-    }
-    return 0;
-}&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><summary type="html">Problem
-Given an array of distinct integers. The task is to count all the triplets such that sum of two elements equals the third element.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Kadane’s algorithm</title><link href="https://parkyo.github.io/categories/geeks-kadane/" rel="alternate" type="text/html" title="GeeksForGeeks - Kadane's algorithm" /><published>2020-08-07T00:00:00+09:00</published><updated>2020-08-07T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-kadane</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-kadane/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given an array arr of N integers. Find the contiguous sub-array with maximum sum.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;I used 2D array with bottom-top DP approach iniitally. 
-However, I figured that I only need 1D array and as iterating through, it only matters what the best sum is until the previous index for the current index since it is supposed to be contiguous.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int kadane() {
-    int t, n;
-    cin &amp;gt;&amp;gt; t;
-    while(t &amp;gt; 0){
-        cin &amp;gt;&amp;gt; n;
-        int list[n]={0};
-        int max = INT_MIN;
-        size_t i = 0;
-        while(i &amp;lt; n){
-            int cur;
-            cin &amp;gt;&amp;gt; cur;
-            list[i] = cur;
-            ++i;
-        }
-        for(size_t i = 1; i &amp;lt; n; ++i){
-            list[i] = max(list[i], list[i]+list[i-1]);
-            max = max(max, list[i]);
-        }
-        --t;
-        cout &amp;lt;&amp;lt; max &amp;lt;&amp;lt; endl;
-    }
-    return 0;
-}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><category term="kadane" /><summary type="html">Problem
-Given an array arr of N integers. Find the contiguous sub-array with maximum sum.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">GeeksForGeeks - Subarrays with Give Sum</title><link href="https://parkyo.github.io/categories/geeks-subarraysum/" rel="alternate" type="text/html" title="GeeksForGeeks - Subarrays with Give Sum" /><published>2020-08-02T00:00:00+09:00</published><updated>2020-08-02T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/geeks-subarraysum</id><content type="html" xml:base="https://parkyo.github.io/categories/geeks-subarraysum/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;Sliding window technique&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int subarraySum(){
-    int t, n, s;
-    int cur_sum = 0, start=0, end = -1;
-    cin &amp;gt;&amp;gt; t &amp;gt;&amp;gt; n &amp;gt;&amp;gt; s;
-    vector&lt;int&gt; list(n,0);
-    for(size_t j = 0; j &amp;lt; t; ++j){
-        for(size_t i = 0; i &amp;lt; n; ++i){
-            int cur;
-            cin &amp;gt;&amp;gt; cur;
-            list[i] = cur;
-        }
-        for(auto i : list){
-            cur_sum += i;
-            ++end;
-            while(start &amp;lt;= end &amp;amp;&amp;amp; cur_sum &amp;gt; s){
-                cur_sum -= list[start];
-                ++start;
-            }
-            if(cur_sum == s){
-                cout &amp;lt;&amp;lt; start+1 &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; end+1;
-                return 0;
-            }
-        }
-    }
-    
-    cout &amp;lt;&amp;lt; -1;
-    return 0;
-    
-}&amp;lt;/strong&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
-&lt;/int&gt;&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="sliding_window" /><category term="must_do" /><summary type="html">Problem
-Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Sliding Window Technique</title><link href="https://parkyo.github.io/categories/sliding-window/" rel="alternate" type="text/html" title="Sliding Window Technique" /><published>2020-08-01T00:00:00+09:00</published><updated>2020-08-01T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/sliding-window</id><content type="html" xml:base="https://parkyo.github.io/categories/sliding-window/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=MK-NZ4hN7rs&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sliding window technique&lt;/strong&gt; improves the efficiency of iteration from O(n*k) to O(n)&lt;/p&gt;
-
-&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
-&lt;p&gt;Given an array of integers of size ‘n’.
-Our aim is to calculate the maximum sum of ‘k’ consecutive elements in the array.&lt;/p&gt;
-
-&lt;p&gt;A &lt;strong&gt;brute Force Solution&lt;/strong&gt; to this problem would be the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int maxSum(int arr[], int n, int k) 
-{ 
-    &lt;/strong&gt;// Initialize result &lt;strong&gt;
-    int max_sum = INT_MIN; 
-  &lt;/strong&gt;
-    // Consider all blocks starting with i. &lt;strong&gt;
-    for (int i = 0; i &amp;lt; n - k + 1; i++) { 
-        int current_sum = 0; 
-        for (int j = 0; j &amp;lt; k; j++) 
-            current_sum = current_sum + arr[i + j]; 
-  &lt;/strong&gt;
-        // Update result if required. &lt;strong&gt;
-        max_sum = max(current_sum, max_sum); 
-    } 
-  
-    return max_sum; 
-} &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n*k)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;With &lt;strong&gt;sliding window technique&lt;/strong&gt;, we can have a window of k elements and keep track of the current sum of the k element sand the maximum sum found so far. We can slide this window through the array to find the answer.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int maxSum(int arr[], int n, int k) 
-{ 
-    &lt;/strong&gt;// n must be greater &lt;strong&gt;
-    if (n &amp;lt; k) { 
-        cout &amp;lt;&amp;lt; &quot;Invalid&quot;; 
-        return -1; 
-    } 
-  &lt;/strong&gt;
-    // Compute sum of first window of size k &lt;strong&gt;
-    int max_sum = 0; 
-    for (int i = 0; i &amp;lt; k; i++) 
-        max_sum += arr[i]; 
-  &lt;/strong&gt;
-    // Compute sums of remaining windows by 
-    // removing first element of previous 
-    // window and adding last element of 
-    // current window. &lt;strong&gt;
-    int window_sum = max_sum; 
-    for (int i = k; i &amp;lt; n; i++) { 
-        window_sum += arr[i] - arr[i - k]; 
-        max_sum = max(max_sum, window_sum); 
-    } 
-  
-    return max_sum; 
-} &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;uses&quot;&gt;Uses&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Sequentially iterate over
-    &lt;ul&gt;
-      &lt;li&gt;contiguous sequence of elements&lt;/li&gt;
-      &lt;li&gt;strings, arrays, linked list&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;To find min, max, longest, shortest, or whether contained
-    &lt;ul&gt;
-      &lt;li&gt;may need calculation and record some value&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;li&gt;Everything grouped &lt;strong&gt;sequentially&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Longest/ smallest/ contains/ max/ min&lt;/strong&gt;&lt;/li&gt;
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;blockquote&gt;Learn about &lt;a href=&quot;/dyanamic-sliding-window/&quot;&gt;Dynamic Version&lt;/a&gt; of Sliding Window Technique&lt;/blockquote&gt;</content><category term="blog" /><category term="algorithm" /><category term="sliding_window" /><summary type="html">reference</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Sliding Window Technique with Dynamic Variant</title><link href="https://parkyo.github.io/categories/dyanamic-sliding-window/" rel="alternate" type="text/html" title="Sliding Window Technique with Dynamic Variant" /><published>2020-08-01T00:00:00+09:00</published><updated>2020-08-01T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/dyanamic-sliding-window</id><content type="html" xml:base="https://parkyo.github.io/categories/dyanamic-sliding-window/">&lt;p&gt;&lt;a href=&quot;/sliding-window/&quot;&gt;reference&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;example&quot;&gt;Example&lt;/h2&gt;
-
-&lt;h3 id=&quot;problem-1&quot;&gt;Problem 1&lt;/h3&gt;
-&lt;p&gt;Find the &lt;strong&gt;smallest subarray&lt;/strong&gt; with given sum&lt;/p&gt;
-
-&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
-&lt;p&gt;As you iterate through the array, move the start of the window to the left while the sum of the window elements is still bigger than or equal to the targetSum.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int smallestSubarray(int targetSum, vector&amp;lt;int&amp;gt; arr) 
-{ 
-    int start = 0;
-    int cur_sum = 0;
-    int min_size = INT_MAX;
-    for (int i = 0; i &amp;lt; arr.size(); ++i){
-        cur_sum += arr[i];
-        while(cur_sum &amp;gt;= targetSum){
-            min_size = min(min_size, i - start + 1);
-            cur_sum -= arr[start];
-            ++start;
-        }
-    }
-    return min_size;
-} &lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Time Complexity : &lt;i&gt;O(n^2)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;problem-2&quot;&gt;Problem 2&lt;/h3&gt;
-&lt;p&gt;Find the &lt;strong&gt;longest substring&lt;/strong&gt; length with K distinct characters&lt;/p&gt;
-
-&lt;h3 id=&quot;solution-1&quot;&gt;Solution&lt;/h3&gt;
-&lt;p&gt;Similar to the solution to the previous problem. 
-Keep track of the number of each distinct character in a hashmap and check the size of the hashmap to see if you have violated the required number of characers.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int longestSubstr(int k, string&amp;amp; s){
-    int start = 0, max_size = 0;
-    unordered_map&amp;lt;char, int&amp;gt; map;
-    for (char c : s){
-        auto it = map.find(c);
-        if(it != map.end()){
-            ++(it-&amp;gt;second);
-        }else{
-            map.insert(pair&amp;lt;char,int&amp;gt;(c, 1));
-        }
-        while(map.size() &amp;gt; k){
-            auto it2 = map.find(s[start]);
-            if((it2-&amp;gt;second) == 1){
-                map.erase(it2);
-            }else{
-                --(it2-&amp;gt;second);
-            }
-            ++start;
-        }
-        if(max_size &amp;lt; map.size()){
-            max_size = map.size();
-        }
-    }
-    return max_size;
-}&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="sliding_window" /><summary type="html">reference</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">What is ‘npm’</title><link href="https://parkyo.github.io/categories/npm/" rel="alternate" type="text/html" title="What is 'npm'" /><published>2020-07-30T00:00:00+09:00</published><updated>2020-07-30T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/npm</id><content type="html" xml:base="https://parkyo.github.io/categories/npm/">&lt;p&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/npm&quot;&gt;doc&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm &amp;lt;command&amp;gt; [args]&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;npm&lt;/strong&gt; is Node JavaScript platform package manager. It can publish, discover, install, and develop node programs. It can also install all the dependencies of a project, defined in &lt;strong&gt;package.json&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="npm" /><summary type="html">doc</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Biweekly Contest 30 - Number of Subarrays with Odd Sums</title><link href="https://parkyo.github.io/categories/numOddSums/" rel="alternate" type="text/html" title="Leetcode Biweekly Contest 30 - Number of Subarrays with Odd Sums" /><published>2020-07-29T00:00:00+09:00</published><updated>2020-07-29T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/numOddSums</id><content type="html" xml:base="https://parkyo.github.io/categories/numOddSums/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given an array of integers arr. Return the number of sub-arrays with odd sum.&lt;/p&gt;
-
-&lt;p&gt;As the answer may grow large, the answer must be computed modulo 10^9 + 7.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Keep track of the number of subarrays of odd sums and even sums.&lt;/li&gt;
-  &lt;li&gt;If the element is odd, swap odd and even and increment odd&lt;/li&gt;
-  &lt;li&gt;If the element is even, increment even&lt;/li&gt;
-  &lt;li&gt;Add the number for every element to the sum&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int numOfSubarrays(vector&amp;lt;int&amp;gt;&amp;amp; arr) {
-      int odd = 0, even = 0, sum = 0;
-      for(auto a : arr){
-          if(a % 2 == 1){
-              swap(odd, even);
-              ++odd;
-          }else{
-              ++even;
-          }
-          sum += odd;
-      }
-      return sum % 10000000007;
-  }&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="biweekly_contest" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Bi-Weekly Contest 31 - Good ways to split a string</title><link href="https://parkyo.github.io/categories/leetcode-goodsplit/" rel="alternate" type="text/html" title="Leetcode Bi-Weekly Contest 31 - Good ways to split a string" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-goodsplit</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-goodsplit/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-good-ways-to-split-a-string/submissions/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;You are given a string s, a split is called good if you can split s into 2 non-empty strings p and q where its concatenation is equal to s and the number of distinct letters in p and q are the same.&lt;/p&gt;
-
-&lt;p&gt;Return the number of good splits you can make in s.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;/sliding-window/&quot;&gt;Sliding Window Technique&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;int numSplits(string s) {
-        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; chars(s.size()-1, vector&amp;lt;int&amp;gt; (2,0));
-        int count = 0;
-        unordered_set&amp;lt;char&amp;gt; s1;
-        unordered_set&amp;lt;char&amp;gt; s2;
-        size_t i = 0, j = chars.size() -1;
-        while(i &amp;lt; chars.size() &amp;amp;&amp;amp; j &amp;gt;= 0){
-            s1.insert(s[i]);
-            s2.insert(s[j+1]);
-            chars[i][0] = (int)s1.size();
-            chars[j][1] = (int)s2.size();
-            ++i;
-            --j;
-        }
-        for(auto i : chars){
-            if(i[0] == i[1]){
-                ++count;
-            }
-        }
-        return count;
-    }
-};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n)w&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry><entry><title type="html">Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees</title><link href="https://parkyo.github.io/categories/leetcode-countSubTree/" rel="alternate" type="text/html" title="Leetcode Weekly Contest 197 - Count Nodes with the same number in subtrees" /><published>2020-07-25T00:00:00+09:00</published><updated>2020-07-25T00:00:00+09:00</updated><id>https://parkyo.github.io/categories/leetcode-countSubTree</id><content type="html" xml:base="https://parkyo.github.io/categories/leetcode-countSubTree/">&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-label/&quot;&gt;LINK&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;level--medium&quot;&gt;Level : Medium&lt;/h3&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;Given a tree (i.e. a connected, undirected graph that has no cycles) consisting of n nodes numbered from 0 to n - 1 and exactly n - 1 edges. The root of the tree is the node 0, and each node of the tree has a label which is a lower-case character given in the string labels (i.e. The node with the number i has the label labels[i]).&lt;/p&gt;
-
-&lt;p&gt;The edges array is given on the form edges[i] = [ai, bi], which means there is an edge between nodes ai and bi in the tree.&lt;/p&gt;
-
-&lt;p&gt;Return an array of size n where ans[i] is the number of nodes in the subtree of the ith node which have the same label as node i.&lt;/p&gt;
-
-&lt;p&gt;A subtree of a tree T is the tree consisting of a node in T and all of its descendant nodes.&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;p&gt;DFS search on tree&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&lt;strong&gt;class Solution {
-public:
-    struct Node{
-        int val;
-        vector&amp;lt;Node*&amp;gt; children;
-        Node(int in_val): val(in_val){
-        }
-    };
-    
-    void dfs(size_t root, size_t i, vector&amp;lt;Node*&amp;gt;&amp;amp; tree, string&amp;amp; labels, vector&amp;lt;int&amp;gt;&amp;amp; ans){
-        if(i &amp;lt; tree.size()){
-            for (auto n : tree[i]-&amp;gt;children){
-                if(labels[n-&amp;gt;val] == labels[root]){
-                    ++ans[root];
-                }
-                dfs(root, n-&amp;gt;val, tree, labels, ans);
-                
-            }
-
-        }
-
-    }
-
-    vector&amp;lt;int&amp;amp;gt countSubTrees(int n, vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; edges, string labels) {
-        vector&amp;lt;int&amp;gt; ans(n,1);
-        vector&amp;lt;Node*&amp;gt; tree(n);
-        for(size_t i = 0; i &amp;lt; n; ++i){
-            Node* n = new Node((int)i);
-            tree[i] = n;
-        }
-        for(auto e : edges){
-            tree[e[0]]-&amp;gt;children.push_back(tree[e[1]]);
-        }
-        for(size_t i = 0; i &amp;lt; n; ++i){
-            dfs(i, i,tree, labels, ans);
-        }
-
-        return ans;
-    }
-};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Time copmlexity: &lt;i&gt;O(n*E)&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;</content><category term="blog" /><category term="algorithm" /><category term="leetcode" /><category term="weekly_contest" /><category term="DFS" /><summary type="html">LINK</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>
+};&lt;/strong&gt;&lt;/code&gt;&lt;/pre&gt;</content><category term="blog" /><category term="algorithm" /><category term="must_do" /><summary type="html">link</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://parkyo.github.io" /></entry></feed>

@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+<title>GeeksForGeeks - Intersection Point in Y Shaped Linked List</title>
+<!-- <meta name="description" ></meta> -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/dog_logo.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/dog_logo.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/dog_logo.png">
+<link rel="manifest" href="/assets/icon/manifest.json">
+<link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/assets/icon/dog_logo.png">
+<meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/main.css" />
+<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+        <header id="header">
+          <a href="/" class="logo">Younse Park</a>
+        </header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            <ul class="links">
+  <li class=""><a href="/">Home</a></li>
+  <!-- <li class=""><a href="/about/">About</a></li> -->
+  <li class=""><a href="/blog/">Blog</a></li>
+  <li class=""><a href="/portfolio/">Portfolio</a></li>
+  <li class=""><a href="/elements/">Elements Reference</a></li>
+</ul>
+
+<!-- <ul class="icons">
+  <li><a href="https://twitter.com/default" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+  <li><a href="https://facebook.com/default" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+  <li><a href="https://instagram.com/default" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+  <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+</ul> -->
+
+						
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+          <section class="post">
+    				<header class="major">
+      				<span class="date">08 Aug 2020</span>
+              <h1>GeeksForGeeks - Intersection Point in Y Shaped Linked List</h1>
+              
+								<li class="button small">algorithm</li>
+								
+								<li class="button small">must_do</li>
+								
+								<li class="button small">LinkedList</li>
+								
+								<li class="button small">important</li>
+								
+								<li class="button small">geeks</li>
+								
+      				<!-- <p><p><a href="https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1/">link</a></p>
+
+</p> -->
+      			</header>
+      			<!-- <div ><img class = "image main" src="" alt="" width = 30%></div> -->
+      			<p><p><a href="https://practice.geeksforgeeks.org/problems/intersection-point-in-y-shapped-linked-lists/1/">link</a></p>
+
+<h2 id="problem">Problem</h2>
+<p>Given two singly linked lists of size N and M, write a program to get the point where two linked lists intersect each other.</p>
+
+<h2 id="solution1">Solution1</h2>
+<p>My initial thought was to iterate through two lists to figure out the size difference.
+Then, I can set the starting point for the longer Linked List and iterate through both to see if the data of the current nodes are the same.</p>
+<pre><code><strong>int intersectPoint(Node* head1, Node* head2)
+{
+    int diff = -1, ans = 0;
+    Node* n1 = head1;
+    Node* n2 = head2;
+    Node* longer = head1;
+    Node* shorter = head2;
+    while(n1 &amp;&amp; n2){
+        n1 = n1-&gt;next;
+        n2 = n2-&gt;next;
+        ++diff;
+    }
+    if(n2){
+        longer = head2;
+        shorter = head1;
+    }
+    if(!n1 &amp;&amp; !n2){
+        diff = 0;
+    }
+    while(diff &gt; 0){
+        longer = longer-&gt;next;
+        --diff;
+    }
+    while(longer){
+        if(longer-&gt;data == shorter-&gt;data){
+            ans = longer-&gt;data;
+        }else{
+            ans = -1;
+        }
+        longer = longer-&gt;next;
+        shorter = shorter-&gt;next;
+    }
+    return ans;
+}
+
+</strong></code></pre>
+<p><strong>Time Complexity : <i>O(n+m)</i></strong></p>
+
+<h2 id="solution-2">Solution 2</h2>
+<p><strong>*** Much better solution</strong>
+Iterate through either list and multiply -1 to all nodes.
+Then iterate through the other list and any negative number you encounter is the intersection. <i>(fcking brilliant)</i></p>
+<pre><code><strong>int intersectPoint(Node* head1, Node* head2)
+{
+    int ans = -1;
+    while(head1){
+        head1-&gt;data *= -1;
+        head1 = head1-&gt;next;
+    }
+    while(head2){
+        if(head2-&gt;data &lt; 0){
+            ans = head2-&gt;data;
+        }
+        head2 = head2-&gt;next;
+    }
+    return ans;
+</strong></code></pre>
+
+<h3 id="how-to-approach-this-solution">How to approach this solution</h3>
+<p>Consider that the intersection is not only when the data are the same but the <strong>addresses</strong> are the same. So if the intersected node’s data changes, the other list will change as well. Also, always try to use all the <strong>conditions</strong> given as advantages: all node values are positive. We could’ve changed the node values as 0 or any negative number that the default value can’t be.</p>
+</p>
+      		</section>
+
+          <div class="comments-wrapper">
+          <div id="disqus_thread"></div>
+          <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
+
+              var disqus_config = function () {
+                  this.page.url = '/categories/geeks-LL-intersect/';  /*Replace PAGE_URL with your page's canonical URL variable*/
+                  this.page.identifier = '/categories/geeks-LL-intersect/'; /*Replace PAGE_IDENTIFIER with your page's unique identifier variable*/
+              };
+
+              (function() {  /* dont endit below this line */
+                  var d = document, s = d.createElement('script');
+
+                  s.src = 'https://default.disqus.com/embed.js';
+
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div><!-- /.comments-wrapper -->
+
+
+					<!-- Footer -->
+						<!-- <footer>
+              <ul class="actions">
+                <li><a href="/blog/" class="button">Our Blog</a></li>
+              </ul>
+						</footer> -->
+					</div>
+
+				<!-- Footer -->
+        <footer id="footer">
+  <section>
+    <form method="POST" action="https://api.slapform.com/loshinpark@gmail.com">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="slap_replyto" id="email" /> <!-- slap_replyto will set the reply-to as the submitter's email! -->
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3"></textarea>
+      </div>
+      <ul class="actions">
+        <li><input type="submit" value="Send Message" /></li>
+      </ul>
+      <input type="hidden" name="slap_redirect" value="https://parkyo.github.io/thank-you" /> <!-- slap_redirect allows you to set a custom redirect/thank you page -->
+    </form>
+  </section>
+  <section class="split contact">
+    <!-- <section class="alt">
+      <h3>Location</h3>
+      <p></p>
+    </section> -->
+    <section>
+      <h3>Phone</h3>
+      <p><a href="tel:503-789-4680">503-789-4680</a></p>
+    </section>
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:loshinpark@gmail.com">loshinpark@gmail.com</a></p>
+    </section>
+    <!-- <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="https://twitter.com/default" class="icon fa-twitter" rel="nofollow"><span class="label">Twitter</span></a></li>
+        <li><a href="https://facebook.com/default" class="icon fa-facebook" rel="nofollow"><span class="label">Facebook</span></a></li>
+        <li><a href="https://instagram.com/default" class="icon fa-instagram" rel="nofollow"><span class="label">Instagram</span></a></li>
+        <li><a href="https://github.com/default" class="icon fa-github" rel="nofollow"><span class="label">GitHub</span></a></li>
+      </ul>
+    </section> -->
+  </section>
+</footer>
+<!-- Copyright -->
+<div id="copyright">
+  <ul><li>&copy; HTML5 UP</li><li>Design by <a href="https://html5up.net" rel="nofollow">HTML5 UP</a></li><li>Jekyll Integration by <a href="https://slapform.com">Slapform</a> </li></ul>
+</div>
+
+
+			</div>
+
+      <!-- Scripts -->
+  		<!-- DYN -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/skel.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+
+			<script async src="https://www.googletagmanager.com/gtag/js?id=default"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'default');
+</script>
+
+
+	</body>
+</html>
